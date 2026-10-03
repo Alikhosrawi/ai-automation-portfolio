@@ -1,0 +1,7 @@
+submission_id,submitted_at,first_name,last_name,email,phone,nationality,permit_type,sponsor,hr_contact_name,hr_email,moving_from,notes
+S-101,2026-09-21 08:15,Priya,Sharma,client1@example.com,+49 000 0000 0101,Indian,EU Blue Card,Example Employer A GmbH,Mara (HR),hr.employer-a@example.com,Bengaluru,Starts as data analyst on 1 Nov
+S-102,2026-09-25 08:40,Jake,Miller,client2@example.com,+49 000 0000 0102,US,ICT card,Example Employer B Inc.,Tom (HR),hr.employer-b@example.com,Chicago,Transfer from the US office for 2 years
+S-103,2026-10-02 07:50,Larissa,Costa,client3@example.com,+49 000 0000 0103,Brazilian,§18b skilled worker,Example Employer C GmbH,Ines (HR),hr.employer-c@example.com,Curitiba,Mechanical engineer
+S-104,2026-10-12 08:30,Chidi,Okafor,client4@example.com,+49 000 0000 0104,Nigerian,EU Blue Card,Example Employer A GmbH,Mara (HR),hr.employer-a@example.com,Lagos,Software developer
+S-105,2026-10-15 19:20,Yui,Tanaka,client5@example.com,+49 000 0000 0105,Japanese,Family reunion,,,,Osaka,Joining her husband who already lives in Hamburg
+S-106,2026-10-16 07:55,Arash,Rezaei,client6@example.com,+49 000 0000 0106,Iranian,Student,Example University Hamburg,,,Tehran,Master's programme starting in April
