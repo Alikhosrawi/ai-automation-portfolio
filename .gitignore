@@ -1,0 +1,31 @@
+# Secrets and local settings: never commit these
+.env
+.env.*
+env.sh
+*.pem
+*.key
+credentials*.json
+
+# Local n8n data (database, encryption key, execution history)
+.n8n/
+n8n-data/
+*.sqlite
+*.sqlite-journal
+
+# Local installs
+node_modules/
+n8n-install/
+node24/
+.venv/
+__pycache__/
+
+# Build and test leftovers
+build-history/
+test-outbox/
+manual-timing/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
