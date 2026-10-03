@@ -1,0 +1,6 @@
+﻿would_send_at,type,channel,to,patient,appointment,therapist,message,sent
+"Mon 5 Oct, 15:15",2a. confirmed,SMS,+49 000 0000 0006,Felix,Tuesday 6 Oct at 08:00,Mira,Thanks Felix! See you tomorrow at 08:00 with Mira.,"NO - demo, preview only"
+"Mon 5 Oct, 17:00",2a. confirmed,SMS,+49 000 0000 0009,Ida,Tuesday 6 Oct at 13:30,Mira,Thanks Ida! See you tomorrow at 13:30 with Mira.,"NO - demo, preview only"
+"Mon 5 Oct, 15:15",2b. move it: offer slots,SMS,+49 000 0000 0007,Greta,Tuesday 6 Oct at 09:30,Lena,"No problem, Greta. Open times we could offer: 1) Wed 7 Oct 14:00 with Lena, 2) Wed 7 Oct 16:30 with Lena, 3) Thu 8 Oct 11:00 with Lena. Reply with the number you'd like and we'll book it.","NO - demo, preview only"
+"Mon 5 Oct, 15:45",2b. move it: offer slots,SMS,+49 000 0000 0008,Hannes,Tuesday 6 Oct at 11:00,Jonas,"No problem, Hannes. Open times we could offer: 1) Wed 7 Oct 09:00 with Jonas, 2) Wed 7 Oct 15:00 with Jonas, 3) Thu 8 Oct 14:00 with Jonas. Reply with the number you'd like and we'll book it.","NO - demo, preview only"
+"Mon 5 Oct, 17:00",2c. unclear: ask a human,SMS,+49 000 0000 0011,Karla,Tuesday 6 Oct at 17:30,Jonas,"(No automatic reply. Reception should read this one.) Patient wrote: ""can I come a bit later?""",NO - for staff only

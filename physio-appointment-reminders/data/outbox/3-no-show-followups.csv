@@ -1,0 +1,3 @@
+﻿would_send_at,type,channel,to,patient,appointment,therapist,message,sent
+"Mon 5 Oct, 18:30",3. no-show follow-up,SMS,+49 000 0000 0002,Ben,Monday 5 Oct at 09:00,Jonas,"Hi Ben, we missed you today at 09:00 with Jonas. No worries, it happens! Would you like a new appointment? Just reply with a day that suits you, or call us on +49 000 0000 0000. Take care, the Physio am Hafen team","NO - demo, preview only"
+"Mon 5 Oct, 18:30",3. no-show follow-up,SMS,+49 000 0000 0004,David,Monday 5 Oct at 14:00,Lena,"Hi David, we missed you today at 14:00 with Lena. No worries, it happens! Would you like a new appointment? Just reply with a day that suits you, or call us on +49 000 0000 0000. Take care, the Physio am Hafen team","NO - demo, preview only"
