@@ -1,0 +1,38 @@
+﻿case_id,client,doc_code,document,ask,last_contact_on,next_chase_allowed_on,decision
+C-001,Priya,ADDRESS_REGISTRATION,Proof that you registered your Hamburg address,client,2026-10-12,2026-10-19,wait
+C-001,Priya,HOUSING,Rental contract and the landlord's move-in confirmation,client,2026-10-12,2026-10-19,wait
+C-001,Priya,EMPLOYER_DECLARATION,Employer's declaration about the job (salary and hours),hr,2026-10-12,2026-10-19,wait
+C-002,Jake,HOUSING,Rental contract and the landlord's move-in confirmation,client,2026-10-09,2026-10-16,chase today
+C-002,Jake,HEALTH_INSURANCE,Proof of health insurance,client,2026-10-09,2026-10-16,chase today
+C-002,Jake,PRIOR_EMPLOYMENT,Proof that you have worked for the company group for some time before the transfer,hr,2026-10-09,2026-10-16,chase today
+C-003,Larissa,HOUSING,Rental contract and the landlord's move-in confirmation,client,2026-10-09,2026-10-16,chase today
+C-003,Larissa,HEALTH_INSURANCE,Proof of health insurance,client,2026-10-09,2026-10-16,chase today
+C-003,Larissa,DEGREE_RECOGNITION,Recognition or comparability statement for your degree,client,2026-10-09,2026-10-16,chase today
+C-004,Chidi,APPLICATION_FORM,Residence permit application form (signed),client,2026-10-12,2026-10-19,wait
+C-004,Chidi,ADDRESS_REGISTRATION,Proof that you registered your Hamburg address,client,2026-10-12,2026-10-19,wait
+C-004,Chidi,HOUSING,Rental contract and the landlord's move-in confirmation,client,2026-10-12,2026-10-19,wait
+C-004,Chidi,HEALTH_INSURANCE,Proof of health insurance,client,2026-10-12,2026-10-19,wait
+C-004,Chidi,EMPLOYER_DECLARATION,Employer's declaration about the job (salary and hours),hr,2026-10-12,2026-10-19,wait
+C-004,Chidi,DEGREE,University degree certificate and transcript,client,2026-10-12,2026-10-19,wait
+C-004,Chidi,DEGREE_RECOGNITION,Recognition or comparability statement for your degree,client,2026-10-12,2026-10-19,wait
+C-005,Yui,PASSPORT,Passport (valid for the whole planned stay) and a copy of all used pages,client,2026-10-16,2026-10-23,wait
+C-005,Yui,PHOTO,One recent biometric passport photo (35 x 45 mm),client,2026-10-16,2026-10-23,wait
+C-005,Yui,APPLICATION_FORM,Residence permit application form (signed),client,2026-10-16,2026-10-23,wait
+C-005,Yui,ADDRESS_REGISTRATION,Proof that you registered your Hamburg address,client,2026-10-16,2026-10-23,wait
+C-005,Yui,HOUSING,Rental contract and the landlord's move-in confirmation,client,2026-10-16,2026-10-23,wait
+C-005,Yui,HEALTH_INSURANCE,Proof of health insurance,client,2026-10-16,2026-10-23,wait
+C-005,Yui,TRANSLATIONS,Certified translations of documents that are not in German or English,client,2026-10-16,2026-10-23,wait
+C-005,Yui,MARRIAGE_CERTIFICATE,Marriage certificate (with apostille or legalisation if needed),client,2026-10-16,2026-10-23,wait
+C-005,Yui,PARTNER_PERMIT,Copy of your partner's residence permit or passport,client,2026-10-16,2026-10-23,wait
+C-005,Yui,LIVING_SPACE,Proof that the flat is big enough for the family,client,2026-10-16,2026-10-23,wait
+C-006,Arash,PASSPORT,Passport (valid for the whole planned stay) and a copy of all used pages,client,2026-10-16,2026-10-23,wait
+C-006,Arash,PHOTO,One recent biometric passport photo (35 x 45 mm),client,2026-10-16,2026-10-23,wait
+C-006,Arash,APPLICATION_FORM,Residence permit application form (signed),client,2026-10-16,2026-10-23,wait
+C-006,Arash,ADDRESS_REGISTRATION,Proof that you registered your Hamburg address,client,2026-10-16,2026-10-23,wait
+C-006,Arash,HOUSING,Rental contract and the landlord's move-in confirmation,client,2026-10-16,2026-10-23,wait
+C-006,Arash,HEALTH_INSURANCE,Proof of health insurance,client,2026-10-16,2026-10-23,wait
+C-006,Arash,ENTRY_VISA,Copy of the entry visa you travelled on,client,2026-10-16,2026-10-23,wait
+C-006,Arash,TRANSLATIONS,Certified translations of documents that are not in German or English,client,2026-10-16,2026-10-23,wait
+C-006,Arash,ADMISSION_LETTER,University admission letter,client,2026-10-16,2026-10-23,wait
+C-006,Arash,PROOF_OF_FUNDS,Proof of funds (for example a blocked-account confirmation),client,2026-10-16,2026-10-23,wait
+C-006,Arash,LANGUAGE_PROOF,Proof of language skills for your course (German or English),client,2026-10-16,2026-10-23,wait

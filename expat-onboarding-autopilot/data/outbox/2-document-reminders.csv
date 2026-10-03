@@ -1,0 +1,35 @@
+﻿would_send_at,type,channel,to,recipient,case_id,subject,message,wording,sent
+"Fri 16 Oct 2026, 09:30",2. reminder to client,Email,client2@example.com,Jake (client),C-002,Friendly reminder: 2 documents still open (C-002),"Hi Jake,
+
+a friendly nudge on your residence permit file (case C-002). We are still missing:
+- Rental contract and the landlord's move-in confirmation
+- Proof of health insurance
+
+No stress if you are already on it. Just reply with a scan or photo when you have it. If something is hard to get, tell us and we will find a way.
+
+Please note: this checklist is illustrative and not legal advice. The immigration office decides what it needs in your case.
+
+Best wishes,
+the Elbe Example Relocation team (fictional agency, demo only)",template text (AI drafting off),"NO - demo, preview only"
+"Fri 16 Oct 2026, 09:30",2. reminder to HR,Email,hr.employer-b@example.com,Tom (HR) for Jake M.,C-002,Friendly reminder: 1 document still open (C-002),"Hi Tom,
+
+a quick reminder for the relocation of Jake M. (case C-002). We still need from your side:
+- Proof that you have worked for the company group for some time before the transfer
+
+If it is already on its way, please ignore this. Thank you!
+
+Best wishes,
+the Elbe Example Relocation team (fictional agency, demo only)",template text (AI drafting off),"NO - demo, preview only"
+"Fri 16 Oct 2026, 09:30",2. reminder to client,Email,client3@example.com,Larissa (client),C-003,Friendly reminder: 3 documents still open (C-003),"Hi Larissa,
+
+a friendly nudge on your residence permit file (case C-003). We are still missing:
+- Rental contract and the landlord's move-in confirmation
+- Proof of health insurance
+- Recognition or comparability statement for your degree
+
+No stress if you are already on it. Just reply with a scan or photo when you have it. If something is hard to get, tell us and we will find a way.
+
+Please note: this checklist is illustrative and not legal advice. The immigration office decides what it needs in your case.
+
+Best wishes,
+the Elbe Example Relocation team (fictional agency, demo only)",template text (AI drafting off),"NO - demo, preview only"

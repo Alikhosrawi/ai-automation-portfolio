@@ -1,0 +1,65 @@
+﻿would_send_at,type,channel,to,recipient,case_id,subject,message,wording,sent
+"Fri 16 Oct 2026, 09:00",1. welcome + checklist,Email,client5@example.com,Yui (client),C-005,"Welcome! Your document checklist (C-005, Family reunion)","Hi Yui,
+
+welcome to Elbe Example Relocation! We've opened your case C-005 (Family reunion). Here is your document checklist (10 items):
+
+- Passport (valid for the whole planned stay) and a copy of all used pages
+  Why: The office checks who you are and that your passport stays valid.
+- One recent biometric passport photo (35 x 45 mm)
+  Why: It goes on your residence card.
+- Residence permit application form (signed)
+  Why: This is the actual application. We pre-fill it and you only sign.
+- Proof that you registered your Hamburg address
+  Why: Everyone who moves into a flat in Germany registers the address. The confirmation is usually asked for.
+- Rental contract and the landlord's move-in confirmation
+  Why: Shows where you live. The landlord's confirmation is also needed for the address registration.
+- Proof of health insurance
+  Why: Health insurance is required for everyone living in Germany.
+- Certified translations of documents that are not in German or English
+  Why: Offices usually only read German or English. A certified translator can help.
+- Marriage certificate (with apostille or legalisation if needed)
+  Why: Shows the family relationship.
+- Copy of your partner's residence permit or passport
+  Why: Shows your partner's right to live in Germany.
+- Proof that the flat is big enough for the family
+  Why: The office checks there is enough living space for everyone.
+
+No need to send everything at once. Reply with scans or photos whenever you have them, and we'll tick them off. If something is hard to get, just tell us.
+
+Please note: this checklist is illustrative and not legal advice. The immigration office decides what it needs in your case.
+
+Best wishes,
+the Elbe Example Relocation team (fictional agency, demo only)",template text (AI drafting off),"NO - demo, preview only"
+"Fri 16 Oct 2026, 09:00",1. welcome + checklist,Email,client6@example.com,Arash (client),C-006,"Welcome! Your document checklist (C-006, Student)","Hi Arash,
+
+welcome to Elbe Example Relocation! We've opened your case C-006 (Student). Here is your document checklist (11 items):
+
+- Passport (valid for the whole planned stay) and a copy of all used pages
+  Why: The office checks who you are and that your passport stays valid.
+- One recent biometric passport photo (35 x 45 mm)
+  Why: It goes on your residence card.
+- Residence permit application form (signed)
+  Why: This is the actual application. We pre-fill it and you only sign.
+- Proof that you registered your Hamburg address
+  Why: Everyone who moves into a flat in Germany registers the address. The confirmation is usually asked for.
+- Rental contract and the landlord's move-in confirmation
+  Why: Shows where you live. The landlord's confirmation is also needed for the address registration.
+- Proof of health insurance
+  Why: Health insurance is required for everyone living in Germany.
+- Copy of the entry visa you travelled on
+  Why: Shows how you entered. (In this illustrative rule set, US and Japanese nationals apply after arriving, so they skip this.)
+- Certified translations of documents that are not in German or English
+  Why: Offices usually only read German or English. A certified translator can help.
+- University admission letter
+  Why: Shows the study place.
+- Proof of funds (for example a blocked-account confirmation)
+  Why: Shows you can cover living costs while studying.
+- Proof of language skills for your course (German or English)
+  Why: The university and the office check you can follow the course.
+
+No need to send everything at once. Reply with scans or photos whenever you have them, and we'll tick them off. If something is hard to get, just tell us.
+
+Please note: this checklist is illustrative and not legal advice. The immigration office decides what it needs in your case.
+
+Best wishes,
+the Elbe Example Relocation team (fictional agency, demo only)",template text (AI drafting off),"NO - demo, preview only"

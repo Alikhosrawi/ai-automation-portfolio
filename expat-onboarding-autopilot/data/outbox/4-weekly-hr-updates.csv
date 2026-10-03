@@ -1,0 +1,48 @@
+﻿would_send_at,type,channel,to,recipient,case_id,subject,message,wording,sent
+"Fri 16 Oct 2026, 16:00",4. weekly update: HR,Email,hr.employer-a@example.com,Mara (HR) for Priya S.,C-001,"Relocation update: Priya S. (C-001), 73% of documents in","Hi Mara,
+
+weekly relocation update for Priya S. (case C-001, EU Blue Card).
+
+Progress: 8 of 11 documents in (73%).
+Needed from you:
+- Employer's declaration about the job (salary and hours)
+From the employee: 2 item(s) still open. We are in touch with them directly.
+Next step: immigration office appointment once the file is complete.
+
+Best wishes,
+the Elbe Example Relocation team (fictional agency, demo only)",template text (AI drafting off),"NO - demo, preview only"
+"Fri 16 Oct 2026, 16:00",4. weekly update: HR,Email,hr.employer-b@example.com,Tom (HR) for Jake M.,C-002,"Relocation update: Jake M. (C-002), 70% of documents in","Hi Tom,
+
+weekly relocation update for Jake M. (case C-002, ICT card).
+
+Progress: 7 of 10 documents in (70%).
+Needed from you:
+- Proof that you have worked for the company group for some time before the transfer
+From the employee: 2 item(s) still open. We are in touch with them directly.
+Next step: immigration office appointment once the file is complete.
+
+Best wishes,
+the Elbe Example Relocation team (fictional agency, demo only)",template text (AI drafting off),"NO - demo, preview only"
+"Fri 16 Oct 2026, 16:00",4. weekly update: HR,Email,hr.employer-c@example.com,Ines (HR) for Larissa C.,C-003,"Relocation update: Larissa C. (C-003), 75% of documents in","Hi Ines,
+
+weekly relocation update for Larissa C. (case C-003, §18b skilled worker).
+
+Progress: 9 of 12 documents in (75%).
+Nothing needed from you this week.
+From the employee: 3 item(s) still open. We are in touch with them directly.
+Next step: immigration office appointment once the file is complete.
+
+Best wishes,
+the Elbe Example Relocation team (fictional agency, demo only)",template text (AI drafting off),"NO - demo, preview only"
+"Fri 16 Oct 2026, 16:00",4. weekly update: HR,Email,hr.employer-a@example.com,Mara (HR) for Chidi O.,C-004,"Relocation update: Chidi O. (C-004), 36% of documents in","Hi Mara,
+
+weekly relocation update for Chidi O. (case C-004, EU Blue Card).
+
+Progress: 4 of 11 documents in (36%).
+Needed from you:
+- Employer's declaration about the job (salary and hours)
+From the employee: 6 item(s) still open. We are in touch with them directly.
+Next step: immigration office appointment once the file is complete.
+
+Best wishes,
+the Elbe Example Relocation team (fictional agency, demo only)",template text (AI drafting off),"NO - demo, preview only"
