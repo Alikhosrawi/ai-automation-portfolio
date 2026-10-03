@@ -1,0 +1,1222 @@
+{
+  "name": "Physio reminders + no-show follow-ups (DEMO, sends nothing)",
+  "nodes": [
+    {
+      "name": "Run the demo day (test button)",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -240,
+        300
+      ],
+      "parameters": {},
+      "id": "48eaa9f9-34fe-4b27-80ed-1edd525ef7e4"
+    },
+    {
+      "name": "Every afternoon 15:00",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 15
+            }
+          ]
+        }
+      },
+      "id": "fd218ab4-3aeb-477f-a0a2-76d4888fb6e7"
+    },
+    {
+      "name": "Every 15 minutes",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        300
+      ],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 15
+            }
+          ]
+        }
+      },
+      "id": "4f75c918-29f9-45cf-b0ba-539d82ebe61b"
+    },
+    {
+      "name": "Every evening 18:30",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        760
+      ],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 18,
+              "triggerAtMinute": 30
+            }
+          ]
+        }
+      },
+      "id": "d90b90b3-9a06-4acc-8d8e-07973bd93fd5"
+    },
+    {
+      "name": "What time is it? (1)",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        240,
+        0
+      ],
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "686fcc7b-e994-4ae7-b050-c89795646fd0",
+              "name": "now",
+              "value": "2026-10-05T15:00:00",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": false,
+        "options": {}
+      },
+      "id": "017b05ed-1e55-4c14-b28d-4ac64ec00b95"
+    },
+    {
+      "name": "Read appointment sheet (1)",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        480,
+        0
+      ],
+      "parameters": {
+        "fileSelector": "/home/node/.n8n-files/physio-demo/appointments.csv",
+        "options": {}
+      },
+      "id": "92917e7c-468a-47ed-a191-6ac665713e05"
+    },
+    {
+      "name": "Rows (1)",
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        720,
+        0
+      ],
+      "parameters": {
+        "options": {
+          "headerRow": true
+        }
+      },
+      "id": "3679ef70-220d-4f66-9b0d-9ee647a6729d"
+    },
+    {
+      "name": "Booked for tomorrow?",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2,
+      "position": [
+        960,
+        0
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "5af4c275-aee0-41ec-ad06-7c8feab74826",
+              "leftValue": "={{ $json.status }}",
+              "rightValue": "booked",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            },
+            {
+              "id": "a3c39608-3d90-4b0c-b368-6cd7db9e6888",
+              "leftValue": "={{ $json.date }}",
+              "rightValue": "={{ DateTime.fromISO($('What time is it? (1)').first().json.now, { zone: 'Europe/Berlin' }).plus({ days: 1 }).toFormat('yyyy-LL-dd') }}",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "9fd7a742-b68e-47f0-bf59-722be81bf022"
+    },
+    {
+      "name": "Write reminder",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1200,
+        0
+      ],
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "e542146a-54b5-477a-917f-5927033481e5",
+              "name": "would_send_at",
+              "value": "={{ DateTime.fromISO($('What time is it? (1)').first().json.now, { zone: 'Europe/Berlin' }).toFormat('ccc d LLL, HH:mm') }}",
+              "type": "string"
+            },
+            {
+              "id": "19aaa315-0758-4101-ac66-cface0237e7d",
+              "name": "type",
+              "value": "1. reminder",
+              "type": "string"
+            },
+            {
+              "id": "1fb1df28-a85e-475b-b623-06cd55530eab",
+              "name": "channel",
+              "value": "SMS",
+              "type": "string"
+            },
+            {
+              "id": "81ec6740-ea98-44ea-84b5-b74d1095b210",
+              "name": "to",
+              "value": "={{ $json.phone }}",
+              "type": "string"
+            },
+            {
+              "id": "f65be448-fded-4c15-81b7-895e6d168411",
+              "name": "patient",
+              "value": "={{ $json.first_name }}",
+              "type": "string"
+            },
+            {
+              "id": "7b06cacf-54c0-4373-aa34-d8bc6dd870f4",
+              "name": "appointment",
+              "value": "={{ DateTime.fromISO($json.date + 'T' + $json.time, { zone: 'Europe/Berlin' }).toFormat(\"cccc d LLL 'at' HH:mm\") }}",
+              "type": "string"
+            },
+            {
+              "id": "445b3f57-2abe-469a-80d7-ff9a9c16b8f1",
+              "name": "therapist",
+              "value": "={{ $json.therapist }}",
+              "type": "string"
+            },
+            {
+              "id": "f93409c4-e067-4539-ab7d-ee614a972a5b",
+              "name": "message",
+              "value": "=Hi {{ $json.first_name }}, a reminder of your physio appointment with {{ $json.therapist }} tomorrow at {{ $json.time }} (Physio am Hafen). Reply 1 = See you tomorrow, or 2 = I need to move it.",
+              "type": "string"
+            },
+            {
+              "id": "92d4ca6f-8e8b-4bf0-b687-9c80d1856f7f",
+              "name": "sent",
+              "value": "NO - demo, preview only",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": false,
+        "options": {}
+      },
+      "id": "047cb23c-1fe6-493b-9b9f-ba165ca4db1f"
+    },
+    {
+      "name": "Make file (1)",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        1440,
+        0
+      ],
+      "parameters": {
+        "options": {}
+      },
+      "id": "c0aef09f-b58c-46bd-8610-6b7b9bb6e948"
+    },
+    {
+      "name": "Save 'would send' log (1)",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        1680,
+        0
+      ],
+      "parameters": {
+        "operation": "write",
+        "fileName": "=/home/node/.n8n-files/physio-demo/outbox/1-reminders.csv",
+        "options": {}
+      },
+      "id": "7bf887a5-5e47-4a65-a2ca-f4d2c6864f24"
+    },
+    {
+      "name": "What time is it? (2)",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        240,
+        300
+      ],
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "3efe7fb6-0f67-4966-b7ff-4c5b932b93e4",
+              "name": "now",
+              "value": "2026-10-05T17:00:00",
+              "type": "string"
+            },
+            {
+              "id": "1ab9495e-d2ea-4fdd-b2bf-40c59266ab68",
+              "name": "minutes_since_last_check",
+              "value": 120,
+              "type": "number"
+            }
+          ]
+        },
+        "includeOtherFields": false,
+        "options": {}
+      },
+      "id": "f944cf34-1b56-4ea0-a6c6-6c7cccc08281"
+    },
+    {
+      "name": "Read appointment sheet (2)",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        480,
+        300
+      ],
+      "parameters": {
+        "fileSelector": "/home/node/.n8n-files/physio-demo/appointments.csv",
+        "options": {}
+      },
+      "id": "826641c5-a57d-4919-ba56-c27c3b0163f2"
+    },
+    {
+      "name": "Rows (2)",
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        720,
+        300
+      ],
+      "parameters": {
+        "options": {
+          "headerRow": true
+        }
+      },
+      "id": "6e926590-0f11-4f9f-8d49-973af56036ee"
+    },
+    {
+      "name": "New reply: 'see you tomorrow'?",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2,
+      "position": [
+        960,
+        200
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "0ec0ed8d-c8ea-4804-849b-419c3360f0c3",
+              "leftValue": "={{ (() => { const t = DateTime.fromFormat(String($json.reply_received_at), 'yyyy-LL-dd HH:mm', { zone: 'Europe/Berlin' }); const now = DateTime.fromISO($('What time is it? (2)').first().json.now, { zone: 'Europe/Berlin' }); const since = now.minus({ minutes: $('What time is it? (2)').first().json.minutes_since_last_check }); return t.isValid && t > since && t <= now; })() && $json.status === 'booked' && ['1','yes','see you tomorrow','see you tomorrow!'].includes(String($json.patient_reply).trim().toLowerCase()) }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "71321831-8135-4e4f-b5d0-0dbf7e86797f"
+    },
+    {
+      "name": "New reply: 'I need to move it'?",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2,
+      "position": [
+        960,
+        400
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "43291307-53bb-4bbf-91ce-d34b824fecd1",
+              "leftValue": "={{ (() => { const t = DateTime.fromFormat(String($json.reply_received_at), 'yyyy-LL-dd HH:mm', { zone: 'Europe/Berlin' }); const now = DateTime.fromISO($('What time is it? (2)').first().json.now, { zone: 'Europe/Berlin' }); const since = now.minus({ minutes: $('What time is it? (2)').first().json.minutes_since_last_check }); return t.isValid && t > since && t <= now; })() && $json.status === 'booked' && ( String($json.patient_reply).trim() === '2' || String($json.patient_reply).toLowerCase().includes('move') ) }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "06cddcf1-8e08-4f3b-939c-80f59aed0be2"
+    },
+    {
+      "name": "New reply: something else?",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2,
+      "position": [
+        960,
+        600
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "f677c754-8ddd-4e7b-933b-bf99211233ba",
+              "leftValue": "={{ (() => { const t = DateTime.fromFormat(String($json.reply_received_at), 'yyyy-LL-dd HH:mm', { zone: 'Europe/Berlin' }); const now = DateTime.fromISO($('What time is it? (2)').first().json.now, { zone: 'Europe/Berlin' }); const since = now.minus({ minutes: $('What time is it? (2)').first().json.minutes_since_last_check }); return t.isValid && t > since && t <= now; })() && (() => { const r = String($json.patient_reply ?? '').trim().toLowerCase(); return $json.status === 'booked' && r !== '' && !['1','2','yes','see you tomorrow','see you tomorrow!'].includes(r) && !r.includes('move'); })() }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "f4198f89-8c5c-495d-b1af-3e572265d033"
+    },
+    {
+      "name": "Write thank-you",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1200,
+        200
+      ],
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "82357f08-0f6f-4a5c-90a4-03915b7ac244",
+              "name": "would_send_at",
+              "value": "={{ (() => { const t = DateTime.fromFormat(String($json.reply_received_at), 'yyyy-LL-dd HH:mm', { zone: 'Europe/Berlin' }); return t.startOf('hour').plus({ minutes: Math.ceil(t.minute / 15) * 15 }).toFormat('ccc d LLL, HH:mm'); })() }}",
+              "type": "string"
+            },
+            {
+              "id": "42109cf9-4a48-48f8-8e4a-fe78cf3ddd70",
+              "name": "type",
+              "value": "2a. confirmed",
+              "type": "string"
+            },
+            {
+              "id": "b06a921d-0e0f-4b9d-8458-711a96d799b6",
+              "name": "channel",
+              "value": "SMS",
+              "type": "string"
+            },
+            {
+              "id": "bd235965-2cda-41cd-89d6-d008a68c64fc",
+              "name": "to",
+              "value": "={{ $json.phone }}",
+              "type": "string"
+            },
+            {
+              "id": "0a8284c4-82bb-4661-8aaa-2f03140d1922",
+              "name": "patient",
+              "value": "={{ $json.first_name }}",
+              "type": "string"
+            },
+            {
+              "id": "f1e25abb-3e7e-4e7f-bb46-b1e961bb3158",
+              "name": "appointment",
+              "value": "={{ DateTime.fromISO($json.date + 'T' + $json.time, { zone: 'Europe/Berlin' }).toFormat(\"cccc d LLL 'at' HH:mm\") }}",
+              "type": "string"
+            },
+            {
+              "id": "7adb2034-db42-48a7-8695-52c18a73c918",
+              "name": "therapist",
+              "value": "={{ $json.therapist }}",
+              "type": "string"
+            },
+            {
+              "id": "a2dccfac-ef07-4afb-9a5a-a1d9d6f1aed1",
+              "name": "message",
+              "value": "=Thanks {{ $json.first_name }}! See you tomorrow at {{ $json.time }} with {{ $json.therapist }}.",
+              "type": "string"
+            },
+            {
+              "id": "05c1e214-24ad-48a2-af96-cf8cef08fce8",
+              "name": "sent",
+              "value": "NO - demo, preview only",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": false,
+        "options": {}
+      },
+      "id": "652d7c84-34bf-4b69-8279-8643bb578de6"
+    },
+    {
+      "name": "Offer open slots",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1200,
+        400
+      ],
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c9d48797-37a2-4140-8fa0-f8b6b27ba496",
+              "name": "would_send_at",
+              "value": "={{ (() => { const t = DateTime.fromFormat(String($json.reply_received_at), 'yyyy-LL-dd HH:mm', { zone: 'Europe/Berlin' }); return t.startOf('hour').plus({ minutes: Math.ceil(t.minute / 15) * 15 }).toFormat('ccc d LLL, HH:mm'); })() }}",
+              "type": "string"
+            },
+            {
+              "id": "59a56f0a-3292-4f49-8398-74bd4bc15be1",
+              "name": "type",
+              "value": "2b. move it: offer slots",
+              "type": "string"
+            },
+            {
+              "id": "9d4f6769-4f0d-4256-940b-a5681ac7cc7b",
+              "name": "channel",
+              "value": "SMS",
+              "type": "string"
+            },
+            {
+              "id": "b2ea489c-8a04-4e69-9555-398660c7110c",
+              "name": "to",
+              "value": "={{ $json.phone }}",
+              "type": "string"
+            },
+            {
+              "id": "4f0b8ac1-2074-4623-a948-4ad4470da1a7",
+              "name": "patient",
+              "value": "={{ $json.first_name }}",
+              "type": "string"
+            },
+            {
+              "id": "e137f5e7-a15d-4e2c-8f1d-92bcedb0deff",
+              "name": "appointment",
+              "value": "={{ DateTime.fromISO($json.date + 'T' + $json.time, { zone: 'Europe/Berlin' }).toFormat(\"cccc d LLL 'at' HH:mm\") }}",
+              "type": "string"
+            },
+            {
+              "id": "d84d5321-e694-4d6a-96b3-1e6657b6844c",
+              "name": "therapist",
+              "value": "={{ $json.therapist }}",
+              "type": "string"
+            },
+            {
+              "id": "2e9d8706-f86d-4a9e-bfea-94d8eda78365",
+              "name": "message",
+              "value": "=No problem, {{ $json.first_name }}. Open times we could offer: {{ (() => { const open = $('Rows (2)').all().map(i => i.json).filter(s => s.status === 'open' && s.date > $json.date).sort((a, b) => (a.date + a.time).localeCompare(b.date + b.time)); const mine = open.filter(s => s.therapist === $json.therapist); return (mine.length ? mine : open).slice(0, 3).map((s, n) => (n + 1) + ') ' + DateTime.fromISO(s.date + 'T' + s.time).toFormat(\"ccc d LLL HH:mm\") + ' with ' + s.therapist).join(', '); })() }}. Reply with the number you'd like and we'll book it.",
+              "type": "string"
+            },
+            {
+              "id": "6d8f7f82-e58d-4120-bf35-1e17f7fbb7be",
+              "name": "sent",
+              "value": "NO - demo, preview only",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": false,
+        "options": {}
+      },
+      "id": "037d55ec-ee38-4b74-8e6a-0968e0ac5bf5"
+    },
+    {
+      "name": "Flag for the team (no auto-reply)",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1200,
+        600
+      ],
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "5841f48f-656d-42d3-b2b6-2b8c0fd6fb35",
+              "name": "would_send_at",
+              "value": "={{ (() => { const t = DateTime.fromFormat(String($json.reply_received_at), 'yyyy-LL-dd HH:mm', { zone: 'Europe/Berlin' }); return t.startOf('hour').plus({ minutes: Math.ceil(t.minute / 15) * 15 }).toFormat('ccc d LLL, HH:mm'); })() }}",
+              "type": "string"
+            },
+            {
+              "id": "101392b9-9ba8-4934-8303-6bc1d202c104",
+              "name": "type",
+              "value": "2c. unclear: ask a human",
+              "type": "string"
+            },
+            {
+              "id": "cf8a042b-f16e-4a4d-8cc7-8693ea6038fa",
+              "name": "channel",
+              "value": "SMS",
+              "type": "string"
+            },
+            {
+              "id": "1ef98aab-ee10-4547-9375-420360fef94b",
+              "name": "to",
+              "value": "={{ $json.phone }}",
+              "type": "string"
+            },
+            {
+              "id": "66624385-d5b7-4d36-85ca-863571af5d08",
+              "name": "patient",
+              "value": "={{ $json.first_name }}",
+              "type": "string"
+            },
+            {
+              "id": "2a47b5b7-b4ee-4092-8ed0-f080534d1824",
+              "name": "appointment",
+              "value": "={{ DateTime.fromISO($json.date + 'T' + $json.time, { zone: 'Europe/Berlin' }).toFormat(\"cccc d LLL 'at' HH:mm\") }}",
+              "type": "string"
+            },
+            {
+              "id": "b120ff92-e395-4a55-bf53-e18e4655c42d",
+              "name": "therapist",
+              "value": "={{ $json.therapist }}",
+              "type": "string"
+            },
+            {
+              "id": "e2ce83a4-3e63-4aaf-be24-bdc2b6a07ec1",
+              "name": "message",
+              "value": "=(No automatic reply. Reception should read this one.) Patient wrote: \"{{ $json.patient_reply }}\"",
+              "type": "string"
+            },
+            {
+              "id": "bd18e9c0-e92b-474a-b3d9-29353a398097",
+              "name": "sent",
+              "value": "NO - for staff only",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": false,
+        "options": {}
+      },
+      "id": "e10b03af-ed64-47d1-a86e-94458a7291cb"
+    },
+    {
+      "name": "Put replies together",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [
+        1440,
+        400
+      ],
+      "parameters": {
+        "numberInputs": 3
+      },
+      "id": "1f609504-93a8-4913-9a27-970ac6a6dbbf"
+    },
+    {
+      "name": "Make file (2)",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        1680,
+        400
+      ],
+      "parameters": {
+        "options": {}
+      },
+      "id": "253a0ca5-8a91-4b3c-a38e-441fcfb44084"
+    },
+    {
+      "name": "Save 'would send' log (2)",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        1920,
+        400
+      ],
+      "parameters": {
+        "operation": "write",
+        "fileName": "=/home/node/.n8n-files/physio-demo/outbox/2-reply-handling.csv",
+        "options": {}
+      },
+      "id": "c7282fba-d687-4854-9f66-44438b6bc1e3"
+    },
+    {
+      "name": "What time is it? (3)",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        240,
+        760
+      ],
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "e9cfb597-2d0f-4d47-8c60-affe8357c3fa",
+              "name": "now",
+              "value": "2026-10-05T18:30:00",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": false,
+        "options": {}
+      },
+      "id": "b20e7f29-c187-4a0e-8b51-e86598463bfe"
+    },
+    {
+      "name": "Read appointment sheet (3)",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        480,
+        760
+      ],
+      "parameters": {
+        "fileSelector": "/home/node/.n8n-files/physio-demo/appointments.csv",
+        "options": {}
+      },
+      "id": "f31bd67d-8bcf-4641-b295-92a794252572"
+    },
+    {
+      "name": "Rows (3)",
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        720,
+        760
+      ],
+      "parameters": {
+        "options": {
+          "headerRow": true
+        }
+      },
+      "id": "de80f4db-7e35-4ef2-afa9-c3aa90755984"
+    },
+    {
+      "name": "No-show today?",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2,
+      "position": [
+        960,
+        760
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "3abdf646-5f7f-4efc-89b9-85040f6dc326",
+              "leftValue": "={{ $json.status }}",
+              "rightValue": "no-show",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            },
+            {
+              "id": "81138aca-abef-4a57-9427-fd4e39a8adb7",
+              "leftValue": "={{ $json.date }}",
+              "rightValue": "={{ DateTime.fromISO($('What time is it? (3)').first().json.now, { zone: 'Europe/Berlin' }).toFormat('yyyy-LL-dd') }}",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "7c23b617-580b-47f6-8fc6-aad34e5a10b4"
+    },
+    {
+      "name": "Write kind rebook note",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1200,
+        760
+      ],
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "f614da50-09c1-4505-b02b-d3db29a59772",
+              "name": "would_send_at",
+              "value": "={{ DateTime.fromISO($('What time is it? (3)').first().json.now, { zone: 'Europe/Berlin' }).toFormat('ccc d LLL, HH:mm') }}",
+              "type": "string"
+            },
+            {
+              "id": "ec10df78-1df2-44d8-9c79-3144b6fe15b5",
+              "name": "type",
+              "value": "3. no-show follow-up",
+              "type": "string"
+            },
+            {
+              "id": "1d4fdb0e-7a54-413e-9941-5e32230d6e5c",
+              "name": "channel",
+              "value": "SMS",
+              "type": "string"
+            },
+            {
+              "id": "412c4186-5ea9-4e85-90c7-82e34560f7f8",
+              "name": "to",
+              "value": "={{ $json.phone }}",
+              "type": "string"
+            },
+            {
+              "id": "61581815-8e11-4c67-af87-95f7048a4029",
+              "name": "patient",
+              "value": "={{ $json.first_name }}",
+              "type": "string"
+            },
+            {
+              "id": "d314f785-72ca-418e-845f-6948719709c5",
+              "name": "appointment",
+              "value": "={{ DateTime.fromISO($json.date + 'T' + $json.time, { zone: 'Europe/Berlin' }).toFormat(\"cccc d LLL 'at' HH:mm\") }}",
+              "type": "string"
+            },
+            {
+              "id": "7f6c500a-d220-482b-a9db-6adc88b9bc15",
+              "name": "therapist",
+              "value": "={{ $json.therapist }}",
+              "type": "string"
+            },
+            {
+              "id": "798d2fee-4695-4151-806c-07e3f1e97a88",
+              "name": "message",
+              "value": "=Hi {{ $json.first_name }}, we missed you today at {{ $json.time }} with {{ $json.therapist }}. No worries, it happens! Would you like a new appointment? Just reply with a day that suits you, or call us on +49 000 0000 0000. Take care, the Physio am Hafen team",
+              "type": "string"
+            },
+            {
+              "id": "8a356fdd-cdc4-4fd3-94b3-e1af6bb41f2a",
+              "name": "sent",
+              "value": "NO - demo, preview only",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": false,
+        "options": {}
+      },
+      "id": "17a6d11a-8fc5-42ab-a043-bf8ee83d43c1"
+    },
+    {
+      "name": "Make file (3)",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        1440,
+        760
+      ],
+      "parameters": {
+        "options": {}
+      },
+      "id": "7a5401f2-72a0-4b81-93a8-6455a7ab9156"
+    },
+    {
+      "name": "Save 'would send' log (3)",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        1680,
+        760
+      ],
+      "parameters": {
+        "operation": "write",
+        "fileName": "=/home/node/.n8n-files/physio-demo/outbox/3-no-show-followups.csv",
+        "options": {}
+      },
+      "id": "4b24bc38-e447-464b-9a07-f783fdee787e"
+    },
+    {
+      "name": "Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        220,
+        -300
+      ],
+      "parameters": {
+        "width": 760,
+        "height": 220,
+        "color": 4,
+        "content": "## One chore, gone: physio reminders (DEMO)\n**1.** 15:00: remind everyone booked for tomorrow (reply 1 = see you tomorrow, 2 = I need to move it)\n**2.** Every 15 min: answer replies. 'Move it' gets 3 open slots. Anything unclear goes to a human.\n**3.** 18:30: kind rebook note to today's no-shows.\n\n**Nothing is sent.** Every message goes to a 'would send' log file. All names and numbers are made up."
+      },
+      "id": "a346ff07-dd0e-4754-9dbe-55e16729cd4d"
+    }
+  ],
+  "connections": {
+    "Run the demo day (test button)": {
+      "main": [
+        [
+          {
+            "node": "What time is it? (1)",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "What time is it? (2)",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "What time is it? (3)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Every afternoon 15:00": {
+      "main": [
+        [
+          {
+            "node": "What time is it? (1)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Every 15 minutes": {
+      "main": [
+        [
+          {
+            "node": "What time is it? (2)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Every evening 18:30": {
+      "main": [
+        [
+          {
+            "node": "What time is it? (3)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "What time is it? (1)": {
+      "main": [
+        [
+          {
+            "node": "Read appointment sheet (1)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read appointment sheet (1)": {
+      "main": [
+        [
+          {
+            "node": "Rows (1)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "What time is it? (2)": {
+      "main": [
+        [
+          {
+            "node": "Read appointment sheet (2)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read appointment sheet (2)": {
+      "main": [
+        [
+          {
+            "node": "Rows (2)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "What time is it? (3)": {
+      "main": [
+        [
+          {
+            "node": "Read appointment sheet (3)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read appointment sheet (3)": {
+      "main": [
+        [
+          {
+            "node": "Rows (3)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Rows (1)": {
+      "main": [
+        [
+          {
+            "node": "Booked for tomorrow?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Booked for tomorrow?": {
+      "main": [
+        [
+          {
+            "node": "Write reminder",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Write reminder": {
+      "main": [
+        [
+          {
+            "node": "Make file (1)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Make file (1)": {
+      "main": [
+        [
+          {
+            "node": "Save 'would send' log (1)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Rows (2)": {
+      "main": [
+        [
+          {
+            "node": "New reply: 'see you tomorrow'?",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "New reply: 'I need to move it'?",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "New reply: something else?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "New reply: 'see you tomorrow'?": {
+      "main": [
+        [
+          {
+            "node": "Write thank-you",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "New reply: 'I need to move it'?": {
+      "main": [
+        [
+          {
+            "node": "Offer open slots",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "New reply: something else?": {
+      "main": [
+        [
+          {
+            "node": "Flag for the team (no auto-reply)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Write thank-you": {
+      "main": [
+        [
+          {
+            "node": "Put replies together",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Offer open slots": {
+      "main": [
+        [
+          {
+            "node": "Put replies together",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Flag for the team (no auto-reply)": {
+      "main": [
+        [
+          {
+            "node": "Put replies together",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "Put replies together": {
+      "main": [
+        [
+          {
+            "node": "Make file (2)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Make file (2)": {
+      "main": [
+        [
+          {
+            "node": "Save 'would send' log (2)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Rows (3)": {
+      "main": [
+        [
+          {
+            "node": "No-show today?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "No-show today?": {
+      "main": [
+        [
+          {
+            "node": "Write kind rebook note",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Write kind rebook note": {
+      "main": [
+        [
+          {
+            "node": "Make file (3)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Make file (3)": {
+      "main": [
+        [
+          {
+            "node": "Save 'would send' log (3)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "Europe/Berlin",
+    "saveManualExecutions": true
+  },
+  "pinData": {}
+}
