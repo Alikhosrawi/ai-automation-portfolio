@@ -1,0 +1,28 @@
+id,first_name,phone,email,therapist,date,time,status,patient_reply,reply_received_at
+1,Anna,+49 000 0000 0001,patient1@example.com,Lena,2026-10-05,08:30,attended,,
+2,Ben,+49 000 0000 0002,patient2@example.com,Jonas,2026-10-05,09:00,no-show,,
+3,Clara,+49 000 0000 0003,patient3@example.com,Mira,2026-10-05,10:30,attended,,
+4,David,+49 000 0000 0004,patient4@example.com,Lena,2026-10-05,14:00,no-show,,
+5,Elif,+49 000 0000 0005,patient5@example.com,Jonas,2026-10-05,16:30,attended,,
+6,Felix,+49 000 0000 0006,patient6@example.com,Mira,2026-10-06,08:00,booked,1,2026-10-05 15:04
+7,Greta,+49 000 0000 0007,patient7@example.com,Lena,2026-10-06,09:30,booked,I need to move it,2026-10-05 15:12
+8,Hannes,+49 000 0000 0008,patient8@example.com,Jonas,2026-10-06,11:00,booked,2,2026-10-05 15:31
+9,Ida,+49 000 0000 0009,patient9@example.com,Mira,2026-10-06,13:30,booked,See you tomorrow!,2026-10-05 16:47
+10,Jan,+49 000 0000 0010,patient10@example.com,Lena,2026-10-06,15:00,booked,,
+11,Karla,+49 000 0000 0011,patient11@example.com,Jonas,2026-10-06,17:30,booked,can I come a bit later?,2026-10-05 16:52
+12,Leo,+49 000 0000 0012,patient12@example.com,Mira,2026-10-07,08:30,booked,,
+13,Mona,+49 000 0000 0013,patient13@example.com,Lena,2026-10-07,10:00,booked,,
+14,Nils,+49 000 0000 0014,patient14@example.com,Jonas,2026-10-07,12:30,booked,,
+15,Olga,+49 000 0000 0015,patient15@example.com,Mira,2026-10-07,16:00,booked,,
+16,Paul,+49 000 0000 0016,patient16@example.com,Lena,2026-10-08,09:00,booked,,
+17,Rosa,+49 000 0000 0017,patient17@example.com,Jonas,2026-10-08,11:30,booked,,
+18,Sami,+49 000 0000 0018,patient18@example.com,Mira,2026-10-08,15:30,booked,,
+19,,,,Lena,2026-10-07,14:00,open,,
+20,,,,Jonas,2026-10-07,09:00,open,,
+21,,,,Mira,2026-10-07,11:00,open,,
+22,,,,Lena,2026-10-07,16:30,open,,
+23,,,,Jonas,2026-10-07,15:00,open,,
+24,,,,Lena,2026-10-08,11:00,open,,
+25,,,,Jonas,2026-10-08,14:00,open,,
+26,,,,Mira,2026-10-08,10:00,open,,
+27,,,,Jonas,2026-10-08,16:30,open,,
