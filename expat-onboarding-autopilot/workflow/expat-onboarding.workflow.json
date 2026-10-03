@@ -1,0 +1,2862 @@
+{
+  "name": "Expat Onboarding Autopilot (DEMO, sends nothing)",
+  "nodes": [
+    {
+      "name": "Run the demo day (test button)",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -260,
+        620
+      ],
+      "parameters": {},
+      "id": "f9c19d3c-4bdb-473b-933e-7061499fd2b1"
+    },
+    {
+      "name": "Every morning 09:00",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        -180
+      ],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 9
+            }
+          ]
+        }
+      },
+      "id": "6e761c67-84be-4eda-b29d-04f731ddfd7b"
+    },
+    {
+      "name": "Every morning 09:30",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        440
+      ],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 9,
+              "triggerAtMinute": 30
+            }
+          ]
+        }
+      },
+      "id": "8839faee-bc94-47d2-9978-89f890f6c9b8"
+    },
+    {
+      "name": "Fridays 16:00",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        1060
+      ],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "weeks",
+              "triggerAtDay": [
+                5
+              ],
+              "triggerAtHour": 16
+            }
+          ]
+        }
+      },
+      "id": "5081dc37-00d2-4b09-a006-a5793d2fba99"
+    },
+    {
+      "name": "What time is it? (1)",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        240,
+        0
+      ],
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "2e76f938-cd82-4384-9208-9015d7b3ed23",
+              "name": "now",
+              "value": "2026-10-16T09:00:00",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": false,
+        "options": {}
+      },
+      "id": "d31dfcb5-c020-41fe-9662-5d1fadacb72b"
+    },
+    {
+      "name": "Read cases sheet (1)",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        480,
+        0
+      ],
+      "parameters": {
+        "fileSelector": "/home/node/.n8n-files/expat-demo/state/cases.csv",
+        "options": {}
+      },
+      "id": "ba473253-8350-41e7-b8d0-d13294bfbad5"
+    },
+    {
+      "name": "Cases (1)",
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        720,
+        0
+      ],
+      "parameters": {
+        "options": {
+          "headerRow": true,
+          "enableBOM": true
+        }
+      },
+      "alwaysOutputData": true,
+      "id": "12452898-2a43-4777-8948-2d49a864d885"
+    },
+    {
+      "name": "Read checklists sheet (1)",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        960,
+        0
+      ],
+      "parameters": {
+        "fileSelector": "/home/node/.n8n-files/expat-demo/state/checklists.csv",
+        "options": {}
+      },
+      "executeOnce": true,
+      "id": "9c5980e6-7faf-4808-ba71-c35ffb53e609"
+    },
+    {
+      "name": "Checklists (1)",
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        0
+      ],
+      "parameters": {
+        "options": {
+          "headerRow": true,
+          "enableBOM": true
+        }
+      },
+      "alwaysOutputData": true,
+      "id": "e0f41f87-dc39-4d1e-a40d-662767476bc4"
+    },
+    {
+      "name": "Read checklist rules",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        1440,
+        0
+      ],
+      "parameters": {
+        "fileSelector": "/home/node/.n8n-files/expat-demo/checklist-rules.csv",
+        "options": {}
+      },
+      "executeOnce": true,
+      "id": "99b27796-8823-46a4-bac2-0306a49199ba"
+    },
+    {
+      "name": "Rules",
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        1680,
+        0
+      ],
+      "parameters": {
+        "options": {
+          "headerRow": true,
+          "enableBOM": true
+        }
+      },
+      "alwaysOutputData": true,
+      "id": "dfe103f8-907a-4450-a8e0-e4403ea066d6"
+    },
+    {
+      "name": "Read intake form submissions",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        1920,
+        0
+      ],
+      "parameters": {
+        "fileSelector": "/home/node/.n8n-files/expat-demo/intake-form-submissions.csv",
+        "options": {}
+      },
+      "executeOnce": true,
+      "id": "6b7d485b-b427-405e-a337-fbc8bfb8a7e4"
+    },
+    {
+      "name": "Submissions",
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        2160,
+        0
+      ],
+      "parameters": {
+        "options": {
+          "headerRow": true,
+          "enableBOM": true
+        }
+      },
+      "alwaysOutputData": true,
+      "id": "64b0d33f-0f5c-47c6-9c96-7b51d9aaa690"
+    },
+    {
+      "name": "New submission? (no case yet)",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2,
+      "position": [
+        2400,
+        0
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "69ea53c0-e474-4d97-86e7-491a51df9762",
+              "leftValue": "={{ !!$json.submission_id && String($json.submitted_at) <= DateTime.fromISO($('What time is it? (1)').first().json.now, { zone: 'Europe/Berlin' }).toFormat('yyyy-LL-dd HH:mm') && !$('Cases (1)').all().map(i => i.json).filter(r => r.case_id).some(c => c.submission_id === $json.submission_id) }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "notes": "Guard: one case per form submission, however often this runs",
+      "notesInFlow": true,
+      "id": "f426ddf4-087d-41c2-9bf7-fb3e3134a955"
+    },
+    {
+      "name": "Open a case",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        2640,
+        0
+      ],
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "2805eaa3-1916-4456-83da-4bb645451361",
+              "name": "case_id",
+              "value": "={{ 'C-' + String($('Cases (1)').all().map(i => i.json).filter(r => r.case_id).length + $itemIndex + 1).padStart(3, '0') }}",
+              "type": "string"
+            },
+            {
+              "id": "17c363f4-a5e5-474f-8ce8-d5343f7c9524",
+              "name": "submission_id",
+              "value": "={{ $json.submission_id }}",
+              "type": "string"
+            },
+            {
+              "id": "2d738ebc-0630-4b90-9791-199dff870ba0",
+              "name": "opened_on",
+              "value": "={{ DateTime.fromISO($('What time is it? (1)').first().json.now, { zone: 'Europe/Berlin' }).toFormat('yyyy-LL-dd') }}",
+              "type": "string"
+            },
+            {
+              "id": "cacef10c-b015-4c43-8aae-13257b497fab",
+              "name": "checklist_sent_on",
+              "value": "={{ DateTime.fromISO($('What time is it? (1)').first().json.now, { zone: 'Europe/Berlin' }).toFormat('yyyy-LL-dd') }}",
+              "type": "string"
+            },
+            {
+              "id": "6b5e0709-91ee-44f6-ba16-3d510363011d",
+              "name": "first_name",
+              "value": "={{ $json.first_name }}",
+              "type": "string"
+            },
+            {
+              "id": "596af286-4ceb-42c7-bffe-56cfa74d431c",
+              "name": "last_name",
+              "value": "={{ $json.last_name }}",
+              "type": "string"
+            },
+            {
+              "id": "0199ae71-4444-4151-a295-f4b2e8aa2b05",
+              "name": "email",
+              "value": "={{ $json.email }}",
+              "type": "string"
+            },
+            {
+              "id": "e34e30aa-849b-40c5-8787-8f56ba4dfe7c",
+              "name": "phone",
+              "value": "={{ $json.phone }}",
+              "type": "string"
+            },
+            {
+              "id": "35f22129-32bb-4969-92f6-f020ae076e40",
+              "name": "nationality",
+              "value": "={{ $json.nationality }}",
+              "type": "string"
+            },
+            {
+              "id": "347711eb-dc31-444e-8d0b-9458462502ed",
+              "name": "permit_type",
+              "value": "={{ $json.permit_type }}",
+              "type": "string"
+            },
+            {
+              "id": "8e8d6062-2f1d-4eb7-ac9c-c547dee9b41d",
+              "name": "sponsor",
+              "value": "={{ $json.sponsor }}",
+              "type": "string"
+            },
+            {
+              "id": "629efefa-d74e-4276-a0b4-c0b480c2538a",
+              "name": "hr_contact_name",
+              "value": "={{ $json.hr_contact_name }}",
+              "type": "string"
+            },
+            {
+              "id": "ba7efad7-ec17-427f-ba3c-b615638eb57e",
+              "name": "hr_email",
+              "value": "={{ $json.hr_email }}",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": false,
+        "options": {}
+      },
+      "id": "bdfa18b7-2f5e-44c8-a7c5-e2447a8848b0"
+    },
+    {
+      "name": "Old + new cases",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        2880,
+        200
+      ],
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "6768bda4-46f5-48f4-8a21-03ffe4ec7d96",
+              "name": "rows",
+              "value": "={{ [...$('Cases (1)').all().map(i => i.json).filter(r => r.case_id), ...$('Open a case').all().map(i => i.json)] }}",
+              "type": "array"
+            }
+          ]
+        },
+        "includeOtherFields": false,
+        "options": {}
+      },
+      "executeOnce": true,
+      "id": "ce32bd69-feef-4d27-a4cd-2469914b9e2e"
+    },
+    {
+      "name": "One row per case",
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        3120,
+        200
+      ],
+      "parameters": {
+        "fieldToSplitOut": "rows",
+        "include": "noOtherFields",
+        "options": {}
+      },
+      "id": "95818e73-77a4-4c57-953d-c14b99a78dc0"
+    },
+    {
+      "name": "Make file: cases",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        3360,
+        200
+      ],
+      "parameters": {
+        "options": {}
+      },
+      "id": "005b8cfc-7830-49e1-807b-6749f56814ee"
+    },
+    {
+      "name": "Save cases sheet",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        3600,
+        200
+      ],
+      "parameters": {
+        "operation": "write",
+        "fileName": "=/home/node/.n8n-files/expat-demo/state/cases.csv",
+        "options": {}
+      },
+      "id": "0c1ed690-2dd0-4c02-8ad8-657dc65e108c"
+    },
+    {
+      "name": "Each new case x each rule",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [
+        2880,
+        -200
+      ],
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineAll",
+        "options": {}
+      },
+      "id": "583b85fa-a88a-43c2-890d-445d27fb594a"
+    },
+    {
+      "name": "Rule applies to this client?",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2,
+      "position": [
+        3120,
+        -200
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "2c2be9a2-dae5-4ce3-b968-4a0ad668e14c",
+              "leftValue": "={{ (($json.permit_types === '*' || String($json.permit_types).split('|').includes($json.permit_type)) && ($json.nationalities === '*' || String($json.nationalities).split('|').includes($json.nationality)) && !String($json.except_nationalities ?? '').split('|').includes($json.nationality)) }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "notes": "Rules table (CSV) is the source of truth",
+      "notesInFlow": true,
+      "id": "86b15d55-f6b3-4ad7-88ce-26492c6ce95c"
+    },
+    {
+      "name": "Checklist item",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        3360,
+        -320
+      ],
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "d0c67ab3-5e3c-4b38-bc4f-d1ceb23017ca",
+              "name": "case_id",
+              "value": "={{ $json.case_id }}",
+              "type": "string"
+            },
+            {
+              "id": "bca86a6a-da2b-4a07-9a8e-34a180bfa450",
+              "name": "rule_id",
+              "value": "={{ $json.rule_id }}",
+              "type": "string"
+            },
+            {
+              "id": "b0b45ba4-485c-402b-9f7c-948469f7985d",
+              "name": "doc_code",
+              "value": "={{ $json.doc_code }}",
+              "type": "string"
+            },
+            {
+              "id": "04800504-730e-4e85-9c2a-648c7f578423",
+              "name": "document",
+              "value": "={{ $json.document }}",
+              "type": "string"
+            },
+            {
+              "id": "568603bf-c9e1-47d4-b12e-ac1989515aa4",
+              "name": "provided_by",
+              "value": "={{ $json.provided_by }}",
+              "type": "string"
+            },
+            {
+              "id": "0315c5c4-a0d2-4ee0-be8d-d082bdd400a8",
+              "name": "why_plain_english",
+              "value": "={{ $json.why_plain_english }}",
+              "type": "string"
+            },
+            {
+              "id": "60668356-b3af-4afb-a885-a5bc13f91647",
+              "name": "added_on",
+              "value": "={{ DateTime.fromISO($('What time is it? (1)').first().json.now, { zone: 'Europe/Berlin' }).toFormat('yyyy-LL-dd') }}",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": false,
+        "options": {}
+      },
+      "id": "8a0bf23d-1a39-4181-81e3-829672ca5d3a"
+    },
+    {
+      "name": "Old + new checklist items",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        3600,
+        -320
+      ],
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c20fa627-67ba-4c6b-aa88-c258c31dc054",
+              "name": "rows",
+              "value": "={{ [...$('Checklists (1)').all().map(i => i.json).filter(r => r.case_id), ...$('Checklist item').all().map(i => i.json)] }}",
+              "type": "array"
+            }
+          ]
+        },
+        "includeOtherFields": false,
+        "options": {}
+      },
+      "executeOnce": true,
+      "id": "2b9ebe5e-6841-4c4e-8d82-5ea823532ac2"
+    },
+    {
+      "name": "One row per item",
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        3840,
+        -320
+      ],
+      "parameters": {
+        "fieldToSplitOut": "rows",
+        "include": "noOtherFields",
+        "options": {}
+      },
+      "id": "937aed5b-dd7b-4ba2-8e75-e3eaddbd41a7"
+    },
+    {
+      "name": "Make file: checklists",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        4080,
+        -320
+      ],
+      "parameters": {
+        "options": {}
+      },
+      "id": "64f55c88-c89f-478c-91dd-1397e7981cec"
+    },
+    {
+      "name": "Save checklists sheet",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        4320,
+        -320
+      ],
+      "parameters": {
+        "operation": "write",
+        "fileName": "=/home/node/.n8n-files/expat-demo/state/checklists.csv",
+        "options": {}
+      },
+      "id": "6a76220a-e2fa-4c89-baf2-e72b0ac30a90"
+    },
+    {
+      "name": "Explain each document (template text, AI off)",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        3360,
+        -120
+      ],
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "44fd7eae-87f2-4181-84cb-3146b81087a9",
+              "name": "case_id",
+              "value": "={{ $json.case_id }}",
+              "type": "string"
+            },
+            {
+              "id": "8153ca97-e134-4422-94df-dfd989a71d4c",
+              "name": "first_name",
+              "value": "={{ $json.first_name }}",
+              "type": "string"
+            },
+            {
+              "id": "b7b7096f-7a2c-4dca-95c5-35126d096c82",
+              "name": "email",
+              "value": "={{ $json.email }}",
+              "type": "string"
+            },
+            {
+              "id": "89bb0772-80f5-4a64-ae3f-024fdedda64f",
+              "name": "permit_type",
+              "value": "={{ $json.permit_type }}",
+              "type": "string"
+            },
+            {
+              "id": "ca80ac36-7dd0-439c-a617-6c6b1f155b0d",
+              "name": "line",
+              "value": "={{ '- ' + $json.document + ($json.provided_by === 'employer' ? ' [your employer sends this, nothing to do for you]' : '') + '\\n  Why: ' + $json.why_plain_english }}",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": false,
+        "options": {}
+      },
+      "notes": "Optional AI step would go here (not included)",
+      "notesInFlow": true,
+      "id": "314df564-7e79-44c0-99d5-602a5a434735"
+    },
+    {
+      "name": "One checklist per client",
+      "type": "n8n-nodes-base.summarize",
+      "typeVersion": 1.1,
+      "position": [
+        3600,
+        -120
+      ],
+      "parameters": {
+        "fieldsToSummarize": {
+          "values": [
+            {
+              "aggregation": "append",
+              "field": "line"
+            }
+          ]
+        },
+        "fieldsToSplitBy": "case_id,first_name,email,permit_type",
+        "options": {}
+      },
+      "id": "8bcdc582-e3d8-4b9b-a6ba-a352abe56b2d"
+    },
+    {
+      "name": "Write welcome + checklist",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        3840,
+        -120
+      ],
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "cc151783-b276-4739-8d98-3feeb58586ad",
+              "name": "would_send_at",
+              "value": "={{ DateTime.fromISO($('What time is it? (1)').first().json.now, { zone: 'Europe/Berlin' }).toFormat('ccc d LLL yyyy, HH:mm') }}",
+              "type": "string"
+            },
+            {
+              "id": "f374a627-3a55-4051-b472-3e6df7659122",
+              "name": "type",
+              "value": "1. welcome + checklist",
+              "type": "string"
+            },
+            {
+              "id": "e71e70e8-aeb4-459d-82be-10327ee23f7d",
+              "name": "channel",
+              "value": "Email",
+              "type": "string"
+            },
+            {
+              "id": "d6f83c4f-9c07-498a-97a6-8c9b2626bb90",
+              "name": "to",
+              "value": "={{ $json.email }}",
+              "type": "string"
+            },
+            {
+              "id": "bf6f3424-7bff-4063-8f3e-75e753186572",
+              "name": "recipient",
+              "value": "={{ $json.first_name }} (client)",
+              "type": "string"
+            },
+            {
+              "id": "cc946d97-5182-4e0e-b485-07467aa64cfc",
+              "name": "case_id",
+              "value": "={{ $json.case_id }}",
+              "type": "string"
+            },
+            {
+              "id": "80af18ff-79e4-4bce-9cc8-a972ac04fcda",
+              "name": "subject",
+              "value": "=Welcome! Your document checklist ({{ $json.case_id }}, {{ $json.permit_type }})",
+              "type": "string"
+            },
+            {
+              "id": "3b981f42-3f4f-4899-b13f-52d29bd72eab",
+              "name": "message",
+              "value": "=Hi {{ $json.first_name }},\n\nwelcome to Elbe Example Relocation! We've opened your case {{ $json.case_id }} ({{ $json.permit_type }}). Here is your document checklist ({{ $json.appended_line.length }} items):\n\n{{ $json.appended_line.join('\\n') }}\n\nNo need to send everything at once. Reply with scans or photos whenever you have them, and we'll tick them off. If something is hard to get, just tell us.\n\nPlease note: this checklist is illustrative and not legal advice. The immigration office decides what it needs in your case.\n\nBest wishes,\nthe Elbe Example Relocation team (fictional agency, demo only)",
+              "type": "string"
+            },
+            {
+              "id": "dd8d6b7a-c628-45ff-817f-26cf6b377c52",
+              "name": "wording",
+              "value": "template text (AI drafting off)",
+              "type": "string"
+            },
+            {
+              "id": "c505100d-43bf-4faa-909f-0982cb78d127",
+              "name": "sent",
+              "value": "NO - demo, preview only",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": false,
+        "options": {}
+      },
+      "id": "3f384804-3108-4dd4-809e-46abea98c61c"
+    },
+    {
+      "name": "Make file (1)",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        4080,
+        -120
+      ],
+      "parameters": {
+        "options": {}
+      },
+      "id": "3ae0294a-c130-448e-beb8-5146740e2a50"
+    },
+    {
+      "name": "Save 'would send' log (1)",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        4320,
+        -120
+      ],
+      "parameters": {
+        "operation": "write",
+        "fileName": "=/home/node/.n8n-files/expat-demo/outbox/1-welcome-checklists.csv",
+        "options": {}
+      },
+      "id": "bbdf5c72-7042-45e1-a327-c61e6946e8cd"
+    },
+    {
+      "name": "What time is it? (2)",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        240,
+        620
+      ],
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "dfd4e5b3-f704-43f8-8cde-eaa78991e273",
+              "name": "now",
+              "value": "2026-10-16T09:30:00",
+              "type": "string"
+            },
+            {
+              "id": "244a909c-4f76-476c-97f7-e3c75d1d85f8",
+              "name": "chase_every_days",
+              "value": 7,
+              "type": "number"
+            }
+          ]
+        },
+        "includeOtherFields": false,
+        "options": {}
+      },
+      "id": "b0d2daa7-4d72-48d6-b475-509a506bce98"
+    },
+    {
+      "name": "Read cases sheet (2)",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        480,
+        620
+      ],
+      "parameters": {
+        "fileSelector": "/home/node/.n8n-files/expat-demo/state/cases.csv",
+        "options": {}
+      },
+      "id": "d5f6026c-b19e-4039-80c8-3d6c244b755d"
+    },
+    {
+      "name": "Cases (2)",
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        720,
+        620
+      ],
+      "parameters": {
+        "options": {
+          "headerRow": true,
+          "enableBOM": true
+        }
+      },
+      "alwaysOutputData": true,
+      "id": "e4f1c5ee-6679-4295-8014-d56b559c5860"
+    },
+    {
+      "name": "Read documents received (2)",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        960,
+        620
+      ],
+      "parameters": {
+        "fileSelector": "/home/node/.n8n-files/expat-demo/documents-received.csv",
+        "options": {}
+      },
+      "executeOnce": true,
+      "id": "2c1a71dd-beb0-474a-aa43-493109ce1f80"
+    },
+    {
+      "name": "Received (2)",
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        620
+      ],
+      "parameters": {
+        "options": {
+          "headerRow": true,
+          "enableBOM": true
+        }
+      },
+      "alwaysOutputData": true,
+      "id": "8bbe0267-7c4b-41c5-adf3-d1988ba1b84f"
+    },
+    {
+      "name": "Read chase log",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        1440,
+        620
+      ],
+      "parameters": {
+        "fileSelector": "/home/node/.n8n-files/expat-demo/state/chase-log.csv",
+        "options": {}
+      },
+      "executeOnce": true,
+      "id": "7223f7fa-dd49-45c0-9505-371f7abd4b30"
+    },
+    {
+      "name": "Chase log (2)",
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        1680,
+        620
+      ],
+      "parameters": {
+        "options": {
+          "headerRow": true,
+          "enableBOM": true
+        }
+      },
+      "alwaysOutputData": true,
+      "id": "f04b2336-5153-4816-900b-f89dfeb50896"
+    },
+    {
+      "name": "Read checklists sheet (2)",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        1920,
+        620
+      ],
+      "parameters": {
+        "fileSelector": "/home/node/.n8n-files/expat-demo/state/checklists.csv",
+        "options": {}
+      },
+      "executeOnce": true,
+      "id": "44b3a783-4821-467f-9b35-60dc2df6ad1c"
+    },
+    {
+      "name": "Checklist items (2)",
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        2160,
+        620
+      ],
+      "parameters": {
+        "options": {
+          "headerRow": true,
+          "enableBOM": true
+        }
+      },
+      "alwaysOutputData": true,
+      "id": "fa8993dd-0610-45f9-a513-253cc9393e3a"
+    },
+    {
+      "name": "Still missing?",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2,
+      "position": [
+        2400,
+        620
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "fdc13d6c-73e1-43f6-a109-be170ac6c116",
+              "leftValue": "={{ !!$json.case_id && !$('Received (2)').all().map(i => i.json).filter(r => r.case_id === $json.case_id && String(r.received_at) <= DateTime.fromISO($('What time is it? (2)').first().json.now, { zone: 'Europe/Berlin' }).toFormat('yyyy-LL-dd HH:mm')).some(r => r.doc_code === $json.doc_code) }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "771956a3-8dac-472a-8671-02ca198fe94c"
+    },
+    {
+      "name": "When may we chase this?",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        2640,
+        620
+      ],
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "23cca3f4-47a7-43c6-9dbb-68b82fc7e69f",
+              "name": "case_id",
+              "value": "={{ $json.case_id }}",
+              "type": "string"
+            },
+            {
+              "id": "6ecdbcb1-b663-4fda-a1f3-dbfca64c4df6",
+              "name": "client",
+              "value": "={{ $('Cases (2)').all().map(i => i.json).filter(r => r.case_id).find(c => c.case_id === $json.case_id)?.first_name }}",
+              "type": "string"
+            },
+            {
+              "id": "a8bee371-026f-4925-af60-f709af3860aa",
+              "name": "doc_code",
+              "value": "={{ $json.doc_code }}",
+              "type": "string"
+            },
+            {
+              "id": "dc9f6196-fc44-4110-b2d3-af1b66aaa96d",
+              "name": "document",
+              "value": "={{ $json.document }}",
+              "type": "string"
+            },
+            {
+              "id": "79278b13-fe15-4120-9396-7af2836c1b5e",
+              "name": "ask",
+              "value": "={{ $json.provided_by === 'employer' ? 'hr' : 'client' }}",
+              "type": "string"
+            },
+            {
+              "id": "922d6ab5-3dba-42cc-94fe-3b0a32273155",
+              "name": "last_contact_on",
+              "value": "={{ [$('Cases (2)').all().map(i => i.json).filter(r => r.case_id).find(c => c.case_id === $json.case_id)?.checklist_sent_on, $('Chase log (2)').all().map(i => i.json).filter(c => c.case_id === $json.case_id && c.doc_code === $json.doc_code).map(c => String(c.chased_on)).sort().pop()].filter(Boolean).sort().pop() }}",
+              "type": "string"
+            },
+            {
+              "id": "b1db1980-f365-4ba3-ae83-71012198d753",
+              "name": "next_chase_allowed_on",
+              "value": "={{ DateTime.fromISO([$('Cases (2)').all().map(i => i.json).filter(r => r.case_id).find(c => c.case_id === $json.case_id)?.checklist_sent_on, $('Chase log (2)').all().map(i => i.json).filter(c => c.case_id === $json.case_id && c.doc_code === $json.doc_code).map(c => String(c.chased_on)).sort().pop()].filter(Boolean).sort().pop()).plus({ days: $('What time is it? (2)').first().json.chase_every_days }).toFormat('yyyy-LL-dd') }}",
+              "type": "string"
+            },
+            {
+              "id": "0a7d6e49-fd83-48f8-b165-6357b21264ab",
+              "name": "decision",
+              "value": "={{ DateTime.fromISO($('What time is it? (2)').first().json.now, { zone: 'Europe/Berlin' }).toFormat('yyyy-LL-dd') >= DateTime.fromISO([$('Cases (2)').all().map(i => i.json).filter(r => r.case_id).find(c => c.case_id === $json.case_id)?.checklist_sent_on, $('Chase log (2)').all().map(i => i.json).filter(c => c.case_id === $json.case_id && c.doc_code === $json.doc_code).map(c => String(c.chased_on)).sort().pop()].filter(Boolean).sort().pop()).plus({ days: $('What time is it? (2)').first().json.chase_every_days }).toFormat('yyyy-LL-dd') ? 'chase today' : 'wait' }}",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": false,
+        "options": {}
+      },
+      "notes": "Guard: last contact + 7 days",
+      "notesInFlow": true,
+      "id": "510dbbb0-6311-4cd6-94cf-a79f795fb85a"
+    },
+    {
+      "name": "Make file: decisions",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        2880,
+        820
+      ],
+      "parameters": {
+        "options": {}
+      },
+      "id": "fd890ac1-15a5-4e4f-8a16-0e4a94b6280e"
+    },
+    {
+      "name": "Save chase decisions",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        3120,
+        820
+      ],
+      "parameters": {
+        "operation": "write",
+        "fileName": "=/home/node/.n8n-files/expat-demo/outbox/2b-chase-decisions.csv",
+        "options": {}
+      },
+      "id": "f28f709d-a4d2-4084-954e-e6d9360d13dc"
+    },
+    {
+      "name": "Chase today?",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2,
+      "position": [
+        2880,
+        620
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "311c193d-df98-4ca4-b448-bbb35dd7c120",
+              "leftValue": "={{ $json.decision === 'chase today' }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "ca9e9ed1-d448-4ef4-b66f-446d8ad53c4b"
+    },
+    {
+      "name": "Chase log entry",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        3120,
+        420
+      ],
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "0ea9eb4e-c1f2-4d4b-b2da-164548decf8d",
+              "name": "case_id",
+              "value": "={{ $json.case_id }}",
+              "type": "string"
+            },
+            {
+              "id": "9210ce03-ea58-4114-897d-29099b73730a",
+              "name": "doc_code",
+              "value": "={{ $json.doc_code }}",
+              "type": "string"
+            },
+            {
+              "id": "235ed046-264c-48b1-b291-1361fbc8da7c",
+              "name": "chased_on",
+              "value": "={{ DateTime.fromISO($('What time is it? (2)').first().json.now, { zone: 'Europe/Berlin' }).toFormat('yyyy-LL-dd') }}",
+              "type": "string"
+            },
+            {
+              "id": "d94c0e7f-e8c4-46bd-8b6e-81fa4e841154",
+              "name": "sent_to",
+              "value": "={{ $json.ask }}",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": false,
+        "options": {}
+      },
+      "id": "f324be51-575f-4a68-b14c-f24627994269"
+    },
+    {
+      "name": "Old + new chases",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        3360,
+        420
+      ],
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "26cebd90-0381-4b58-ba70-98aaaad61f97",
+              "name": "rows",
+              "value": "={{ [...$('Chase log (2)').all().map(i => i.json).filter(r => r.case_id), ...$('Chase log entry').all().map(i => i.json)] }}",
+              "type": "array"
+            }
+          ]
+        },
+        "includeOtherFields": false,
+        "options": {}
+      },
+      "executeOnce": true,
+      "id": "248e2978-ff64-4402-99e0-ba3de8ba3fe2"
+    },
+    {
+      "name": "One row per chase",
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        3600,
+        420
+      ],
+      "parameters": {
+        "fieldToSplitOut": "rows",
+        "include": "noOtherFields",
+        "options": {}
+      },
+      "id": "d4d4566d-9ed3-4185-98c3-106bac02e78a"
+    },
+    {
+      "name": "Make file: chase log",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        3840,
+        420
+      ],
+      "parameters": {
+        "options": {}
+      },
+      "id": "6d036b9a-1363-42d1-8e81-0056ea785018"
+    },
+    {
+      "name": "Save chase log",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        4080,
+        420
+      ],
+      "parameters": {
+        "operation": "write",
+        "fileName": "=/home/node/.n8n-files/expat-demo/state/chase-log.csv",
+        "options": {}
+      },
+      "id": "e8e2cff0-40a0-40fd-9e70-726c017a6af9"
+    },
+    {
+      "name": "One reminder per person",
+      "type": "n8n-nodes-base.summarize",
+      "typeVersion": 1.1,
+      "position": [
+        3120,
+        620
+      ],
+      "parameters": {
+        "fieldsToSummarize": {
+          "values": [
+            {
+              "aggregation": "append",
+              "field": "document"
+            }
+          ]
+        },
+        "fieldsToSplitBy": "case_id,ask",
+        "options": {}
+      },
+      "id": "f8e760c6-35a8-4e48-9f45-cc2f54b01838"
+    },
+    {
+      "name": "Write polite reminder",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        3360,
+        620
+      ],
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "42b27afb-f136-488b-968c-f1293d191c2c",
+              "name": "would_send_at",
+              "value": "={{ DateTime.fromISO($('What time is it? (2)').first().json.now, { zone: 'Europe/Berlin' }).toFormat('ccc d LLL yyyy, HH:mm') }}",
+              "type": "string"
+            },
+            {
+              "id": "9b268c98-02c7-41aa-b9d7-918818db3ea3",
+              "name": "type",
+              "value": "={{ $json.ask === 'hr' ? '2. reminder to HR' : '2. reminder to client' }}",
+              "type": "string"
+            },
+            {
+              "id": "440a29cd-a616-4a5d-a6fb-035be8037e33",
+              "name": "channel",
+              "value": "Email",
+              "type": "string"
+            },
+            {
+              "id": "3eba8c3f-d6a2-4617-80d5-182f39df3b16",
+              "name": "to",
+              "value": "={{ (c => $json.ask === 'hr' ? c.hr_email : c.email)($('Cases (2)').all().map(i => i.json).filter(r => r.case_id).find(c => c.case_id === $json.case_id)) }}",
+              "type": "string"
+            },
+            {
+              "id": "787ab671-113b-4582-9284-88ffdf662ee0",
+              "name": "recipient",
+              "value": "={{ (c => $json.ask === 'hr' ? c.hr_contact_name + ' for ' + c.first_name + ' ' + c.last_name[0] + '.' : c.first_name + ' (client)')($('Cases (2)').all().map(i => i.json).filter(r => r.case_id).find(c => c.case_id === $json.case_id)) }}",
+              "type": "string"
+            },
+            {
+              "id": "5f6431e2-fb71-4866-8370-ce308eed88d1",
+              "name": "case_id",
+              "value": "={{ $json.case_id }}",
+              "type": "string"
+            },
+            {
+              "id": "263fbaa6-8160-4cd1-be7e-4195ea888945",
+              "name": "subject",
+              "value": "=Friendly reminder: {{ $json.appended_document.length }} document{{ $json.appended_document.length > 1 ? 's' : '' }} still open ({{ $json.case_id }})",
+              "type": "string"
+            },
+            {
+              "id": "7ddcbfde-204f-4b49-910a-eda9bcb3d2ce",
+              "name": "message",
+              "value": "={{ (c => $json.ask === 'hr' ? 'Hi ' + c.hr_contact_name.replace(' (HR)', '') + ',\\n\\na quick reminder for the relocation of ' + c.first_name + ' ' + c.last_name[0] + '. (case ' + c.case_id + '). We still need from your side:\\n- ' + $json.appended_document.join('\\n- ') + '\\n\\nIf it is already on its way, please ignore this. Thank you!\\n\\nBest wishes,\\nthe Elbe Example Relocation team (fictional agency, demo only)' : 'Hi ' + c.first_name + ',\\n\\na friendly nudge on your residence permit file (case ' + c.case_id + '). We are still missing:\\n- ' + $json.appended_document.join('\\n- ') + '\\n\\nNo stress if you are already on it. Just reply with a scan or photo when you have it. If something is hard to get, tell us and we will find a way.\\n\\nPlease note: this checklist is illustrative and not legal advice. The immigration office decides what it needs in your case.\\n\\nBest wishes,\\nthe Elbe Example Relocation team (fictional agency, demo only)')($('Cases (2)').all().map(i => i.json).filter(r => r.case_id).find(c => c.case_id === $json.case_id)) }}",
+              "type": "string"
+            },
+            {
+              "id": "c331f01e-f53d-487a-8eb9-4f0b1ab729f5",
+              "name": "wording",
+              "value": "template text (AI drafting off)",
+              "type": "string"
+            },
+            {
+              "id": "0f5ee79a-930f-4eeb-a768-27e425c2d894",
+              "name": "sent",
+              "value": "NO - demo, preview only",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": false,
+        "options": {}
+      },
+      "id": "27cb12c2-4bf8-47dc-bde4-f6ab8e1d1ff7"
+    },
+    {
+      "name": "Make file (2)",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        3600,
+        620
+      ],
+      "parameters": {
+        "options": {}
+      },
+      "id": "168f4fa7-37dd-4008-b0f1-51c8572cbb16"
+    },
+    {
+      "name": "Save 'would send' log (2)",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        3840,
+        620
+      ],
+      "parameters": {
+        "operation": "write",
+        "fileName": "=/home/node/.n8n-files/expat-demo/outbox/2-document-reminders.csv",
+        "options": {}
+      },
+      "id": "6d1a59a2-92f3-483e-956c-8640bb9f97a2"
+    },
+    {
+      "name": "What time is it? (3)",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        240,
+        1240
+      ],
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "08886b6b-04c6-4c8b-8cc8-1e9b390dfd45",
+              "name": "now",
+              "value": "2026-10-16T16:00:00",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": false,
+        "options": {}
+      },
+      "id": "ff61d9fe-09b8-40aa-a525-c6772dfee64d"
+    },
+    {
+      "name": "Read checklists sheet (3)",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        480,
+        1240
+      ],
+      "parameters": {
+        "fileSelector": "/home/node/.n8n-files/expat-demo/state/checklists.csv",
+        "options": {}
+      },
+      "id": "6b8dd939-7637-48d6-abb4-8e845fc70740"
+    },
+    {
+      "name": "Checklist items (3)",
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        720,
+        1240
+      ],
+      "parameters": {
+        "options": {
+          "headerRow": true,
+          "enableBOM": true
+        }
+      },
+      "alwaysOutputData": true,
+      "id": "3b621061-01e6-4a3c-81a0-927155569273"
+    },
+    {
+      "name": "Read documents received (3)",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        960,
+        1240
+      ],
+      "parameters": {
+        "fileSelector": "/home/node/.n8n-files/expat-demo/documents-received.csv",
+        "options": {}
+      },
+      "executeOnce": true,
+      "id": "fdfb9cd1-e331-4f9a-a182-1124257f0979"
+    },
+    {
+      "name": "Received (3)",
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        1240
+      ],
+      "parameters": {
+        "options": {
+          "headerRow": true,
+          "enableBOM": true
+        }
+      },
+      "alwaysOutputData": true,
+      "id": "637fb8e4-4cc3-4ab3-9f05-9b776be03c16"
+    },
+    {
+      "name": "Read status log",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        1440,
+        1240
+      ],
+      "parameters": {
+        "fileSelector": "/home/node/.n8n-files/expat-demo/state/status-log.csv",
+        "options": {}
+      },
+      "executeOnce": true,
+      "id": "a3c58873-9ffe-4dba-bf38-9767682d417a"
+    },
+    {
+      "name": "Status log",
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        1680,
+        1240
+      ],
+      "parameters": {
+        "options": {
+          "headerRow": true,
+          "enableBOM": true
+        }
+      },
+      "alwaysOutputData": true,
+      "id": "caf96c70-27b3-4727-8fc0-32ab1dbb64b7"
+    },
+    {
+      "name": "Read cases sheet (3)",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        1920,
+        1240
+      ],
+      "parameters": {
+        "fileSelector": "/home/node/.n8n-files/expat-demo/state/cases.csv",
+        "options": {}
+      },
+      "executeOnce": true,
+      "id": "b51097ef-f67c-4741-b535-64adc164a091"
+    },
+    {
+      "name": "Cases (3)",
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        2160,
+        1240
+      ],
+      "parameters": {
+        "options": {
+          "headerRow": true,
+          "enableBOM": true
+        }
+      },
+      "alwaysOutputData": true,
+      "id": "d41f54fb-ad5c-4fb3-92c1-190af8f72c63"
+    },
+    {
+      "name": "No update this week yet?",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2,
+      "position": [
+        2400,
+        1240
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "9df185f9-06ef-4e4f-a133-b0f62e588fde",
+              "leftValue": "={{ !!$json.case_id && $json.opened_on < DateTime.fromISO($('What time is it? (3)').first().json.now, { zone: 'Europe/Berlin' }).toFormat('yyyy-LL-dd') && !$('Status log').all().some(s => s.json.case_id === $json.case_id && s.json.week === DateTime.fromISO($('What time is it? (3)').first().json.now, { zone: 'Europe/Berlin' }).toFormat(\"kkkk-'W'WW\")) }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "notes": "Guard: one update per case per week (cases opened today got the welcome instead)",
+      "notesInFlow": true,
+      "id": "54138c91-6a5a-4d9b-b506-b1970ccea522"
+    },
+    {
+      "name": "Case progress",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        2640,
+        1240
+      ],
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "1d440ecc-e65f-450a-b08c-22ba68847485",
+              "name": "case_id",
+              "value": "={{ $json.case_id }}",
+              "type": "string"
+            },
+            {
+              "id": "2eaddd5c-25ac-4d56-ac44-84b6bd7a1ff2",
+              "name": "first_name",
+              "value": "={{ $json.first_name }}",
+              "type": "string"
+            },
+            {
+              "id": "0e5d648f-213c-4e3c-80eb-0ad27607f44e",
+              "name": "short_name",
+              "value": "={{ $json.first_name + ' ' + $json.last_name[0] + '.' }}",
+              "type": "string"
+            },
+            {
+              "id": "6d7d61fa-ceb4-49ab-a07c-c1f34515d4bd",
+              "name": "email",
+              "value": "={{ $json.email }}",
+              "type": "string"
+            },
+            {
+              "id": "795b943c-9c00-447e-9583-cca24d6d2f77",
+              "name": "permit_type",
+              "value": "={{ $json.permit_type }}",
+              "type": "string"
+            },
+            {
+              "id": "7a14a567-7025-4854-b958-ff32516aea27",
+              "name": "hr_contact_name",
+              "value": "={{ $json.hr_contact_name }}",
+              "type": "string"
+            },
+            {
+              "id": "324b4a84-16eb-4c53-8f7a-0e84c361c3df",
+              "name": "hr_email",
+              "value": "={{ $json.hr_email }}",
+              "type": "string"
+            },
+            {
+              "id": "8d6fffdd-9d25-4573-bd63-af93a276cdee",
+              "name": "total",
+              "value": "={{ $('Checklist items (3)').all().map(i => i.json).filter(r => r.case_id === $json.case_id).length }}",
+              "type": "number"
+            },
+            {
+              "id": "0605ede4-e915-4f5b-adf1-e1537ee8b8ce",
+              "name": "done",
+              "value": "={{ $('Checklist items (3)').all().map(i => i.json).filter(r => r.case_id === $json.case_id).filter(d => $('Received (3)').all().map(i => i.json).filter(r => r.case_id === $json.case_id && String(r.received_at) <= DateTime.fromISO($('What time is it? (3)').first().json.now, { zone: 'Europe/Berlin' }).toFormat('yyyy-LL-dd HH:mm')).some(r => r.doc_code === d.doc_code)).length }}",
+              "type": "number"
+            },
+            {
+              "id": "a4aa6bc6-5189-4afe-8d35-d146001753ff",
+              "name": "new_this_week",
+              "value": "={{ $('Checklist items (3)').all().map(i => i.json).filter(r => r.case_id === $json.case_id).filter(d => $('Received (3)').all().map(i => i.json).filter(r => r.case_id === $json.case_id && String(r.received_at) <= DateTime.fromISO($('What time is it? (3)').first().json.now, { zone: 'Europe/Berlin' }).toFormat('yyyy-LL-dd HH:mm')).some(r => r.doc_code === d.doc_code && String(r.received_at) > DateTime.fromISO($('What time is it? (3)').first().json.now, { zone: 'Europe/Berlin' }).minus({ days: 7 }).toFormat('yyyy-LL-dd HH:mm'))).map(d => d.document) }}",
+              "type": "array"
+            },
+            {
+              "id": "ac69602d-b933-466d-b4de-769d328feeb2",
+              "name": "open_client",
+              "value": "={{ $('Checklist items (3)').all().map(i => i.json).filter(r => r.case_id === $json.case_id).filter(d => d.provided_by !== 'employer' && !$('Received (3)').all().map(i => i.json).filter(r => r.case_id === $json.case_id && String(r.received_at) <= DateTime.fromISO($('What time is it? (3)').first().json.now, { zone: 'Europe/Berlin' }).toFormat('yyyy-LL-dd HH:mm')).some(r => r.doc_code === d.doc_code)).map(d => d.document) }}",
+              "type": "array"
+            },
+            {
+              "id": "1a4bd48b-63aa-4a30-a8a3-d00bf124d792",
+              "name": "open_employer",
+              "value": "={{ $('Checklist items (3)').all().map(i => i.json).filter(r => r.case_id === $json.case_id).filter(d => d.provided_by === 'employer' && !$('Received (3)').all().map(i => i.json).filter(r => r.case_id === $json.case_id && String(r.received_at) <= DateTime.fromISO($('What time is it? (3)').first().json.now, { zone: 'Europe/Berlin' }).toFormat('yyyy-LL-dd HH:mm')).some(r => r.doc_code === d.doc_code)).map(d => d.document) }}",
+              "type": "array"
+            },
+            {
+              "id": "eef3913a-a71d-4a15-8910-d7a301f37f5c",
+              "name": "week",
+              "value": "={{ DateTime.fromISO($('What time is it? (3)').first().json.now, { zone: 'Europe/Berlin' }).toFormat(\"kkkk-'W'WW\") }}",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": false,
+        "options": {}
+      },
+      "id": "f1eefd78-ae06-4af8-9202-a83a60492d3f"
+    },
+    {
+      "name": "Write client update",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        2880,
+        1080
+      ],
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "fcbb9472-43af-43ae-8345-e363bbab8c44",
+              "name": "would_send_at",
+              "value": "={{ DateTime.fromISO($('What time is it? (3)').first().json.now, { zone: 'Europe/Berlin' }).toFormat('ccc d LLL yyyy, HH:mm') }}",
+              "type": "string"
+            },
+            {
+              "id": "9e66b5d9-3094-47cf-b1e5-643701903059",
+              "name": "type",
+              "value": "3. weekly update: client",
+              "type": "string"
+            },
+            {
+              "id": "e1f0db15-8cb8-4fcd-b4a5-c4f1218fec34",
+              "name": "channel",
+              "value": "Email",
+              "type": "string"
+            },
+            {
+              "id": "1e85bafd-a6bf-436e-b692-4d56f071a5b8",
+              "name": "to",
+              "value": "={{ $json.email }}",
+              "type": "string"
+            },
+            {
+              "id": "cd5627cd-9680-4945-8408-7ee6e8852fb4",
+              "name": "recipient",
+              "value": "={{ $json.first_name }} (client)",
+              "type": "string"
+            },
+            {
+              "id": "c4916a67-e6ed-4446-8799-58d196e696c9",
+              "name": "case_id",
+              "value": "={{ $json.case_id }}",
+              "type": "string"
+            },
+            {
+              "id": "31a0f9c7-9f61-4945-bf82-afa009277bf0",
+              "name": "subject",
+              "value": "=Your weekly update: {{ $json.done }} of {{ $json.total }} documents in ({{ $json.case_id }})",
+              "type": "string"
+            },
+            {
+              "id": "305b5ffa-fd9a-4b73-974f-7abdf94dd1c7",
+              "name": "message",
+              "value": "={{ 'Hi ' + $json.first_name + ',\\n\\nhere is your weekly update for case ' + $json.case_id + ' (' + $json.permit_type + ').\\n\\n' + 'Progress: ' + $json.done + ' of ' + $json.total + ' documents in.\\n' + ($json.new_this_week.length ? 'New this week (thank you!):\\n- ' + $json.new_this_week.join('\\n- ') + '\\n' : '') + ($json.open_client.length ? 'Still needed from you:\\n- ' + $json.open_client.join('\\n- ') + '\\n' : 'Nothing more needed from you right now.\\n') + ($json.open_employer.length ? 'Waiting for your employer (we are in touch with HR, nothing to do for you):\\n- ' + $json.open_employer.join('\\n- ') + '\\n' : '') + '\\nNext step: ' + ($json.done === $json.total ? 'your file is complete. We will book your appointment at the immigration office and confirm the date.' : 'once everything is in, we book your appointment at the immigration office.') + '\\n\\nPlease note: this checklist is illustrative and not legal advice. The immigration office decides what it needs in your case.\\n\\nBest wishes,\\nthe Elbe Example Relocation team (fictional agency, demo only)' }}",
+              "type": "string"
+            },
+            {
+              "id": "8657d954-0bd0-4e5b-a4d8-f52f118a206c",
+              "name": "wording",
+              "value": "template text (AI drafting off)",
+              "type": "string"
+            },
+            {
+              "id": "fb993291-8c80-44cf-ba77-9c8d11bc23fc",
+              "name": "sent",
+              "value": "NO - demo, preview only",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": false,
+        "options": {}
+      },
+      "id": "c2c63901-03e9-4184-8ccb-ffea243e443b"
+    },
+    {
+      "name": "Make file (3)",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        3120,
+        1080
+      ],
+      "parameters": {
+        "options": {}
+      },
+      "id": "df7f9f79-6478-4dc6-bc3d-f3246ce06f8c"
+    },
+    {
+      "name": "Save 'would send' log (3)",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        3360,
+        1080
+      ],
+      "parameters": {
+        "operation": "write",
+        "fileName": "=/home/node/.n8n-files/expat-demo/outbox/3-weekly-client-updates.csv",
+        "options": {}
+      },
+      "id": "301e8deb-d55f-49f7-9814-4302d526b4a6"
+    },
+    {
+      "name": "Has an HR contact?",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2,
+      "position": [
+        2880,
+        1240
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "6fdc9c8a-e15e-4274-b39c-e47bd6b5585c",
+              "leftValue": "={{ !!$json.hr_email }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "c8d693a9-4daa-42e5-bda4-294dd91d1c6c"
+    },
+    {
+      "name": "Write HR update (progress only)",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        3120,
+        1240
+      ],
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "a08f8048-459c-49c6-a206-10cd0f9d8d01",
+              "name": "would_send_at",
+              "value": "={{ DateTime.fromISO($('What time is it? (3)').first().json.now, { zone: 'Europe/Berlin' }).toFormat('ccc d LLL yyyy, HH:mm') }}",
+              "type": "string"
+            },
+            {
+              "id": "8e43bc49-d16e-4218-a556-169e4c8f76cb",
+              "name": "type",
+              "value": "4. weekly update: HR",
+              "type": "string"
+            },
+            {
+              "id": "d463c06b-1e81-4009-93bf-15059049af2e",
+              "name": "channel",
+              "value": "Email",
+              "type": "string"
+            },
+            {
+              "id": "4eee792a-d7ca-46e7-bae4-ee94c82e7348",
+              "name": "to",
+              "value": "={{ $json.hr_email }}",
+              "type": "string"
+            },
+            {
+              "id": "e14897f3-7893-4620-84b8-3756e062ae2f",
+              "name": "recipient",
+              "value": "={{ $json.hr_contact_name }} for {{ $json.short_name }}",
+              "type": "string"
+            },
+            {
+              "id": "3e03c23f-d17c-4ff8-909f-f42065af4476",
+              "name": "case_id",
+              "value": "={{ $json.case_id }}",
+              "type": "string"
+            },
+            {
+              "id": "950c4585-f405-49b9-b82b-3e45317d4737",
+              "name": "subject",
+              "value": "=Relocation update: {{ $json.short_name }} ({{ $json.case_id }}), {{ Math.round(100 * $json.done / $json.total) }}% of documents in",
+              "type": "string"
+            },
+            {
+              "id": "269351f4-ee80-4066-8292-c63e51ae7607",
+              "name": "message",
+              "value": "={{ 'Hi ' + $json.hr_contact_name.replace(' (HR)', '') + ',\\n\\nweekly relocation update for ' + $json.short_name + ' (case ' + $json.case_id + ', ' + $json.permit_type + ').\\n\\n' + 'Progress: ' + $json.done + ' of ' + $json.total + ' documents in (' + Math.round(100 * $json.done / $json.total) + '%).\\n' + ($json.open_employer.length ? 'Needed from you:\\n- ' + $json.open_employer.join('\\n- ') + '\\n' : 'Nothing needed from you this week.\\n') + 'From the employee: ' + ($json.open_client.length ? $json.open_client.length + ' item(s) still open. We are in touch with them directly.' : 'all items in.') + '\\nNext step: ' + ($json.done === $json.total ? 'booking the immigration office appointment.' : 'immigration office appointment once the file is complete.') + '\\n\\nBest wishes,\\nthe Elbe Example Relocation team (fictional agency, demo only)' }}",
+              "type": "string"
+            },
+            {
+              "id": "dfd614f7-5d6b-4d94-b1e1-ffeef3ca3622",
+              "name": "wording",
+              "value": "template text (AI drafting off)",
+              "type": "string"
+            },
+            {
+              "id": "bad69f3d-be00-41d9-9516-38c253b0a52f",
+              "name": "sent",
+              "value": "NO - demo, preview only",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": false,
+        "options": {}
+      },
+      "notes": "HR sees progress only, no personal documents",
+      "notesInFlow": true,
+      "id": "2a60bbf9-ada7-49da-9d8e-f4dfb8a227c9"
+    },
+    {
+      "name": "Make file (4)",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        3360,
+        1240
+      ],
+      "parameters": {
+        "options": {}
+      },
+      "id": "c35f71c4-eb27-465b-8550-8f0cae7f39f6"
+    },
+    {
+      "name": "Save 'would send' log (4)",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        3600,
+        1240
+      ],
+      "parameters": {
+        "operation": "write",
+        "fileName": "=/home/node/.n8n-files/expat-demo/outbox/4-weekly-hr-updates.csv",
+        "options": {}
+      },
+      "id": "fa2f3248-e317-47ea-96a6-7a8c4c7bf9ec"
+    },
+    {
+      "name": "Status log entry",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        2880,
+        1440
+      ],
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "2fb04a75-b9ff-47b1-9341-f318e00155dc",
+              "name": "case_id",
+              "value": "={{ $json.case_id }}",
+              "type": "string"
+            },
+            {
+              "id": "25cb9ea9-94dd-434b-af50-d2a392fecef0",
+              "name": "week",
+              "value": "={{ $json.week }}",
+              "type": "string"
+            },
+            {
+              "id": "b478e852-ff98-4dc7-bdab-882b9fc05a87",
+              "name": "written_on",
+              "value": "={{ DateTime.fromISO($('What time is it? (3)').first().json.now, { zone: 'Europe/Berlin' }).toFormat('yyyy-LL-dd') }}",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": false,
+        "options": {}
+      },
+      "id": "dbcc2b4c-3ce5-47f0-89c6-4a1ae8c79472"
+    },
+    {
+      "name": "Old + new updates",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        3120,
+        1440
+      ],
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "f022ebda-8780-4cda-b666-413f673d44a1",
+              "name": "rows",
+              "value": "={{ [...$('Status log').all().map(i => i.json).filter(r => r.case_id), ...$('Status log entry').all().map(i => i.json)] }}",
+              "type": "array"
+            }
+          ]
+        },
+        "includeOtherFields": false,
+        "options": {}
+      },
+      "executeOnce": true,
+      "id": "ae4d3584-1f68-4185-b6d9-cb2dc06bbdef"
+    },
+    {
+      "name": "One row per update",
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        3360,
+        1440
+      ],
+      "parameters": {
+        "fieldToSplitOut": "rows",
+        "include": "noOtherFields",
+        "options": {}
+      },
+      "id": "5fe03ee9-7e1c-4ce2-bbb6-27bbfe06e942"
+    },
+    {
+      "name": "Make file: status log",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        3600,
+        1440
+      ],
+      "parameters": {
+        "options": {}
+      },
+      "id": "5f8a2233-1c10-43c0-ae7c-57ea5a423eab"
+    },
+    {
+      "name": "Save status log",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        3840,
+        1440
+      ],
+      "parameters": {
+        "operation": "write",
+        "fileName": "=/home/node/.n8n-files/expat-demo/state/status-log.csv",
+        "options": {}
+      },
+      "id": "60d61800-a5ab-4d13-a270-530ea57428e3"
+    },
+    {
+      "name": "Lane note 1",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -60,
+        -470
+      ],
+      "parameters": {
+        "width": 4660,
+        "height": 820,
+        "color": 7,
+        "content": "## 1. Intake: new client -> case + document checklist + welcome email  (live: every morning 09:00)"
+      },
+      "id": "c7f0434c-db09-4fa0-9627-6376d3321b4f"
+    },
+    {
+      "name": "Lane note 2",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -60,
+        370
+      ],
+      "parameters": {
+        "width": 4660,
+        "height": 560,
+        "color": 7,
+        "content": "## 2. Chasing: polite reminders for missing documents, at most once per document every 7 days  (live: every morning 09:30)"
+      },
+      "id": "c0c2d6e3-d941-4423-95a9-3d2281d1d5b6"
+    },
+    {
+      "name": "Lane note 3",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -60,
+        990
+      ],
+      "parameters": {
+        "width": 4660,
+        "height": 560,
+        "color": 7,
+        "content": "## 3. Weekly status: one update for the client, a progress-only one for HR  (live: Fridays 16:00)"
+      },
+      "id": "09f3b135-5315-4318-bc23-651877355ec0"
+    },
+    {
+      "name": "Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        200,
+        -860
+      ],
+      "parameters": {
+        "width": 900,
+        "height": 300,
+        "color": 4,
+        "content": "## Expat Onboarding Autopilot (DEMO, sends nothing)\n**1. Intake** (09:00): each new form submission opens a case and gets a document checklist built from the rules table (permit type + nationality).\n**2. Chasing** (09:30): polite reminders for missing documents. Guard: at most one reminder per document every 7 days. Employer documents are asked from HR.\n**3. Weekly status** (Fri 16:00): one update for the client, a progress-only one for HR. Guard: one per case per week.\n\n**Nothing is sent.** Every message goes to a 'would send' log file. All people, companies and numbers are made up. The checklist is illustrative, not legal advice."
+      },
+      "id": "bd7634bc-14a1-4715-97ce-c0e61bbf096b"
+    },
+    {
+      "name": "AI note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        3300,
+        -860
+      ],
+      "parameters": {
+        "width": 520,
+        "height": 200,
+        "color": 3,
+        "content": "### Optional AI step: OFF (not included)\nThe friendly wording comes from the rules table (column why_plain_english). This is the fallback, and it is what the demo uses. To try AI, put an AI step between 'Explain each document' and 'One checklist per client' (needs your own API key; not tested here)."
+      },
+      "id": "81fef4a6-28b4-4646-b684-45354752afa0"
+    }
+  ],
+  "connections": {
+    "Run the demo day (test button)": {
+      "main": [
+        [
+          {
+            "node": "What time is it? (1)",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "What time is it? (2)",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "What time is it? (3)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Every morning 09:00": {
+      "main": [
+        [
+          {
+            "node": "What time is it? (1)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Every morning 09:30": {
+      "main": [
+        [
+          {
+            "node": "What time is it? (2)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fridays 16:00": {
+      "main": [
+        [
+          {
+            "node": "What time is it? (3)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "What time is it? (1)": {
+      "main": [
+        [
+          {
+            "node": "Read cases sheet (1)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read cases sheet (1)": {
+      "main": [
+        [
+          {
+            "node": "Cases (1)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cases (1)": {
+      "main": [
+        [
+          {
+            "node": "Read checklists sheet (1)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read checklists sheet (1)": {
+      "main": [
+        [
+          {
+            "node": "Checklists (1)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Checklists (1)": {
+      "main": [
+        [
+          {
+            "node": "Read checklist rules",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read checklist rules": {
+      "main": [
+        [
+          {
+            "node": "Rules",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Rules": {
+      "main": [
+        [
+          {
+            "node": "Read intake form submissions",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Each new case x each rule",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Read intake form submissions": {
+      "main": [
+        [
+          {
+            "node": "Submissions",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Submissions": {
+      "main": [
+        [
+          {
+            "node": "New submission? (no case yet)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "New submission? (no case yet)": {
+      "main": [
+        [
+          {
+            "node": "Open a case",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Open a case": {
+      "main": [
+        [
+          {
+            "node": "Old + new cases",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Each new case x each rule",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Old + new cases": {
+      "main": [
+        [
+          {
+            "node": "One row per case",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "One row per case": {
+      "main": [
+        [
+          {
+            "node": "Make file: cases",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Make file: cases": {
+      "main": [
+        [
+          {
+            "node": "Save cases sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Each new case x each rule": {
+      "main": [
+        [
+          {
+            "node": "Rule applies to this client?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Rule applies to this client?": {
+      "main": [
+        [
+          {
+            "node": "Checklist item",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Explain each document (template text, AI off)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Checklist item": {
+      "main": [
+        [
+          {
+            "node": "Old + new checklist items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Old + new checklist items": {
+      "main": [
+        [
+          {
+            "node": "One row per item",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "One row per item": {
+      "main": [
+        [
+          {
+            "node": "Make file: checklists",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Make file: checklists": {
+      "main": [
+        [
+          {
+            "node": "Save checklists sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Explain each document (template text, AI off)": {
+      "main": [
+        [
+          {
+            "node": "One checklist per client",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "One checklist per client": {
+      "main": [
+        [
+          {
+            "node": "Write welcome + checklist",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Write welcome + checklist": {
+      "main": [
+        [
+          {
+            "node": "Make file (1)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Make file (1)": {
+      "main": [
+        [
+          {
+            "node": "Save 'would send' log (1)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "What time is it? (2)": {
+      "main": [
+        [
+          {
+            "node": "Read cases sheet (2)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read cases sheet (2)": {
+      "main": [
+        [
+          {
+            "node": "Cases (2)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cases (2)": {
+      "main": [
+        [
+          {
+            "node": "Read documents received (2)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read documents received (2)": {
+      "main": [
+        [
+          {
+            "node": "Received (2)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Received (2)": {
+      "main": [
+        [
+          {
+            "node": "Read chase log",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read chase log": {
+      "main": [
+        [
+          {
+            "node": "Chase log (2)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Chase log (2)": {
+      "main": [
+        [
+          {
+            "node": "Read checklists sheet (2)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read checklists sheet (2)": {
+      "main": [
+        [
+          {
+            "node": "Checklist items (2)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Checklist items (2)": {
+      "main": [
+        [
+          {
+            "node": "Still missing?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Still missing?": {
+      "main": [
+        [
+          {
+            "node": "When may we chase this?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When may we chase this?": {
+      "main": [
+        [
+          {
+            "node": "Chase today?",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Make file: decisions",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Chase today?": {
+      "main": [
+        [
+          {
+            "node": "One reminder per person",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Chase log entry",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "One reminder per person": {
+      "main": [
+        [
+          {
+            "node": "Write polite reminder",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Write polite reminder": {
+      "main": [
+        [
+          {
+            "node": "Make file (2)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Make file (2)": {
+      "main": [
+        [
+          {
+            "node": "Save 'would send' log (2)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Make file: decisions": {
+      "main": [
+        [
+          {
+            "node": "Save chase decisions",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Chase log entry": {
+      "main": [
+        [
+          {
+            "node": "Old + new chases",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Old + new chases": {
+      "main": [
+        [
+          {
+            "node": "One row per chase",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "One row per chase": {
+      "main": [
+        [
+          {
+            "node": "Make file: chase log",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Make file: chase log": {
+      "main": [
+        [
+          {
+            "node": "Save chase log",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "What time is it? (3)": {
+      "main": [
+        [
+          {
+            "node": "Read checklists sheet (3)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read checklists sheet (3)": {
+      "main": [
+        [
+          {
+            "node": "Checklist items (3)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Checklist items (3)": {
+      "main": [
+        [
+          {
+            "node": "Read documents received (3)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read documents received (3)": {
+      "main": [
+        [
+          {
+            "node": "Received (3)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Received (3)": {
+      "main": [
+        [
+          {
+            "node": "Read status log",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read status log": {
+      "main": [
+        [
+          {
+            "node": "Status log",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Status log": {
+      "main": [
+        [
+          {
+            "node": "Read cases sheet (3)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read cases sheet (3)": {
+      "main": [
+        [
+          {
+            "node": "Cases (3)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cases (3)": {
+      "main": [
+        [
+          {
+            "node": "No update this week yet?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "No update this week yet?": {
+      "main": [
+        [
+          {
+            "node": "Case progress",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Case progress": {
+      "main": [
+        [
+          {
+            "node": "Write client update",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Has an HR contact?",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Status log entry",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Write client update": {
+      "main": [
+        [
+          {
+            "node": "Make file (3)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Make file (3)": {
+      "main": [
+        [
+          {
+            "node": "Save 'would send' log (3)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Has an HR contact?": {
+      "main": [
+        [
+          {
+            "node": "Write HR update (progress only)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Write HR update (progress only)": {
+      "main": [
+        [
+          {
+            "node": "Make file (4)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Make file (4)": {
+      "main": [
+        [
+          {
+            "node": "Save 'would send' log (4)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Status log entry": {
+      "main": [
+        [
+          {
+            "node": "Old + new updates",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Old + new updates": {
+      "main": [
+        [
+          {
+            "node": "One row per update",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "One row per update": {
+      "main": [
+        [
+          {
+            "node": "Make file: status log",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Make file: status log": {
+      "main": [
+        [
+          {
+            "node": "Save status log",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "Europe/Berlin",
+    "saveManualExecutions": true
+  },
+  "pinData": {}
+}
