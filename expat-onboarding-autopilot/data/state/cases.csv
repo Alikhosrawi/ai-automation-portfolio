@@ -1,0 +1,5 @@
+﻿case_id,submission_id,opened_on,checklist_sent_on,first_name,last_name,email,phone,nationality,permit_type,sponsor,hr_contact_name,hr_email
+C-001,S-101,2026-09-21,2026-09-21,Priya,Sharma,client1@example.com,+49 000 0000 0101,Indian,EU Blue Card,Example Employer A GmbH,Mara (HR),hr.employer-a@example.com
+C-002,S-102,2026-09-25,2026-09-25,Jake,Miller,client2@example.com,+49 000 0000 0102,US,ICT card,Example Employer B Inc.,Tom (HR),hr.employer-b@example.com
+C-003,S-103,2026-10-02,2026-10-02,Larissa,Costa,client3@example.com,+49 000 0000 0103,Brazilian,§18b skilled worker,Example Employer C GmbH,Ines (HR),hr.employer-c@example.com
+C-004,S-104,2026-10-12,2026-10-12,Chidi,Okafor,client4@example.com,+49 000 0000 0104,Nigerian,EU Blue Card,Example Employer A GmbH,Mara (HR),hr.employer-a@example.com
