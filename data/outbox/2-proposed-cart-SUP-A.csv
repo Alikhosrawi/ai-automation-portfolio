@@ -1,0 +1,3 @@
+supplier,orders_email,order_for_week_of,item_id,item,packs,pack,units,unit,one_unit_is,status
+"Alster Example Praxisbedarf (fictional)","orders@alster-supplies.example","2026-10-19","KT-TAPE","Kinesiology tape 5 cm x 5 m","2","box of 6 rolls","12","roll","5 m","PROPOSED - waiting for the manager review. NOT ORDERED (demo)."
+"Alster Example Praxisbedarf (fictional)","orders@alster-supplies.example","2026-10-19","LOTION","Massage lotion 1 l","1","bottle","1","bottle","1 l","PROPOSED - waiting for the manager review. NOT ORDERED (demo)."
