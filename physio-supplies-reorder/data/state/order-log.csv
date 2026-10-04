@@ -1,0 +1,11 @@
+order_week,item_id,supplier_id,packs,units,prepared_at,status
+2026-10-12,KT-TAPE,SUP-A,1,6,2026-10-09 17:00,ordered by the practice manager (delivered 12-14 Oct)
+2026-10-12,RIGID-TAPE,SUP-A,1,12,2026-10-09 17:00,ordered by the practice manager (delivered 12-14 Oct)
+2026-10-12,LOTION,SUP-A,3,3,2026-10-09 17:00,ordered by the practice manager (delivered 12-14 Oct)
+2026-10-12,US-GEL,SUP-B,1,12,2026-10-09 17:00,ordered by the practice manager (delivered 12-14 Oct)
+2026-10-12,COUCH-ROLL,SUP-B,1,9,2026-10-09 17:00,ordered by the practice manager (delivered 12-14 Oct)
+2026-10-12,GLOVES-M,SUP-B,1,10,2026-10-09 17:00,ordered by the practice manager (delivered 12-14 Oct)
+2026-10-12,DISINF-WIPES,SUP-B,1,6,2026-10-09 17:00,ordered by the practice manager (delivered 12-14 Oct)
+2026-10-12,HAND-SAN,SUP-B,1,10,2026-10-09 17:00,ordered by the practice manager (delivered 12-14 Oct)
+2026-10-12,PAPER-TOWELS,SUP-B,1,20,2026-10-09 17:00,ordered by the practice manager (delivered 12-14 Oct)
+2026-10-12,ELECTRODES,SUP-C,1,5,2026-10-09 17:00,ordered by the practice manager (delivered 12-14 Oct)
