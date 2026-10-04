@@ -1,3 +1,0 @@
-supplier,orders_email,order_for_week_of,item_id,item,packs,pack,units,unit,one_unit_is,approved_by,status
-"Elbe Example Hygiene (fictional)","orders@elbe-hygiene.example","2026-10-19","COUCH-ROLL","Couch roll 50 m","1","pack of 9 rolls","9","roll","50 m","Mira (practice manager, fictional)","APPROVED by the practice manager. NOT ORDERED (demo): place this order yourself."
-"Elbe Example Hygiene (fictional)","orders@elbe-hygiene.example","2026-10-19","DISINF-WIPES","Surface disinfectant wipes","1","case of 6 tubs","6","tub","100 wipes","Mira (practice manager, fictional)","APPROVED by the practice manager. NOT ORDERED (demo): place this order yourself."
