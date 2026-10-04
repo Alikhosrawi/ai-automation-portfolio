@@ -1,0 +1,11 @@
+review_id,order_week,supplier,item_id,item,proposed_packs,pack,why,decision,approved_packs,reviewed_by,reviewed_at,note
+2026-10-12/KT-TAPE/1,2026-10-12,Alster Example Praxisbedarf (fictional),KT-TAPE,Kinesiology tape 5 cm x 5 m,1,box of 6 rolls,Last week's order (prepared before this demo run).,approve,,practice manager,2026-10-09 17:30,
+2026-10-12/RIGID-TAPE/1,2026-10-12,Alster Example Praxisbedarf (fictional),RIGID-TAPE,Rigid sports tape 3.8 cm,1,box of 12 rolls,Last week's order (prepared before this demo run).,approve,,practice manager,2026-10-09 17:30,
+2026-10-12/LOTION/1,2026-10-12,Alster Example Praxisbedarf (fictional),LOTION,Massage lotion 1 l,3,bottles,Last week's order (prepared before this demo run).,approve,,practice manager,2026-10-09 17:30,
+2026-10-12/US-GEL/1,2026-10-12,Elbe Example Hygiene (fictional),US-GEL,Ultrasound gel 250 ml,1,case of 12 bottles,Last week's order (prepared before this demo run).,approve,,practice manager,2026-10-09 17:30,
+2026-10-12/COUCH-ROLL/1,2026-10-12,Elbe Example Hygiene (fictional),COUCH-ROLL,Couch roll 50 m,1,pack of 9 rolls,Last week's order (prepared before this demo run).,approve,,practice manager,2026-10-09 17:30,
+2026-10-12/GLOVES-M/1,2026-10-12,Elbe Example Hygiene (fictional),GLOVES-M,"Nitrile gloves, size M",1,carton of 10 boxes,Last week's order (prepared before this demo run).,approve,,practice manager,2026-10-09 17:30,
+2026-10-12/DISINF-WIPES/1,2026-10-12,Elbe Example Hygiene (fictional),DISINF-WIPES,Surface disinfectant wipes,1,case of 6 tubs,Last week's order (prepared before this demo run).,approve,,practice manager,2026-10-09 17:30,
+2026-10-12/HAND-SAN/1,2026-10-12,Elbe Example Hygiene (fictional),HAND-SAN,Hand sanitiser 500 ml,1,case of 10 bottles,Last week's order (prepared before this demo run).,approve,,practice manager,2026-10-09 17:30,
+2026-10-12/PAPER-TOWELS/1,2026-10-12,Elbe Example Hygiene (fictional),PAPER-TOWELS,Paper hand towels,1,carton of 20 bundles,Last week's order (prepared before this demo run).,approve,,practice manager,2026-10-09 17:30,
+2026-10-12/ELECTRODES/1,2026-10-12,Hafen Example Electro (fictional),ELECTRODES,Electrode pads 5 x 5 cm,1,box of 5 bags,Last week's order (prepared before this demo run).,approve,,practice manager,2026-10-09 17:30,
