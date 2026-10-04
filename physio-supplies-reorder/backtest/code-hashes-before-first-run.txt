@@ -1,0 +1,11 @@
+Code hashes recorded BEFORE the first v2 backtest run: 2026-10-04 09:42:37 CEST
+(generate_backtest_history.py had been run once, to check its output shape; no backtest had been run)
+f4ce0825ed29f513ac9584c605160a705aa958c3f56676c5f497d425936fe04d  backtest/PREREGISTRATION.md
+68b95c4f7970a6421c2ad3df1a720a80156381793e1548387d1895afb377034f  backtest/AMENDMENTS.md
+2b5b57ad287cec00c36901bd6fd5fb1e5c9703863e16e45ae90af9bafc59a7f1  workflow/reorder_maths.py
+9380898c88296451b618c621294a1625f57c791e65335c32dec255c0d8ee698e  workflow/build_workflow.py
+801da7d317ce07afafe92ff5d7e63aa3344061b2f0c811699af8922c6af611bc  workflow/generate_backtest_history.py
+aa2f25d3eef21b38b771aece5d392fa4280bc7dc3e265d6901e25c59519491a0  workflow/backtest.py
+4d849132e680d07c6593f15f0b60413f476a8fc91d149cd0e81059963ff979c2  workflow/backtest_seeds.py
+0a54da64721bfb19ce8e7c4bbd5e91ed07e2a64c210290dff1f1ab5e00d6ce9e  data/items.csv
+1196dd9761bf37459897724941bea92644dabb6f4a7f9f17ced14e463151957f  data/usage-rates.csv

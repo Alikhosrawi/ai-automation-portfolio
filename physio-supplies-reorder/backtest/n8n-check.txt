@@ -1,0 +1,23 @@
+decided 2026-01-02 for 2026-01-05 KT-TAPE       forecast n8n   7 / backtest   7 (  6.97)   packs n8n 2 / backtest 2   same
+decided 2026-01-02 for 2026-01-05 RIGID-TAPE    forecast n8n   7 / backtest   7 (  6.86)   packs n8n 1 / backtest 1   same
+decided 2026-01-02 for 2026-01-05 LOTION        forecast n8n   2 / backtest   2 (  1.65)   packs n8n 2 / backtest 2   same
+decided 2026-01-02 for 2026-01-05 COLD-PACK     forecast n8n   2 / backtest   2 (  1.97)   packs n8n 1 / backtest 1   same
+decided 2026-01-02 for 2026-01-05 US-GEL        forecast n8n   3 / backtest   3 (  2.96)   packs n8n 1 / backtest 1   same
+decided 2026-01-02 for 2026-01-05 COUCH-ROLL    forecast n8n  10 / backtest  10 (  9.17)   packs n8n 2 / backtest 2   same
+decided 2026-01-02 for 2026-01-05 GLOVES-M      forecast n8n   3 / backtest   3 (  2.67)   packs n8n 1 / backtest 1   same
+decided 2026-01-02 for 2026-01-05 DISINF-WIPES  forecast n8n   6 / backtest   6 (  5.72)   packs n8n 1 / backtest 1   same
+decided 2026-01-02 for 2026-01-05 HAND-SAN      forecast n8n   4 / backtest   4 (  3.49)   packs n8n 1 / backtest 1   same
+decided 2026-01-02 for 2026-01-05 PAPER-TOWELS  forecast n8n  14 / backtest  14 ( 13.97)   packs n8n 1 / backtest 1   same
+decided 2026-01-02 for 2026-01-05 ELECTRODES    forecast n8n   6 / backtest   6 (  5.12)   packs n8n 2 / backtest 2   same
+decided 2026-07-10 for 2026-07-13 KT-TAPE       forecast n8n  10 / backtest  10 (  9.72)   packs n8n 1 / backtest 1   same
+decided 2026-07-10 for 2026-07-13 RIGID-TAPE    forecast n8n  13 / backtest  13 ( 12.43)   packs n8n 1 / backtest 1   same
+decided 2026-07-10 for 2026-07-13 LOTION        forecast n8n   2 / backtest   2 (   1.4)   packs n8n 1 / backtest 1   same
+decided 2026-07-10 for 2026-07-13 COLD-PACK     forecast n8n   6 / backtest   6 (  5.12)   packs n8n 1 / backtest 1   same
+decided 2026-07-10 for 2026-07-13 US-GEL        forecast n8n   4 / backtest   4 (   3.6)   packs n8n 0 / backtest 0   same
+decided 2026-07-10 for 2026-07-13 COUCH-ROLL    forecast n8n   6 / backtest   6 (  5.41)   packs n8n 0 / backtest 0   same
+decided 2026-07-10 for 2026-07-13 GLOVES-M      forecast n8n   2 / backtest   2 (   1.5)   packs n8n 1 / backtest 1   same
+decided 2026-07-10 for 2026-07-13 DISINF-WIPES  forecast n8n   4 / backtest   4 (   3.1)   packs n8n 0 / backtest 0   same
+decided 2026-07-10 for 2026-07-13 HAND-SAN      forecast n8n   4 / backtest   4 (  3.47)   packs n8n 0 / backtest 0   same
+decided 2026-07-10 for 2026-07-13 PAPER-TOWELS  forecast n8n  10 / backtest  10 (  9.31)   packs n8n 1 / backtest 1   same
+decided 2026-07-10 for 2026-07-13 ELECTRODES    forecast n8n   5 / backtest   5 (  4.16)   packs n8n 0 / backtest 0   same
+n8n vs backtest Python: 22 item-weeks compared, 0 difference(s)

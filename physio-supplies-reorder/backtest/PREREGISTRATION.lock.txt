@@ -1,0 +1,5 @@
+PREREGISTRATION.md
+sha256: f4ce0825ed29f513ac9584c605160a705aa958c3f56676c5f497d425936fe04d
+locked: 2026-10-04 09:39:13 CEST (Europe/Berlin)
+No v2 generator or v2 backtest code existed and no v2 results had been produced at this time.
+The demo folder and the public copy hold byte-identical copies (same hash).
