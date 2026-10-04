@@ -1,0 +1,140 @@
+booking_id,date,start,therapist,treatment_type
+B-0001,2026-10-19,08:00,Jana,Physiotherapy
+B-0002,2026-10-19,08:00,Selin,Physiotherapy
+B-0003,2026-10-19,08:30,Malte,Physiotherapy
+B-0004,2026-10-19,08:30,Tom,Electrotherapy
+B-0005,2026-10-19,09:00,Jana,Electrotherapy
+B-0006,2026-10-19,09:00,Selin,Sports physio + taping
+B-0007,2026-10-19,09:30,Malte,Electrotherapy
+B-0008,2026-10-19,09:30,Tom,Physiotherapy
+B-0009,2026-10-19,10:00,Jana,Physiotherapy
+B-0010,2026-10-19,10:00,Selin,Physiotherapy
+B-0011,2026-10-19,10:30,Malte,Physiotherapy
+B-0012,2026-10-19,10:30,Tom,Physiotherapy
+B-0013,2026-10-19,11:00,Jana,Physiotherapy
+B-0014,2026-10-19,11:00,Selin,Physiotherapy
+B-0015,2026-10-19,11:30,Malte,Massage
+B-0016,2026-10-19,11:30,Tom,Lymph drainage
+B-0017,2026-10-19,12:00,Jana,Physiotherapy
+B-0018,2026-10-19,12:00,Selin,Physiotherapy
+B-0019,2026-10-19,12:30,Malte,Manual therapy
+B-0020,2026-10-19,12:30,Tom,Physiotherapy
+B-0021,2026-10-19,13:00,Jana,Manual therapy
+B-0022,2026-10-19,13:00,Selin,Lymph drainage
+B-0023,2026-10-19,13:30,Malte,Sports physio + taping
+B-0024,2026-10-19,13:30,Tom,Physiotherapy
+B-0025,2026-10-19,14:00,Jana,Physiotherapy
+B-0026,2026-10-19,14:00,Selin,Sports physio + taping
+B-0027,2026-10-19,14:30,Malte,Lymph drainage
+B-0028,2026-10-19,14:30,Tom,Electrotherapy
+B-0029,2026-10-19,15:00,Jana,Electrotherapy
+B-0030,2026-10-19,15:30,Malte,Physiotherapy
+B-0031,2026-10-20,08:00,Jana,Massage
+B-0032,2026-10-20,08:00,Selin,Physiotherapy
+B-0033,2026-10-20,08:30,Malte,Lymph drainage
+B-0034,2026-10-20,08:30,Tom,Physiotherapy
+B-0035,2026-10-20,09:00,Jana,Ultrasound
+B-0036,2026-10-20,09:00,Selin,Physiotherapy
+B-0037,2026-10-20,09:30,Malte,Physiotherapy
+B-0038,2026-10-20,09:30,Tom,Manual therapy
+B-0039,2026-10-20,10:00,Jana,Manual therapy
+B-0040,2026-10-20,10:00,Selin,Physiotherapy
+B-0041,2026-10-20,10:30,Malte,Shockwave
+B-0042,2026-10-20,10:30,Tom,Physiotherapy
+B-0043,2026-10-20,11:00,Jana,Manual therapy
+B-0044,2026-10-20,11:00,Selin,Lymph drainage
+B-0045,2026-10-20,11:30,Malte,Physiotherapy
+B-0046,2026-10-20,11:30,Tom,Lymph drainage
+B-0047,2026-10-20,12:00,Jana,Shockwave
+B-0048,2026-10-20,12:00,Selin,Sports physio + taping
+B-0049,2026-10-20,12:30,Malte,Sports physio + taping
+B-0050,2026-10-20,12:30,Tom,Electrotherapy
+B-0051,2026-10-20,13:00,Jana,Electrotherapy
+B-0052,2026-10-20,13:00,Selin,Sports physio + taping
+B-0053,2026-10-20,13:30,Malte,Lymph drainage
+B-0054,2026-10-20,13:30,Tom,Electrotherapy
+B-0055,2026-10-20,14:00,Jana,Physiotherapy
+B-0056,2026-10-20,14:00,Selin,Manual therapy
+B-0057,2026-10-20,14:30,Malte,Electrotherapy
+B-0058,2026-10-20,14:30,Tom,Physiotherapy
+B-0059,2026-10-20,15:00,Jana,Electrotherapy
+B-0060,2026-10-20,15:30,Malte,Lymph drainage
+B-0061,2026-10-21,08:00,Jana,Physiotherapy
+B-0062,2026-10-21,08:00,Selin,Lymph drainage
+B-0063,2026-10-21,08:30,Malte,Physiotherapy
+B-0064,2026-10-21,08:30,Tom,Massage
+B-0065,2026-10-21,09:00,Jana,Physiotherapy
+B-0066,2026-10-21,09:00,Selin,Sports physio + taping
+B-0067,2026-10-21,09:30,Malte,Sports physio + taping
+B-0068,2026-10-21,09:30,Tom,Manual therapy
+B-0069,2026-10-21,10:00,Jana,Physiotherapy
+B-0070,2026-10-21,10:00,Selin,Manual therapy
+B-0071,2026-10-21,10:30,Malte,Physiotherapy
+B-0072,2026-10-21,10:30,Tom,Massage
+B-0073,2026-10-21,11:00,Jana,Manual therapy
+B-0074,2026-10-21,11:00,Selin,Manual therapy
+B-0075,2026-10-21,11:30,Malte,Manual therapy
+B-0076,2026-10-21,11:30,Tom,Physiotherapy
+B-0077,2026-10-21,12:00,Jana,Electrotherapy
+B-0078,2026-10-21,12:00,Selin,Physiotherapy
+B-0079,2026-10-21,12:30,Malte,Physiotherapy
+B-0080,2026-10-21,12:30,Tom,Lymph drainage
+B-0081,2026-10-21,13:00,Jana,Physiotherapy
+B-0082,2026-10-21,13:00,Selin,Electrotherapy
+B-0083,2026-10-21,13:30,Malte,Ultrasound
+B-0084,2026-10-21,13:30,Tom,Physiotherapy
+B-0085,2026-10-21,14:00,Jana,Sports physio + taping
+B-0086,2026-10-21,14:00,Selin,Physiotherapy
+B-0087,2026-10-21,14:30,Malte,Lymph drainage
+B-0088,2026-10-22,08:00,Jana,Sports physio + taping
+B-0089,2026-10-22,08:00,Selin,Ultrasound
+B-0090,2026-10-22,08:30,Malte,Massage
+B-0091,2026-10-22,08:30,Tom,Sports physio + taping
+B-0092,2026-10-22,09:00,Jana,Massage
+B-0093,2026-10-22,09:00,Selin,Ultrasound
+B-0094,2026-10-22,09:30,Malte,Sports physio + taping
+B-0095,2026-10-22,09:30,Tom,Physiotherapy
+B-0096,2026-10-22,10:00,Jana,Physiotherapy
+B-0097,2026-10-22,10:00,Selin,Manual therapy
+B-0098,2026-10-22,10:30,Malte,Manual therapy
+B-0099,2026-10-22,10:30,Tom,Massage
+B-0100,2026-10-22,11:00,Jana,Physiotherapy
+B-0101,2026-10-22,11:00,Selin,Sports physio + taping
+B-0102,2026-10-22,11:30,Malte,Lymph drainage
+B-0103,2026-10-22,11:30,Tom,Physiotherapy
+B-0104,2026-10-22,12:00,Jana,Lymph drainage
+B-0105,2026-10-22,12:00,Selin,Physiotherapy
+B-0106,2026-10-22,12:30,Malte,Electrotherapy
+B-0107,2026-10-22,12:30,Tom,Massage
+B-0108,2026-10-22,13:00,Jana,Manual therapy
+B-0109,2026-10-22,13:00,Selin,Electrotherapy
+B-0110,2026-10-22,13:30,Malte,Physiotherapy
+B-0111,2026-10-22,13:30,Tom,Massage
+B-0112,2026-10-22,14:00,Jana,Physiotherapy
+B-0113,2026-10-22,14:30,Malte,Manual therapy
+B-0114,2026-10-23,08:00,Jana,Lymph drainage
+B-0115,2026-10-23,08:00,Selin,Electrotherapy
+B-0116,2026-10-23,08:30,Malte,Sports physio + taping
+B-0117,2026-10-23,08:30,Tom,Sports physio + taping
+B-0118,2026-10-23,09:00,Jana,Physiotherapy
+B-0119,2026-10-23,09:00,Selin,Manual therapy
+B-0120,2026-10-23,09:30,Malte,Physiotherapy
+B-0121,2026-10-23,09:30,Tom,Shockwave
+B-0122,2026-10-23,10:00,Jana,Physiotherapy
+B-0123,2026-10-23,10:00,Selin,Sports physio + taping
+B-0124,2026-10-23,10:30,Malte,Physiotherapy
+B-0125,2026-10-23,10:30,Tom,Physiotherapy
+B-0126,2026-10-23,11:00,Jana,Massage
+B-0127,2026-10-23,11:00,Selin,Physiotherapy
+B-0128,2026-10-23,11:30,Malte,Manual therapy
+B-0129,2026-10-23,11:30,Tom,Manual therapy
+B-0130,2026-10-23,12:00,Jana,Sports physio + taping
+B-0131,2026-10-23,12:00,Selin,Manual therapy
+B-0132,2026-10-23,12:30,Malte,Physiotherapy
+B-0133,2026-10-23,12:30,Tom,Physiotherapy
+B-0134,2026-10-23,13:00,Jana,Sports physio + taping
+B-0135,2026-10-23,13:00,Selin,Manual therapy
+B-0136,2026-10-23,13:30,Malte,Shockwave
+B-0137,2026-10-23,13:30,Tom,Electrotherapy
+B-0138,2026-10-23,14:00,Jana,Ultrasound
+B-0139,2026-10-23,14:30,Malte,Physiotherapy
