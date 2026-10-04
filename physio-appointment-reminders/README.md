@@ -36,7 +36,18 @@ The test run in n8n, with the number of items passing through each step (the who
 
 ![Test run with item counts](screenshots/04-test-run-item-counts.png)
 
-**Time saved:** not measured yet. I haven't timed the manual version with a stopwatch, so I'm not putting a number on it.
+## Measured: manual baseline
+
+I timed the manual version with a stopwatch on 4 Oct 2026. Writing 5 reminders by hand for made-up patients (look up the time, type the phone number, name, time and therapist, plus "Reply 1 to confirm, 2 to move it") took **4 min 20 s in total: 52 seconds per reminder.** That's a single run, by one person, on made-up data.
+
+The daily and weekly figures below are **extrapolated** from that one run, not measured:
+
+| Appointments per day | Writing reminders by hand, per day | Per 5-day week |
+|---|---|---|
+| 30 | about 26 min | about 2.2 h |
+| 40 | about 35 min | about 2.9 h |
+
+The comparison point is the 52 seconds, not how fast the workflow writes each message: with the automation, the front desk spends zero minutes writing reminders. Answering replies and no-show follow-ups weren't timed, so they aren't in these numbers. This is not a measured saving at a real practice.
 
 ## Try it yourself
 
