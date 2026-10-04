@@ -1,0 +1,2 @@
+supplier,orders_email,order_for_week_of,item_id,item,packs,pack,units,unit,one_unit_is,approved_by,status
+"Alster Example Praxisbedarf (fictional)","orders@alster-supplies.example","2026-10-19","KT-TAPE","Kinesiology tape 5 cm x 5 m","3","box of 6 rolls","18","roll","5 m","Mira (practice manager, fictional)","APPROVED by the practice manager. NOT ORDERED (demo): place this order yourself."
