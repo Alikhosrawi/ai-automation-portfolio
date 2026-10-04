@@ -1,0 +1,401 @@
+week_start,treatment_type,sessions
+2025-11-03,Physiotherapy,46
+2025-11-03,Manual therapy,13
+2025-11-03,Sports physio + taping,8
+2025-11-03,Lymph drainage,6
+2025-11-03,Massage,17
+2025-11-03,Ultrasound,10
+2025-11-03,Electrotherapy,12
+2025-11-03,Shockwave,5
+2025-11-10,Physiotherapy,37
+2025-11-10,Manual therapy,22
+2025-11-10,Sports physio + taping,11
+2025-11-10,Lymph drainage,13
+2025-11-10,Massage,10
+2025-11-10,Ultrasound,7
+2025-11-10,Electrotherapy,8
+2025-11-10,Shockwave,3
+2025-11-17,Physiotherapy,46
+2025-11-17,Manual therapy,17
+2025-11-17,Sports physio + taping,17
+2025-11-17,Lymph drainage,13
+2025-11-17,Massage,16
+2025-11-17,Ultrasound,4
+2025-11-17,Electrotherapy,11
+2025-11-17,Shockwave,2
+2025-11-24,Physiotherapy,38
+2025-11-24,Manual therapy,17
+2025-11-24,Sports physio + taping,11
+2025-11-24,Lymph drainage,10
+2025-11-24,Massage,5
+2025-11-24,Ultrasound,8
+2025-11-24,Electrotherapy,7
+2025-11-24,Shockwave,2
+2025-12-01,Physiotherapy,42
+2025-12-01,Manual therapy,14
+2025-12-01,Sports physio + taping,12
+2025-12-01,Lymph drainage,8
+2025-12-01,Massage,8
+2025-12-01,Ultrasound,9
+2025-12-01,Electrotherapy,10
+2025-12-01,Shockwave,2
+2025-12-08,Physiotherapy,42
+2025-12-08,Manual therapy,19
+2025-12-08,Sports physio + taping,8
+2025-12-08,Lymph drainage,7
+2025-12-08,Massage,7
+2025-12-08,Ultrasound,5
+2025-12-08,Electrotherapy,9
+2025-12-08,Shockwave,3
+2025-12-15,Physiotherapy,50
+2025-12-15,Manual therapy,24
+2025-12-15,Sports physio + taping,11
+2025-12-15,Lymph drainage,8
+2025-12-15,Massage,14
+2025-12-15,Ultrasound,6
+2025-12-15,Electrotherapy,12
+2025-12-15,Shockwave,1
+2025-12-22,Physiotherapy,16
+2025-12-22,Manual therapy,2
+2025-12-22,Sports physio + taping,7
+2025-12-22,Lymph drainage,4
+2025-12-22,Massage,3
+2025-12-22,Ultrasound,2
+2025-12-22,Electrotherapy,6
+2025-12-22,Shockwave,0
+2025-12-29,Physiotherapy,6
+2025-12-29,Manual therapy,4
+2025-12-29,Sports physio + taping,0
+2025-12-29,Lymph drainage,2
+2025-12-29,Massage,3
+2025-12-29,Ultrasound,0
+2025-12-29,Electrotherapy,1
+2025-12-29,Shockwave,0
+2026-01-05,Physiotherapy,41
+2026-01-05,Manual therapy,20
+2026-01-05,Sports physio + taping,7
+2026-01-05,Lymph drainage,19
+2026-01-05,Massage,7
+2026-01-05,Ultrasound,9
+2026-01-05,Electrotherapy,12
+2026-01-05,Shockwave,3
+2026-01-12,Physiotherapy,44
+2026-01-12,Manual therapy,21
+2026-01-12,Sports physio + taping,9
+2026-01-12,Lymph drainage,15
+2026-01-12,Massage,15
+2026-01-12,Ultrasound,9
+2026-01-12,Electrotherapy,9
+2026-01-12,Shockwave,6
+2026-01-19,Physiotherapy,51
+2026-01-19,Manual therapy,23
+2026-01-19,Sports physio + taping,6
+2026-01-19,Lymph drainage,11
+2026-01-19,Massage,13
+2026-01-19,Ultrasound,7
+2026-01-19,Electrotherapy,15
+2026-01-19,Shockwave,3
+2026-01-26,Physiotherapy,45
+2026-01-26,Manual therapy,20
+2026-01-26,Sports physio + taping,9
+2026-01-26,Lymph drainage,12
+2026-01-26,Massage,6
+2026-01-26,Ultrasound,7
+2026-01-26,Electrotherapy,13
+2026-01-26,Shockwave,5
+2026-02-02,Physiotherapy,62
+2026-02-02,Manual therapy,19
+2026-02-02,Sports physio + taping,12
+2026-02-02,Lymph drainage,13
+2026-02-02,Massage,10
+2026-02-02,Ultrasound,4
+2026-02-02,Electrotherapy,7
+2026-02-02,Shockwave,1
+2026-02-09,Physiotherapy,46
+2026-02-09,Manual therapy,18
+2026-02-09,Sports physio + taping,7
+2026-02-09,Lymph drainage,11
+2026-02-09,Massage,11
+2026-02-09,Ultrasound,8
+2026-02-09,Electrotherapy,9
+2026-02-09,Shockwave,2
+2026-02-16,Physiotherapy,58
+2026-02-16,Manual therapy,15
+2026-02-16,Sports physio + taping,11
+2026-02-16,Lymph drainage,13
+2026-02-16,Massage,13
+2026-02-16,Ultrasound,13
+2026-02-16,Electrotherapy,4
+2026-02-16,Shockwave,4
+2026-02-23,Physiotherapy,51
+2026-02-23,Manual therapy,19
+2026-02-23,Sports physio + taping,9
+2026-02-23,Lymph drainage,11
+2026-02-23,Massage,11
+2026-02-23,Ultrasound,6
+2026-02-23,Electrotherapy,12
+2026-02-23,Shockwave,1
+2026-03-02,Physiotherapy,41
+2026-03-02,Manual therapy,14
+2026-03-02,Sports physio + taping,8
+2026-03-02,Lymph drainage,11
+2026-03-02,Massage,4
+2026-03-02,Ultrasound,10
+2026-03-02,Electrotherapy,13
+2026-03-02,Shockwave,1
+2026-03-09,Physiotherapy,46
+2026-03-09,Manual therapy,24
+2026-03-09,Sports physio + taping,7
+2026-03-09,Lymph drainage,12
+2026-03-09,Massage,9
+2026-03-09,Ultrasound,3
+2026-03-09,Electrotherapy,4
+2026-03-09,Shockwave,2
+2026-03-16,Physiotherapy,35
+2026-03-16,Manual therapy,22
+2026-03-16,Sports physio + taping,11
+2026-03-16,Lymph drainage,5
+2026-03-16,Massage,6
+2026-03-16,Ultrasound,7
+2026-03-16,Electrotherapy,9
+2026-03-16,Shockwave,3
+2026-03-23,Physiotherapy,32
+2026-03-23,Manual therapy,15
+2026-03-23,Sports physio + taping,12
+2026-03-23,Lymph drainage,11
+2026-03-23,Massage,10
+2026-03-23,Ultrasound,7
+2026-03-23,Electrotherapy,13
+2026-03-23,Shockwave,2
+2026-03-30,Physiotherapy,32
+2026-03-30,Manual therapy,10
+2026-03-30,Sports physio + taping,6
+2026-03-30,Lymph drainage,8
+2026-03-30,Massage,7
+2026-03-30,Ultrasound,7
+2026-03-30,Electrotherapy,7
+2026-03-30,Shockwave,5
+2026-04-06,Physiotherapy,20
+2026-04-06,Manual therapy,12
+2026-04-06,Sports physio + taping,6
+2026-04-06,Lymph drainage,9
+2026-04-06,Massage,10
+2026-04-06,Ultrasound,2
+2026-04-06,Electrotherapy,5
+2026-04-06,Shockwave,3
+2026-04-13,Physiotherapy,39
+2026-04-13,Manual therapy,21
+2026-04-13,Sports physio + taping,11
+2026-04-13,Lymph drainage,6
+2026-04-13,Massage,12
+2026-04-13,Ultrasound,7
+2026-04-13,Electrotherapy,13
+2026-04-13,Shockwave,2
+2026-04-20,Physiotherapy,49
+2026-04-20,Manual therapy,23
+2026-04-20,Sports physio + taping,14
+2026-04-20,Lymph drainage,19
+2026-04-20,Massage,14
+2026-04-20,Ultrasound,11
+2026-04-20,Electrotherapy,11
+2026-04-20,Shockwave,1
+2026-04-27,Physiotherapy,37
+2026-04-27,Manual therapy,14
+2026-04-27,Sports physio + taping,13
+2026-04-27,Lymph drainage,8
+2026-04-27,Massage,8
+2026-04-27,Ultrasound,7
+2026-04-27,Electrotherapy,3
+2026-04-27,Shockwave,2
+2026-05-04,Physiotherapy,37
+2026-05-04,Manual therapy,22
+2026-05-04,Sports physio + taping,12
+2026-05-04,Lymph drainage,12
+2026-05-04,Massage,10
+2026-05-04,Ultrasound,12
+2026-05-04,Electrotherapy,8
+2026-05-04,Shockwave,2
+2026-05-11,Physiotherapy,32
+2026-05-11,Manual therapy,16
+2026-05-11,Sports physio + taping,10
+2026-05-11,Lymph drainage,4
+2026-05-11,Massage,3
+2026-05-11,Ultrasound,7
+2026-05-11,Electrotherapy,7
+2026-05-11,Shockwave,2
+2026-05-18,Physiotherapy,53
+2026-05-18,Manual therapy,17
+2026-05-18,Sports physio + taping,13
+2026-05-18,Lymph drainage,16
+2026-05-18,Massage,12
+2026-05-18,Ultrasound,9
+2026-05-18,Electrotherapy,9
+2026-05-18,Shockwave,4
+2026-05-25,Physiotherapy,27
+2026-05-25,Manual therapy,9
+2026-05-25,Sports physio + taping,8
+2026-05-25,Lymph drainage,16
+2026-05-25,Massage,2
+2026-05-25,Ultrasound,4
+2026-05-25,Electrotherapy,6
+2026-05-25,Shockwave,4
+2026-06-01,Physiotherapy,38
+2026-06-01,Manual therapy,17
+2026-06-01,Sports physio + taping,12
+2026-06-01,Lymph drainage,7
+2026-06-01,Massage,5
+2026-06-01,Ultrasound,5
+2026-06-01,Electrotherapy,14
+2026-06-01,Shockwave,3
+2026-06-08,Physiotherapy,52
+2026-06-08,Manual therapy,19
+2026-06-08,Sports physio + taping,13
+2026-06-08,Lymph drainage,12
+2026-06-08,Massage,8
+2026-06-08,Ultrasound,4
+2026-06-08,Electrotherapy,10
+2026-06-08,Shockwave,2
+2026-06-15,Physiotherapy,57
+2026-06-15,Manual therapy,12
+2026-06-15,Sports physio + taping,18
+2026-06-15,Lymph drainage,14
+2026-06-15,Massage,11
+2026-06-15,Ultrasound,9
+2026-06-15,Electrotherapy,10
+2026-06-15,Shockwave,5
+2026-06-22,Physiotherapy,51
+2026-06-22,Manual therapy,26
+2026-06-22,Sports physio + taping,29
+2026-06-22,Lymph drainage,16
+2026-06-22,Massage,10
+2026-06-22,Ultrasound,7
+2026-06-22,Electrotherapy,8
+2026-06-22,Shockwave,4
+2026-06-29,Physiotherapy,53
+2026-06-29,Manual therapy,26
+2026-06-29,Sports physio + taping,25
+2026-06-29,Lymph drainage,18
+2026-06-29,Massage,11
+2026-06-29,Ultrasound,13
+2026-06-29,Electrotherapy,5
+2026-06-29,Shockwave,2
+2026-07-06,Physiotherapy,35
+2026-07-06,Manual therapy,25
+2026-07-06,Sports physio + taping,16
+2026-07-06,Lymph drainage,21
+2026-07-06,Massage,5
+2026-07-06,Ultrasound,11
+2026-07-06,Electrotherapy,8
+2026-07-06,Shockwave,5
+2026-07-13,Physiotherapy,37
+2026-07-13,Manual therapy,15
+2026-07-13,Sports physio + taping,15
+2026-07-13,Lymph drainage,11
+2026-07-13,Massage,7
+2026-07-13,Ultrasound,8
+2026-07-13,Electrotherapy,9
+2026-07-13,Shockwave,5
+2026-07-20,Physiotherapy,31
+2026-07-20,Manual therapy,11
+2026-07-20,Sports physio + taping,8
+2026-07-20,Lymph drainage,12
+2026-07-20,Massage,9
+2026-07-20,Ultrasound,5
+2026-07-20,Electrotherapy,6
+2026-07-20,Shockwave,2
+2026-07-27,Physiotherapy,30
+2026-07-27,Manual therapy,17
+2026-07-27,Sports physio + taping,14
+2026-07-27,Lymph drainage,8
+2026-07-27,Massage,8
+2026-07-27,Ultrasound,5
+2026-07-27,Electrotherapy,3
+2026-07-27,Shockwave,3
+2026-08-03,Physiotherapy,23
+2026-08-03,Manual therapy,10
+2026-08-03,Sports physio + taping,13
+2026-08-03,Lymph drainage,12
+2026-08-03,Massage,2
+2026-08-03,Ultrasound,5
+2026-08-03,Electrotherapy,3
+2026-08-03,Shockwave,3
+2026-08-10,Physiotherapy,16
+2026-08-10,Manual therapy,10
+2026-08-10,Sports physio + taping,12
+2026-08-10,Lymph drainage,19
+2026-08-10,Massage,2
+2026-08-10,Ultrasound,3
+2026-08-10,Electrotherapy,4
+2026-08-10,Shockwave,4
+2026-08-17,Physiotherapy,43
+2026-08-17,Manual therapy,20
+2026-08-17,Sports physio + taping,21
+2026-08-17,Lymph drainage,15
+2026-08-17,Massage,6
+2026-08-17,Ultrasound,6
+2026-08-17,Electrotherapy,10
+2026-08-17,Shockwave,3
+2026-08-24,Physiotherapy,50
+2026-08-24,Manual therapy,30
+2026-08-24,Sports physio + taping,30
+2026-08-24,Lymph drainage,19
+2026-08-24,Massage,12
+2026-08-24,Ultrasound,9
+2026-08-24,Electrotherapy,7
+2026-08-24,Shockwave,1
+2026-08-31,Physiotherapy,46
+2026-08-31,Manual therapy,27
+2026-08-31,Sports physio + taping,29
+2026-08-31,Lymph drainage,16
+2026-08-31,Massage,13
+2026-08-31,Ultrasound,5
+2026-08-31,Electrotherapy,9
+2026-08-31,Shockwave,5
+2026-09-07,Physiotherapy,45
+2026-09-07,Manual therapy,26
+2026-09-07,Sports physio + taping,22
+2026-09-07,Lymph drainage,17
+2026-09-07,Massage,9
+2026-09-07,Ultrasound,9
+2026-09-07,Electrotherapy,10
+2026-09-07,Shockwave,4
+2026-09-14,Physiotherapy,37
+2026-09-14,Manual therapy,24
+2026-09-14,Sports physio + taping,15
+2026-09-14,Lymph drainage,20
+2026-09-14,Massage,13
+2026-09-14,Ultrasound,11
+2026-09-14,Electrotherapy,8
+2026-09-14,Shockwave,8
+2026-09-21,Physiotherapy,37
+2026-09-21,Manual therapy,27
+2026-09-21,Sports physio + taping,19
+2026-09-21,Lymph drainage,11
+2026-09-21,Massage,11
+2026-09-21,Ultrasound,10
+2026-09-21,Electrotherapy,12
+2026-09-21,Shockwave,6
+2026-09-28,Physiotherapy,55
+2026-09-28,Manual therapy,24
+2026-09-28,Sports physio + taping,22
+2026-09-28,Lymph drainage,13
+2026-09-28,Massage,8
+2026-09-28,Ultrasound,6
+2026-09-28,Electrotherapy,10
+2026-09-28,Shockwave,5
+2026-10-05,Physiotherapy,41
+2026-10-05,Manual therapy,30
+2026-10-05,Sports physio + taping,20
+2026-10-05,Lymph drainage,17
+2026-10-05,Massage,7
+2026-10-05,Ultrasound,9
+2026-10-05,Electrotherapy,14
+2026-10-05,Shockwave,13
+2026-10-12,Physiotherapy,63
+2026-10-12,Manual therapy,25
+2026-10-12,Sports physio + taping,19
+2026-10-12,Lymph drainage,27
+2026-10-12,Massage,10
+2026-10-12,Ultrasound,5
+2026-10-12,Electrotherapy,14
+2026-10-12,Shockwave,7
