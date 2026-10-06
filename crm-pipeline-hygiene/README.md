@@ -60,9 +60,9 @@ The main row up close, with the number of items passing through each step:
 
 A tool that says "I found 56 problems" proves nothing unless you know what was there. So I planted the problems myself, and **wrote the rules of the test down before any code or data existed**: [`test/PREREGISTRATION.md`](test/PREREGISTRATION.md) fixes the seed (20261012), every planted problem and its count, the check rules, the metrics and the 20 extra seeds. Its SHA-256 hash and the time (6 Oct 2026, 18:18) are in [`PREREGISTRATION.lock.txt`](test/PREREGISTRATION.lock.txt), it's the first commit in this demo's history, and it hasn't been edited since. Later changes are listed in [`test/AMENDMENTS.md`](test/AMENDMENTS.md) (none changed the result).
 
-**The data:** 400 clean deals (110 won, 90 lost, 200 open) for about 230 companies, then 38 planted rule problems, 18 planted duplicates (8 exact, 10 messy) and **6 look-alike traps**: two real deals at the same company with similar amounts but different business ("Rollout Bremen site" vs "Expansion +25 seats"). The traps test whether the check flags things it shouldn't.
+**The data:** 400 clean deals (110 won, 90 lost, 200 open) for about 230 companies, then 38 planted rule problems, 18 planted duplicates (8 exact, 10 messy) and **6 look-alike traps**: two real deals at the same company with similar amounts but different business ("Rollout Bremen site" vs "Shift planning + time tracking, 120 seats"). The traps test whether the check flags things it shouldn't.
 
-**The AI judge was blind.** I wrote the generator and know where the traps are, so I couldn't be the judge. The 36 look-alike pairs went to a separate Claude agent that only ever saw the 36 prompts, nothing else on the machine. Its answers are recorded word for word in [`data/ai/duplicate-verdicts.csv`](data/ai/duplicate-verdicts.csv). The Monday note was written the same way, from the facts file only.
+**The AI judge was blind.** I wrote the generator and know where the traps are, so I couldn't be the judge. The 36 look-alike pairs went to a separate Claude agent that was given only the 36 prompts and told not to open anything else. Its answers are recorded word for word in [`data/ai/duplicate-verdicts.csv`](data/ai/duplicate-verdicts.csv). The Monday note was written the same way, from the facts file only.
 
 **Results on the primary seed:**
 
@@ -80,7 +80,7 @@ A tool that says "I found 56 problems" proves nothing unless you know what was t
 | Rules only | 17 | **13** (11 real deals) | 6 of 6 |
 | Rules + AI judge | **18** | **0** | 0 of 6 |
 
-Each wrong pair means a real deal removed from the forecast and a rep told to merge it into another real deal. That's the part rules do badly: "Renewal 2027" and "Expansion +40 seats" at the same company with similar amounts look like one deal to a rule, and like two to anyone who reads the names.
+Those 13 pairs would flag 11 real deals as copies: 11 reps told to merge a real deal away, and the 6 of those deals that close in Q4 wrongly taken out of the forecast. That's the part rules do badly: "Renewal 2027" and "Expansion +40 seats" at the same company with similar amounts look like one deal to a rule, and like two to anyone who reads the names.
 
 **The forecast:**
 
@@ -90,7 +90,7 @@ Each wrong pair means a real deal removed from the forecast and a rep told to me
 | Cleaned by the check | 1,783,490 | −133,520 (−7.0 %) |
 | True (from the answer key) | 1,917,010 | |
 
-The cleaned number is closer, but **it's low, not right**: the whole gap is the 8 deals without an amount. That's why the note calls it a floor, and why "add the amount" is the first line in each owner's message.
+The cleaned number is closer, but **it's low, not right**: the whole gap is the 8 deals without an amount. That's why the note says the cleaned figure "can only go up" (a sentence the code writes, not the AI), and why "add the amount" comes first in the message of every owner who has such a deal.
 
 **On 20 other seeds** (20261013–20261032, decided in advance; median and range, never used to pick a result):
 - Rule checks: 38 of 38 caught, 0 false flags, on every seed.
@@ -99,7 +99,7 @@ The cleaned number is closer, but **it's low, not right**: the whole gap is the 
 - How far the export was off the truth: median +9.8 % (+0.9 % to +21.5 %).
 - The AI judge ran on the primary seed only (said so in advance), so there is no AI score for the other 20.
 
-**n8n and Python give identical results.** The checks run as n8n steps, and the same logic exists as a plain-Python copy. Every output file was compared cell by cell: identical in replay, live and off mode, on 5 more seeds, when the number guard rejects a note, and when the workflow runs twice. Live mode was tested against a local stand-in for the Anthropic API (I had no key in the test environment), which checked all 74 requests. Details: [`test/n8n-checks.txt`](test/n8n-checks.txt).
+**n8n and Python give identical results.** The checks run as n8n steps, and the same logic exists as a plain-Python copy. Every output file was compared cell by cell: identical in replay, live and off mode, in off mode on 5 more seeds, when the number guard rejects a note, and when the workflow runs twice. Live mode was tested against a local stand-in for the Anthropic API (I had no key in the test environment), which checked all 74 requests. Details: [`test/n8n-checks.txt`](test/n8n-checks.txt).
 
 **Time saved:** not measured. I haven't timed a real Monday clean-up with a stopwatch, so I'm not putting a number on it.
 
@@ -136,7 +136,7 @@ I built and tested this on **n8n 2.42**, which needs **Node.js 24** if you run i
 3. **Check the folder path.** The `Settings` step points to `/home/node/.n8n-files/pipeline-hygiene-demo`, the home folder in the official Docker image. If you run n8n another way, change `folder` in `Settings` to your own path (for example `/Users/yourname/.n8n-files/pipeline-hygiene-demo`). It's the only place the path appears.
 4. **Import:** Workflows → Import from File → `workflow/pipeline-hygiene.workflow.json`.
 5. **Run it.** Open the small menu next to **Execute workflow**, choose **Run the demo Monday (test button)**, then click **Execute workflow**. Eight files appear in `outbox/`, the same as in [`data/outbox/`](data/outbox/).
-6. **Optional, live AI:** create a **Header Auth** credential named `x-api-key` with your Anthropic API key, select it in the two "Ask Claude" steps, and set `aiMode` to `live` in `Settings`. That sends 36 short prompts and one longer one per run.
+6. **Optional, live AI:** create a **Header Auth** credential whose header **Name** is `x-api-key` and whose **Value** is your Anthropic API key, select it in the two "Ask Claude" steps, and set `aiMode` to `live` in `Settings`. That sends 36 short prompts and one longer one per run.
 
 The schedule trigger uses the real date. The test button pins "now" to Monday 12 Oct 2026, 07:30, so the demo data always gives the results above.
 

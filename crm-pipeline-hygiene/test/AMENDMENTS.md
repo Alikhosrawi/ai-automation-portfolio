@@ -31,7 +31,14 @@ compares both versions' output files; see `n8n-checks.txt` (identical in every m
 **A6, 6 Oct 2026: the owner to-do messages and the would-send file were added to the outputs** (6-owner-messages.csv,
 5-would-send.csv, which replaces a log that grew on every run). Outputs only; nothing scored reads them.
 
+**A7, 6 Oct 2026: the API address became a setting** (`ANTHROPIC_API_URL` in Python, `apiUrl` in n8n's Settings),
+so live mode could be tested against a local stand-in for the Anthropic API. The default is the real address.
+
+**A8, naming and order, for completeness.** The pre-registration calls the answer key `answer-key.csv`; the file is
+`answer-key/seed-20261012.csv` (one per seed). The recorded AI note in `data/ai/weekly-note.md` was written after scoring,
+from the facts file that already included A2's sentence, which is why it contains that sentence.
+
 **If you check the code hashes:** `code-hashes-before-scoring.txt` was recorded before the AI judge ran. The check rules
 (`hygiene_checks.py`), the generator, the validator and both prompts still match it. `ai_steps.py` and `run_weekly.py`
-don't, because of A2, A3, A5 and A6 above (the stricter guard, the API address setting for testing, the rounding rule and
+don't, because of A2, A3, A5, A6 and A7 above (the stricter guard, the API address setting for testing, the rounding rule and
 the new output files). Re-running the scoring after those changes gives an identical `primary-seed-score.json`.
