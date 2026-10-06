@@ -1,6 +1,6 @@
 # AI automation portfolio: one chore, gone
 
-Small automations that each take one boring admin chore off a small business.
+Small, real workflows built with AI, each removing one repetitive admin chore, with what broke and how I fixed it.
 
 I'm [Ali Khosravi](https://github.com/Alikhosrawi), and I build these as personal learning projects, with AI as my co-pilot. Each folder is one working demo: the workflow file, fake sample data, screenshots, and a build story about what broke and how I fixed it.
 
@@ -14,7 +14,7 @@ The idea behind the series is simple: pick one chore, like sending reminders or 
 | [Expat onboarding autopilot](expat-onboarding-autopilot/) | Building a document checklist for each new relocation client, chasing missing documents without nagging, and writing weekly updates for the client and their HR contact | n8n, CSV | Working demo on fake data (sends nothing) |
 | [Physio supplies reorder agent](physio-supplies-reorder/) | Counting the supply cupboard every Friday, guessing next week's usage from the bookings, and preparing the order for each supplier for the practice manager to approve, without running out mid-week or overfilling the shelf | n8n, CSV | Working demo on fake data (orders nothing), with a pre-registered backtest on a synthetic 50-week history (41 weeks scored) |
 
-**Coming next:** more chores from small businesses, one at a time.
+**Coming next:** more builds, one chore at a time.
 
 ## All demos use fake data
 
