@@ -46,7 +46,8 @@ def call_claude(prompt, max_tokens=600):
         raise RuntimeError("--ai live needs ANTHROPIC_API_KEY in the environment")
     body = json.dumps({"model": DEFAULT_MODEL, "max_tokens": max_tokens,
                        "messages": [{"role": "user", "content": prompt}]}).encode()
-    req = urllib.request.Request("https://api.anthropic.com/v1/messages", data=body, headers={
+    url = os.environ.get("ANTHROPIC_API_URL", "https://api.anthropic.com/v1/messages")
+    req = urllib.request.Request(url, data=body, headers={
         "x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json"})
     with urllib.request.urlopen(req, timeout=60) as r:
         out = json.loads(r.read())
@@ -101,7 +102,7 @@ def number_guard(note, facts):
     """Every number in the note must appear in the facts. Euro amounts must match a euro amount in the facts and
     percentages a percentage, so '€300' can't pass just because a deal is called '300 seats'.
     Returns the list of numbers that fail."""
-    fact_text = json.dumps(facts, ensure_ascii=False)
+    fact_text = json.dumps(facts, indent=1, ensure_ascii=False)  # same text as JSON.stringify(facts, null, 1) in n8n
     allowed = numbers_in(fact_text) | {"4"}  # "Q4" is allowed
     money, pct = {_norm(m) for m in MONEY.findall(fact_text)}, {_norm(m) for m in PCT.findall(fact_text)}
     bad = {n for n in numbers_in(note) if n not in allowed}

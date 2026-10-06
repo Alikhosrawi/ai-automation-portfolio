@@ -1,0 +1,21 @@
+n8n checks, 6 Oct 2026. n8n 2.42.3 on Node.js 24.21.0, run headless with `n8n execute`. Fixed "now": Mon 12 Oct 2026 07:30.
+Comparison: workflow/compare_outboxes.py, all 8 output files, CSVs cell by cell, facts.json as data, note and guard as text.
+
+1. Replay mode (recorded AI answers), primary seed      n8n vs Python: 8 of 8 files identical. 49 steps, about 1.3-1.5 s.
+2. The 36 duplicate-judge prompts n8n builds             identical, character for character, to the 36 the blind judge saw
+                                                         (data/ai/duplicate-prompts.jsonl).
+3. Live mode, against a local fake Anthropic endpoint    n8n vs Python: 8 of 8 identical. 74 requests (36 pair calls + 1 note call,
+   that checks the key header, API version, model and    for each of n8n and Python), 0 malformed. Against replay mode, only the
+   message format, and answers from the recordings       "decided by" / "note source" labels differ, as they should.
+   (no real API key was used: none was available)
+4. Off mode (no AI, a person decides every look-alike)   n8n vs Python: 8 of 8 identical.
+5. Five other seeds (20261013, 20261017, 20261021,       n8n vs Python, off mode: 8 of 8 identical on every seed.
+   20261026, 20261032)
+6. Number guard failure path: the recorded AI note       n8n: "note used: template (AI draft failed the number guard)",
+   with one number changed (€345,040 -> €345,000)        bad numbers named: 345000, €345000. Python: identical (8 of 8).
+7. Run twice in a row                                    second run: 8 of 8 files identical to the first.
+
+Bugs these checks found on the way (fixed before the results above):
+- Step 3 called a helper (amountGap) that only existed in another step's code. n8n stopped with "amountGap is not defined".
+- An amount gap of exactly 11.25 % was written as 11.2 by Python and 11.3 by n8n. Python's rounding sends halves to the
+  even digit; JavaScript sends them up. Both now use the same "half up" rule.

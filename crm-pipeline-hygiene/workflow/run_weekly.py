@@ -9,6 +9,7 @@ in 5-would-send-log.csv.
 import argparse
 import csv
 import json
+import math
 import os
 from collections import Counter, defaultdict
 from datetime import datetime
@@ -20,8 +21,15 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 NOW = datetime(2026, 10, 12, 7, 30)  # the demo's fixed "now"
 
 
+def half_up(x, digits=0):
+    """Round halves up, the same way the n8n (JavaScript) copy does. Python's round() and format() round halves to
+    even, so 11.25 became 11.2 here and 11.3 in n8n."""
+    f = 10 ** digits
+    return math.floor(x * f + 0.5) / f
+
+
 def eur(x):
-    return f"€{round(x):,}"
+    return f"€{int(half_up(x)):,}"
 
 
 def main():
@@ -78,18 +86,18 @@ def main():
             o, c = p["original"], p["copy"]
             w.writerow([ai_steps.pair_id(p), o["Record ID"], o["Deal Name"], o["Associated Company (Primary)"],
                         c["Record ID"], c["Deal Name"], c["Associated Company (Primary)"], p["how"],
-                        f"{100 * hc.amount_gap(o, c):.1f}", v, why, src])
+                        f"{half_up(100 * hc.amount_gap(o, c), 1):.1f}", v, why, src])
 
     with open(os.path.join(a.out, "3-forecast-bridge.csv"), "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow(["step", "record_id", "deal", "owner", "stage", "amount", "weighted", "running_total"])
         run = fc["raw"]
-        w.writerow(["Q4 weighted forecast as exported", "", f"{len(fc['q4_deals'])} open deals closing in Q4", "", "", "", "", round(run)])
+        w.writerow(["Q4 weighted forecast as exported", "", f"{len(fc['q4_deals'])} open deals closing in Q4", "", "", "", "", int(half_up(run))])
         for label, rows in [("minus duplicate copy", fc["dup_rows"]), ("minus no activity for over 60 days", fc["zombie_rows"])]:
             for d in sorted(rows, key=lambda d: -hc.weighted(d)):
                 run -= hc.weighted(d)
-                w.writerow([label, d["Record ID"], d["Deal Name"], owner_of(d), d["Deal Stage"], d["Amount"], round(hc.weighted(d)), round(run)])
-        w.writerow(["Q4 weighted forecast, cleaned", "", "", "", "", "", "", round(fc["cleaned"])])
+                w.writerow([label, d["Record ID"], d["Deal Name"], owner_of(d), d["Deal Stage"], d["Amount"], int(half_up(hc.weighted(d))), int(half_up(run))])
+        w.writerow(["Q4 weighted forecast, cleaned", "", "", "", "", "", "", int(half_up(fc["cleaned"]))])
         for d in fc["no_amount_rows"]:
             w.writerow(["not counted: no amount", d["Record ID"], d["Deal Name"], owner_of(d), d["Deal Stage"], "", "", ""])
 
@@ -105,7 +113,7 @@ def main():
         "q4_forecast_as_exported": eur(fc["raw"]),
         "q4_forecast_cleaned": eur(fc["cleaned"]),
         "difference": eur(fc["raw"] - fc["cleaned"]),
-        "difference_pct_of_exported": f"{100 * (fc['raw'] - fc['cleaned']) / fc['raw']:.1f}%",
+        "difference_pct_of_exported": f"{half_up(100 * (fc['raw'] - fc['cleaned']) / fc['raw'], 1):.1f}%",
         "q4_open_deals": len(fc["q4_deals"]),
         "removed_duplicate_copies": {"deals": len(fc["dup_rows"]), "weighted": eur(dup_amt), "largest": top(fc["dup_rows"])},
         "removed_no_activity_over_60_days": {"deals": len(fc["zombie_rows"]), "weighted": eur(zom_amt), "largest": top(fc["zombie_rows"])},
@@ -157,7 +165,7 @@ def main():
         w.writerow([now.strftime("%Y-%m-%d %H:%M"), "#sales-leadership (would post, nothing sent)", "Monday pipeline hygiene note", "4-monday-note.md", source])
         w.writerow([now.strftime("%Y-%m-%d %H:%M"), "direct messages (would send, nothing sent)", f"{len(by_owner)} owner to-do messages", "6-owner-messages.csv", "template"])
 
-    print(json.dumps({"q4_raw": round(fc["raw"]), "q4_cleaned": round(fc["cleaned"]), "flags": len(flags),
+    print(json.dumps({"q4_raw": int(half_up(fc["raw"])), "q4_cleaned": int(half_up(fc["cleaned"])), "flags": len(flags),
                       "exact_dups": len(exact), "candidates": len(candidates),
                       "verdicts": dict(Counter(v for _, v, _, _ in dup_rows)), "note": source}))
 
