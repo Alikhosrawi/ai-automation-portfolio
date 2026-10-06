@@ -1,0 +1,96 @@
+{
+  "date": "Mon 12 Oct 2026",
+  "q4_forecast_as_exported": "€2,128,530",
+  "q4_forecast_cleaned": "€1,783,490",
+  "difference": "€345,040",
+  "difference_pct_of_exported": "16.2%",
+  "q4_open_deals": 132,
+  "removed_duplicate_copies": {
+    "deals": 12,
+    "weighted": "€204,740",
+    "largest": [
+      {
+        "deal": "Sandtor Spediiton GmbH: expansion +150 seats",
+        "owner": "Clara Example",
+        "weighted": "€105,840"
+      },
+      {
+        "deal": "Expansion +120 seats for Kirchdorf Kli. gGmbH",
+        "owner": "Clara Example",
+        "weighted": "€30,480"
+      },
+      {
+        "deal": "Wilhelmsburg Handel – Renewal 2027",
+        "owner": "Jonas Example",
+        "weighted": "€20,040"
+      }
+    ]
+  },
+  "removed_no_activity_over_60_days": {
+    "deals": 4,
+    "weighted": "€140,300",
+    "largest": [
+      {
+        "deal": "Wattenmeer Handel – Shift planning + time tracking, 300 seats",
+        "owner": "Clara Example",
+        "weighted": "€108,000"
+      },
+      {
+        "deal": "Uhlenhorst Bau – Workforce analytics add-on",
+        "owner": "Leonie Example",
+        "weighted": "€13,200"
+      },
+      {
+        "deal": "Tidenhub Kliniken – Renewal 2027",
+        "owner": "Finn Example",
+        "weighted": "€11,360"
+      }
+    ]
+  },
+  "not_counted_no_amount": {
+    "deals": 8,
+    "names": [
+      "Wandsbek Gastro – Time tracking, 300 seats",
+      "Lotsenhaus Bau – Expansion +150 seats",
+      "Ostwind Facility Services – Workforce analytics, 120 seats",
+      "Kirchdorf Kliniken – Shift planning, 25 seats",
+      "Fleetwerk Reinigung – Time tracking, 60 seats",
+      "Uhlenhorst Bau – Shift planning + time tracking, 60 seats",
+      "Kirchdorf Kliniken – Renewal 2027",
+      "Strandgut Spedition – Expansion +40 seats"
+    ],
+    "meaning": "These count as zero in both figures, so once their amounts are filled in, the cleaned figure can only go up."
+  },
+  "fix_this_week": [
+    {
+      "owner": "Jonas Example",
+      "items": 12
+    },
+    {
+      "owner": "Murat Example",
+      "items": 12
+    },
+    {
+      "owner": "Finn Example",
+      "items": 9
+    },
+    {
+      "owner": "Clara Example",
+      "items": 8
+    },
+    {
+      "owner": "Leonie Example",
+      "items": 8
+    },
+    {
+      "owner": "Aylin Example",
+      "items": 4
+    },
+    {
+      "owner": "(no owner)",
+      "items": 3
+    }
+  ],
+  "items_total": 56,
+  "duplicate_pairs_for_a_person": 0
+}

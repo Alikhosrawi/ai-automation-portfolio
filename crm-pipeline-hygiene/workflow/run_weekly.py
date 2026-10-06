@@ -109,7 +109,8 @@ def main():
         "q4_open_deals": len(fc["q4_deals"]),
         "removed_duplicate_copies": {"deals": len(fc["dup_rows"]), "weighted": eur(dup_amt), "largest": top(fc["dup_rows"])},
         "removed_no_activity_over_60_days": {"deals": len(fc["zombie_rows"]), "weighted": eur(zom_amt), "largest": top(fc["zombie_rows"])},
-        "not_counted_no_amount": {"deals": len(fc["no_amount_rows"]), "names": [d["Deal Name"] for d in fc["no_amount_rows"]]},
+        "not_counted_no_amount": {"deals": len(fc["no_amount_rows"]), "names": [d["Deal Name"] for d in fc["no_amount_rows"]],
+                                  "meaning": "These count as zero in both figures, so once their amounts are filled in, the cleaned figure can only go up."},
         "fix_this_week": [{"owner": o, "items": n} for o, n in sorted(per_owner.items(), key=lambda x: (-x[1], x[0]))],
         "items_total": len(flags),
         "duplicate_pairs_for_a_person": len(unsure),
@@ -140,17 +141,37 @@ def main():
         f.write(f"note used: {source}\n")
         f.write("numbers in the AI draft not found in facts.json: " + (", ".join(guard_problems) if guard_problems else "none") + "\n")
 
-    log = os.path.join(a.out, "5-would-send-log.csv")
-    new = not os.path.exists(log)
-    with open(log, "a", newline="", encoding="utf-8") as f:
+    # 7. one to-do message per owner (would be sent as a direct message; nothing is sent)
+    by_owner = defaultdict(list)
+    for d, code, detail in flags:
+        by_owner[owner_of(d)].append((d, code))
+    with open(os.path.join(a.out, "6-owner-messages.csv"), "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
-        if new:
-            w.writerow(["logged_at", "channel", "what", "file", "note_source"])
+        w.writerow(["to", "items", "message"])
+        for o in [x["owner"] for x in facts["fix_this_week"]]:
+            w.writerow([owner_message_to(o), len(by_owner[o]), owner_message(o, by_owner[o])])
+
+    with open(os.path.join(a.out, "5-would-send.csv"), "w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        w.writerow(["logged_at", "channel", "what", "file", "note_source"])
         w.writerow([now.strftime("%Y-%m-%d %H:%M"), "#sales-leadership (would post, nothing sent)", "Monday pipeline hygiene note", "4-monday-note.md", source])
+        w.writerow([now.strftime("%Y-%m-%d %H:%M"), "direct messages (would send, nothing sent)", f"{len(by_owner)} owner to-do messages", "6-owner-messages.csv", "template"])
 
     print(json.dumps({"q4_raw": round(fc["raw"]), "q4_cleaned": round(fc["cleaned"]), "flags": len(flags),
                       "exact_dups": len(exact), "candidates": len(candidates),
                       "verdicts": dict(Counter(v for _, v, _, _ in dup_rows)), "note": source}))
+
+
+def owner_message_to(owner):
+    return "Head of RevOps (deals with no owner)" if owner == "(no owner)" else owner
+
+
+def owner_message(owner, items):
+    """The Monday direct message: what this person should fix, most urgent first."""
+    hi = "These deals have no owner. Please assign them:" if owner == "(no owner)" else \
+        f"Hi {owner.split()[0]}, {len(items)} things in HubSpot need you before this week's forecast call:"
+    lines = [hi] + [f"- {d['Deal Name']}: {hc.ACTION[code]}" for d, code in items]
+    return "\n".join(lines)
 
 
 def template_note(f):

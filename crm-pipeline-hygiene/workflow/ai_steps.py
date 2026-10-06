@@ -84,18 +84,27 @@ def judge_pairs(pairs, mode, recorded_path):
 
 # ---- the number guard -------------------------------------------------------------------------------
 NUM = re.compile(r"\d[\d,.]*\d|\d")
+MONEY = re.compile(r"€\s?(\d[\d,.]*\d|\d)")
+PCT = re.compile(r"(\d[\d,.]*\d|\d)\s?%")
+
+
+def _norm(n):
+    return n.rstrip(".").replace(",", "")
 
 
 def numbers_in(text):
     """Every number in a text, normalised: '€1,234' -> '1234', '12.5%' -> '12.5'. Trailing dots dropped."""
-    out = set()
-    for m in NUM.findall(text):
-        n = m.rstrip(".").replace(",", "")
-        out.add(n)
-    return out
+    return {_norm(m) for m in NUM.findall(text)}
 
 
 def number_guard(note, facts):
-    """Every number in the note must appear somewhere in the facts. Returns the list of numbers that don't."""
-    allowed = numbers_in(json.dumps(facts, ensure_ascii=False)) | {"4"}  # "Q4" is allowed
-    return sorted(n for n in numbers_in(note) if n not in allowed)
+    """Every number in the note must appear in the facts. Euro amounts must match a euro amount in the facts and
+    percentages a percentage, so '€300' can't pass just because a deal is called '300 seats'.
+    Returns the list of numbers that fail."""
+    fact_text = json.dumps(facts, ensure_ascii=False)
+    allowed = numbers_in(fact_text) | {"4"}  # "Q4" is allowed
+    money, pct = {_norm(m) for m in MONEY.findall(fact_text)}, {_norm(m) for m in PCT.findall(fact_text)}
+    bad = {n for n in numbers_in(note) if n not in allowed}
+    bad |= {f"€{_norm(m)}" for m in MONEY.findall(note) if _norm(m) not in money}
+    bad |= {f"{_norm(m)}%" for m in PCT.findall(note) if _norm(m) not in pct}
+    return sorted(bad)

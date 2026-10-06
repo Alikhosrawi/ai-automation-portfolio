@@ -1,0 +1,27 @@
+step,record_id,deal,owner,stage,amount,weighted,running_total
+Q4 weighted forecast as exported,,132 open deals closing in Q4,,,,,2128530
+minus duplicate copy,32291030631,Sandtor Spediiton GmbH: expansion +150 seats,Clara Example,Decision Maker Bought-In,132300,105840,2022690
+minus duplicate copy,32225749347,Expansion +120 seats for Kirchdorf Kli. gGmbH,Clara Example,Decision Maker Bought-In,38100,30480,1992210
+minus duplicate copy,32162047647,Wilhelmsburg Handel – Renewal 2027,Jonas Example,Presentation Scheduled,33400,20040,1972170
+minus duplicate copy,32290382328,Ankerplatz Bau: renewal 2027,Murat Example,Presentation Scheduled,23200,13920,1958250
+minus duplicate copy,32251617713,"BLAUWAL PFLEGE GMBH & CO. KG: time tracking, 40 seats",Leonie Example,Qualified To Buy,24400,9760,1948490
+minus duplicate copy,32067281733,Hafenkante Pflege – Expansion +40 seats,Murat Example,Contract Sent,7800,7020,1941470
+minus duplicate copy,32142514618,"Westwall Pflege Flensburg: shift planning + time tracking, 40 seats",Murat Example,Appointment Scheduled,26600,5320,1936150
+minus duplicate copy,32148389610,"Francop Log. GmbH: workforce analytics, 25 seats",Aylin Example,Appointment Scheduled,14700,2940,1933210
+minus duplicate copy,32222322861,Eichenwald Facility Services – Workforce analytics add-on,Murat Example,Appointment Scheduled,14000,2800,1930410
+minus duplicate copy,32150786470,BIRKENHAIN PFLEGE GMBH & CO. KG - Expansion +150 seats,Clara Example,Appointment Scheduled,13900,2780,1927630
+minus duplicate copy,32293229190,"Lotsenhaus Bua UG - Shift planning, 120 seats",Clara Example,Appointment Scheduled,10000,2000,1925630
+minus duplicate copy,32099245661,"Kaiserkai Kliniken – Workforce analytics, 80 seats",Jonas Example,Appointment Scheduled,9200,1840,1923790
+minus no activity for over 60 days,32120217853,"Wattenmeer Handel – Shift planning + time tracking, 300 seats",Clara Example,Presentation Scheduled,180000,108000,1815790
+minus no activity for over 60 days,32004476615,Uhlenhorst Bau – Workforce analytics add-on,Leonie Example,Decision Maker Bought-In,16500,13200,1802590
+minus no activity for over 60 days,32126988740,Tidenhub Kliniken – Renewal 2027,Finn Example,Appointment Scheduled,56800,11360,1791230
+minus no activity for over 60 days,32058990997,Lindenhof Handel – Expansion +60 seats,Jonas Example,Appointment Scheduled,38700,7740,1783490
+"Q4 weighted forecast, cleaned",,,,,,,1783490
+not counted: no amount,31999326915,"Wandsbek Gastro – Time tracking, 300 seats",Jonas Example,Qualified To Buy,,,
+not counted: no amount,32015337901,Lotsenhaus Bau – Expansion +150 seats,Aylin Example,Qualified To Buy,,,
+not counted: no amount,32052317011,"Ostwind Facility Services – Workforce analytics, 120 seats",Leonie Example,Qualified To Buy,,,
+not counted: no amount,32134741420,"Kirchdorf Kliniken – Shift planning, 25 seats",Aylin Example,Presentation Scheduled,,,
+not counted: no amount,32164760202,"Fleetwerk Reinigung – Time tracking, 60 seats",Murat Example,Contract Sent,,,
+not counted: no amount,32228640465,"Uhlenhorst Bau – Shift planning + time tracking, 60 seats",Jonas Example,Presentation Scheduled,,,
+not counted: no amount,32239839258,Kirchdorf Kliniken – Renewal 2027,Murat Example,Decision Maker Bought-In,,,
+not counted: no amount,32262239546,Strandgut Spedition – Expansion +40 seats,Jonas Example,Qualified To Buy,,,
