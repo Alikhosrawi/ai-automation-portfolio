@@ -1,0 +1,2 @@
+note used: AI (recorded)
+numbers in the AI draft not found in facts.json: none

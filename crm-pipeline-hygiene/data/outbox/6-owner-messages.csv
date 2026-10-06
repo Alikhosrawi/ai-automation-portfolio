@@ -1,0 +1,64 @@
+to,items,message
+Jonas Example,12,"Hi Jonas, 12 things in HubSpot need you before this week's forecast call:
+- Wandsbek Gastro – Time tracking, 300 seats: Add the amount (it counts as €0 in the forecast until then)
+- Uhlenhorst Bau – Shift planning + time tracking, 60 seats: Add the amount (it counts as €0 in the forecast until then)
+- Strandgut Spedition – Expansion +40 seats: Add the amount (it counts as €0 in the forecast until then)
+- Billwerder Pflege – Expansion +150 seats: Add a close date (it is in no quarter's forecast until then)
+- Billwerder Pflege – Renewal 2027: No activity for 31-60 days: book a next step or downgrade it
+- Heimfeld Sicherheitsdienst – Expansion +300 seats: No activity for 31-60 days: book a next step or downgrade it
+- Lindenhof Handel – Expansion +60 seats: No activity for over 60 days: close it as lost, or prove it's alive
+- Rönneburg Hotels – Expansion +300 seats: Looks like a second copy of another deal: merge it into the original
+- Shift planning + time tracking, 60 seats for Grünspan Logistik: Looks like a second copy of another deal: merge it into the original
+- Wilhelmsburg Handel – Renewal 2027: Looks like a second copy of another deal: merge it into the original
+- Sandtor Event – Expansion +60 seats: Looks like a second copy of another deal: merge it into the original
+- Kaiserkai Kliniken – Workforce analytics, 80 seats: Looks like a second copy of another deal: merge it into the original"
+Murat Example,12,"Hi Murat, 12 things in HubSpot need you before this week's forecast call:
+- Fleetwerk Reinigung – Time tracking, 60 seats: Add the amount (it counts as €0 in the forecast until then)
+- Kirchdorf Kliniken – Renewal 2027: Add the amount (it counts as €0 in the forecast until then)
+- Wandsbek Gastro – Expansion +120 seats: Add a close date (it is in no quarter's forecast until then)
+- Moorfleet Hotels – Expansion +25 seats: Add a close date (it is in no quarter's forecast until then)
+- Sinstorf Event – Renewal 2027: The close date has passed: move it or close the deal
+- Curslack Event – Expansion +25 seats: No activity for 31-60 days: book a next step or downgrade it
+- Seemeile Sicherheitsdienst – Workforce analytics, 120 seats: Closed won, but the close date is in the future: fix the date
+- Ebbe Gastro – Workforce analytics, 60 seats: Looks like a second copy of another deal: merge it into the original
+- Westwall Pflege Flensburg: shift planning + time tracking, 40 seats: Looks like a second copy of another deal: merge it into the original
+- Ankerplatz Bau: renewal 2027: Looks like a second copy of another deal: merge it into the original
+- Eichenwald Facility Services – Workforce analytics add-on: Looks like a second copy of another deal: merge it into the original
+- Hafenkante Pflege – Expansion +40 seats: Looks like a second copy of another deal: merge it into the original"
+Finn Example,9,"Hi Finn, 9 things in HubSpot need you before this week's forecast call:
+- Neugraben Facility Services – Shift planning + time tracking, 300 seats: The close date has passed: move it or close the deal
+- Waltershof Sicherheitsdienst – Expansion +300 seats: The close date has passed: move it or close the deal
+- Ochsenwerder Bau – Expansion +40 seats: No activity for over 60 days: close it as lost, or prove it's alive
+- Blauwal Pflege – Expansion +300 seats: No activity for over 60 days: close it as lost, or prove it's alive
+- Tidenhub Kliniken – Renewal 2027: No activity for over 60 days: close it as lost, or prove it's alive
+- Wattenmeer Handel – Workforce analytics add-on: No activity for over 60 days: close it as lost, or prove it's alive
+- Altona Hotels – Expansion +200 seats: No activity for over 60 days: close it as lost, or prove it's alive
+- Ankerplatz Bau – Shift planning + time tracking, 25 seats: Closed won, but the close date is in the future: fix the date
+- Tatenberg Reinigung – Workforce analytics, 80 seats: Looks like a second copy of another deal: merge it into the original"
+Clara Example,8,"Hi Clara, 8 things in HubSpot need you before this week's forecast call:
+- Lotsenhaus Event – Renewal 2027: The close date has passed: move it or close the deal
+- Neugraben Hotels – Workforce analytics add-on: No activity for 31-60 days: book a next step or downgrade it
+- Neuenfelde Handel – Renewal 2027: No activity for 31-60 days: book a next step or downgrade it
+- Wattenmeer Handel – Shift planning + time tracking, 300 seats: No activity for over 60 days: close it as lost, or prove it's alive
+- Sandtor Spediiton GmbH: expansion +150 seats: Looks like a second copy of another deal: merge it into the original
+- Expansion +120 seats for Kirchdorf Kli. gGmbH: Looks like a second copy of another deal: merge it into the original
+- BIRKENHAIN PFLEGE GMBH & CO. KG - Expansion +150 seats: Looks like a second copy of another deal: merge it into the original
+- Lotsenhaus Bua UG - Shift planning, 120 seats: Looks like a second copy of another deal: merge it into the original"
+Leonie Example,8,"Hi Leonie, 8 things in HubSpot need you before this week's forecast call:
+- Ostwind Facility Services – Workforce analytics, 120 seats: Add the amount (it counts as €0 in the forecast until then)
+- Hammerbrook Pflege – Expansion +40 seats: Add a close date (it is in no quarter's forecast until then)
+- Veddel Spedition – Workforce analytics, 200 seats: The close date has passed: move it or close the deal
+- Allermöhe Hotels – Workforce analytics add-on: The close date has passed: move it or close the deal
+- Wattenmeer Handel – Renewal 2027: No activity for 31-60 days: book a next step or downgrade it
+- Uhlenhorst Bau – Workforce analytics add-on: No activity for over 60 days: close it as lost, or prove it's alive
+- Eppendorf Sicherheitsdienst Lüneburg - Expansion +120 seats: Looks like a second copy of another deal: merge it into the original
+- BLAUWAL PFLEGE GMBH & CO. KG: time tracking, 40 seats: Looks like a second copy of another deal: merge it into the original"
+Aylin Example,4,"Hi Aylin, 4 things in HubSpot need you before this week's forecast call:
+- Lotsenhaus Bau – Expansion +150 seats: Add the amount (it counts as €0 in the forecast until then)
+- Kirchdorf Kliniken – Shift planning, 25 seats: Add the amount (it counts as €0 in the forecast until then)
+- Bernstein Event – Expansion +40 seats: Closed won, but the close date is in the future: fix the date
+- Francop Log. GmbH: workforce analytics, 25 seats: Looks like a second copy of another deal: merge it into the original"
+Head of RevOps (deals with no owner),3,"These deals have no owner. Please assign them:
+- Winterhude Bau – Workforce analytics, 40 seats: Give it an owner
+- Seemeile Gastro – Shift planning + time tracking, 300 seats: Give it an owner
+- Silbermöwe Facility Services – Expansion +60 seats: Give it an owner"

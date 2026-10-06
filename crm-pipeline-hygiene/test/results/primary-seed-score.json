@@ -1,0 +1,143 @@
+{
+  "rules": {
+    "STALE": {
+      "planted": 6,
+      "caught": 6,
+      "false_flags": 0
+    },
+    "ZOMBIE": {
+      "planted": 8,
+      "caught": 8,
+      "false_flags": 0
+    },
+    "PAST_CLOSE": {
+      "planted": 6,
+      "caught": 6,
+      "false_flags": 0
+    },
+    "NO_AMOUNT": {
+      "planted": 8,
+      "caught": 8,
+      "false_flags": 0
+    },
+    "NO_CLOSE_DATE": {
+      "planted": 4,
+      "caught": 4,
+      "false_flags": 0
+    },
+    "NO_OWNER": {
+      "planted": 3,
+      "caught": 3,
+      "false_flags": 0
+    },
+    "WON_FUTURE_DATE": {
+      "planted": 3,
+      "caught": 3,
+      "false_flags": 0
+    }
+  },
+  "duplicates_ai": {
+    "by_code": {
+      "DUP_EXACT": {
+        "planted": 8,
+        "caught": 8,
+        "unsure": 0,
+        "reached_ai": 0
+      },
+      "DUP_FUZZY": {
+        "planted": 10,
+        "caught": 10,
+        "unsure": 0,
+        "reached_ai": 0
+      }
+    },
+    "false_flags": 0,
+    "false_flags_on_traps": 0,
+    "traps_marked_unsure": 0,
+    "false_flag_pairs": []
+  },
+  "duplicates_rules_only": {
+    "by_code": {
+      "DUP_EXACT": {
+        "planted": 8,
+        "caught": 8,
+        "unsure": 0,
+        "reached_ai": 8
+      },
+      "DUP_FUZZY": {
+        "planted": 10,
+        "caught": 9,
+        "unsure": 0,
+        "reached_ai": 10
+      }
+    },
+    "false_flags": 13,
+    "false_flags_on_traps": 6,
+    "traps_marked_unsure": 0,
+    "false_flag_pairs": [
+      [
+        "32141288138",
+        "32067707686"
+      ],
+      [
+        "32141288138",
+        "32117287664"
+      ],
+      [
+        "32206748744",
+        "32177638807"
+      ],
+      [
+        "32233172625",
+        "32097481765"
+      ],
+      [
+        "32239839258",
+        "32134741420"
+      ],
+      [
+        "32244299145",
+        "32198772213"
+      ],
+      [
+        "32247247361",
+        "32198772213"
+      ],
+      [
+        "32247247361",
+        "32244299145"
+      ],
+      [
+        "32266871028",
+        "32244721862"
+      ],
+      [
+        "32269630156",
+        "32216825458"
+      ],
+      [
+        "32275476846",
+        "32220638084"
+      ],
+      [
+        "32285764367",
+        "32227279262"
+      ],
+      [
+        "32293986023",
+        "32282705677"
+      ]
+    ]
+  },
+  "candidate_pairs": 36,
+  "exact_pairs": 8,
+  "forecast": {
+    "raw": 2128530,
+    "cleaned": 1783490,
+    "true": 1917010,
+    "raw_minus_true": 211520,
+    "raw_minus_true_pct": 11.0,
+    "cleaned_minus_true": -133520,
+    "cleaned_minus_true_pct": -7.0
+  }
+}

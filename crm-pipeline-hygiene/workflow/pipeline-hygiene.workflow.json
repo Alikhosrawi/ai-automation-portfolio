@@ -1,0 +1,1480 @@
+{
+  "name": "Pipeline hygiene check (demo)",
+  "nodes": [
+    {
+      "id": "86d0cf00-dbfc-5eda-b480-6aab049aac42",
+      "name": "Run the demo Monday (test button)",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -460,
+        0
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "ca01793b-59e6-516f-a23b-a63496ce08fa",
+      "name": "Every Monday 07:30",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -460,
+        200
+      ],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "weeks",
+              "triggerAtDay": [
+                1
+              ],
+              "triggerAtHour": 7,
+              "triggerAtMinute": 30
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "9da3f2c2-8467-526e-9fdd-f268adb68cb4",
+      "name": "Settings",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -220,
+        100
+      ],
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "s1",
+              "name": "folder",
+              "value": "/home/node/.n8n-files/pipeline-hygiene-demo",
+              "type": "string"
+            },
+            {
+              "id": "s2",
+              "name": "now",
+              "type": "string",
+              "value": "={{ $('Every Monday 07:30').isExecuted ? $now.setZone('Europe/Berlin').toFormat('yyyy-MM-dd HH:mm') : '2026-10-12 07:30' }}"
+            },
+            {
+              "id": "s3",
+              "name": "aiMode",
+              "value": "replay",
+              "type": "string"
+            },
+            {
+              "id": "s4",
+              "name": "model",
+              "value": "claude-sonnet-5-5",
+              "type": "string"
+            },
+            {
+              "id": "s5",
+              "name": "apiUrl",
+              "value": "https://api.anthropic.com/v1/messages",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "a742d03c-a5b4-5598-a0b8-c3e769fd48cd",
+      "name": "Read deals export",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        20,
+        -300
+      ],
+      "parameters": {
+        "fileSelector": "={{ $('Settings').first().json.folder }}/export/deals.csv",
+        "options": {}
+      }
+    },
+    {
+      "id": "500a9eaf-fa9d-58b9-9b1b-2a538abdf681",
+      "name": "Deal rows",
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        240,
+        -300
+      ],
+      "parameters": {
+        "options": {
+          "headerRow": true
+        }
+      }
+    },
+    {
+      "id": "bc9e2097-b101-5aa1-b204-7835d219a61b",
+      "name": "All deals",
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        460,
+        -300
+      ],
+      "parameters": {
+        "aggregate": "aggregateAllItemData",
+        "destinationFieldName": "rows",
+        "options": {}
+      }
+    },
+    {
+      "id": "78320a77-d239-531d-8152-cb807e4cd265",
+      "name": "Read companies export",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        720,
+        -300
+      ],
+      "parameters": {
+        "fileSelector": "={{ $('Settings').first().json.folder }}/export/companies.csv",
+        "options": {}
+      }
+    },
+    {
+      "id": "cd989daf-d8bd-5bd1-a238-63d7ce4da7e4",
+      "name": "Company rows",
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        940,
+        -300
+      ],
+      "parameters": {
+        "options": {
+          "headerRow": true
+        }
+      }
+    },
+    {
+      "id": "f11f26c2-8784-5e14-92be-5649e96f6c27",
+      "name": "All companies",
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        1160,
+        -300
+      ],
+      "parameters": {
+        "aggregate": "aggregateAllItemData",
+        "destinationFieldName": "rows",
+        "options": {}
+      }
+    },
+    {
+      "id": "db0e50c0-e94b-5504-b44a-2a9563a73496",
+      "name": "Read recorded AI answers",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        1420,
+        -300
+      ],
+      "parameters": {
+        "fileSelector": "={{ $('Settings').first().json.folder }}/ai/duplicate-verdicts.csv",
+        "options": {}
+      }
+    },
+    {
+      "id": "8521d5f1-679f-51d2-9ada-f346550210cb",
+      "name": "Answer rows",
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        1640,
+        -300
+      ],
+      "parameters": {
+        "options": {
+          "headerRow": true
+        }
+      }
+    },
+    {
+      "id": "9e05bfa4-137f-53c1-ba3d-d2f1633119c5",
+      "name": "All recorded answers",
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        1860,
+        -300
+      ],
+      "parameters": {
+        "aggregate": "aggregateAllItemData",
+        "destinationFieldName": "rows",
+        "options": {}
+      }
+    },
+    {
+      "id": "fa878c0a-3b07-5acf-8c4d-b55345a6579f",
+      "name": "Read judge prompt",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        20,
+        -140
+      ],
+      "parameters": {
+        "fileSelector": "={{ $('Settings').first().json.folder }}/prompts/duplicate-judge.md",
+        "options": {}
+      }
+    },
+    {
+      "id": "29fdabd8-6e85-52a8-b881-dba90152d7c4",
+      "name": "Judge prompt text",
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        240,
+        -140
+      ],
+      "parameters": {
+        "operation": "text",
+        "destinationKey": "text",
+        "options": {}
+      }
+    },
+    {
+      "id": "020fac2f-988c-5c3f-b92b-39946a25c2dd",
+      "name": "Read note prompt",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        500,
+        -140
+      ],
+      "parameters": {
+        "fileSelector": "={{ $('Settings').first().json.folder }}/prompts/weekly-note.md",
+        "options": {}
+      }
+    },
+    {
+      "id": "d7b78d3d-e1ed-5052-80af-038f3695d28e",
+      "name": "Note prompt text",
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        720,
+        -140
+      ],
+      "parameters": {
+        "operation": "text",
+        "destinationKey": "text",
+        "options": {}
+      }
+    },
+    {
+      "id": "3da89e42-73c9-54d4-bdad-62d75fbfcaf5",
+      "name": "Read recorded note",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        980,
+        -140
+      ],
+      "parameters": {
+        "fileSelector": "={{ $('Settings').first().json.folder }}/ai/weekly-note.md",
+        "options": {}
+      }
+    },
+    {
+      "id": "44110c0c-c973-56ac-83ae-f2a7a2889d7f",
+      "name": "Recorded note text",
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        -140
+      ],
+      "parameters": {
+        "operation": "text",
+        "destinationKey": "text",
+        "options": {}
+      }
+    },
+    {
+      "id": "13238124-b977-5226-90b8-d00b4c08383e",
+      "name": "1. Rule checks",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        20,
+        120
+      ],
+      "parameters": {
+        "jsCode": "const PROB = {\"Appointment Scheduled\": 0.2, \"Qualified To Buy\": 0.4, \"Presentation Scheduled\": 0.6,\n  \"Decision Maker Bought-In\": 0.8, \"Contract Sent\": 0.9, \"Closed Won\": 1.0, \"Closed Lost\": 0.0};\nconst CLOSED = [\"Closed Won\", \"Closed Lost\"];\nconst LEGAL = new Set([\"gmbh\", \"ggmbh\", \"mbh\", \"ag\", \"se\", \"kg\", \"co\", \"ug\", \"ohg\", \"kgaa\", \"und\"]);\nconst ACTION = {\n  NO_AMOUNT: \"Add the amount (it counts as €0 in the forecast until then)\",\n  NO_CLOSE_DATE: \"Add a close date (it is in no quarter's forecast until then)\",\n  NO_OWNER: \"Give it an owner\",\n  PAST_CLOSE: \"The close date has passed: move it or close the deal\",\n  STALE: \"No activity for 31-60 days: book a next step or downgrade it\",\n  ZOMBIE: \"No activity for over 60 days: close it as lost, or prove it's alive\",\n  WON_FUTURE_DATE: \"Closed won, but the close date is in the future: fix the date\",\n  DUPLICATE: \"Looks like a second copy of another deal: merge it into the original\",\n};\nconst ORDER = Object.keys(ACTION);\n// dates as whole days since 1970 (UTC) and minutes, so there are no time-zone surprises\nconst dayNum = s => s ? Math.round(Date.UTC(+s.slice(0, 4), +s.slice(5, 7) - 1, +s.slice(8, 10)) / 86400000) : null;\nconst minNum = s => s ? dayNum(s) * 1440 + (+s.slice(11, 13)) * 60 + (+s.slice(14, 16)) : null;\nconst Q4 = [dayNum(\"2026-10-01\"), dayNum(\"2026-12-31\")];\n\nfunction prep(deals, companies) {\n  const comps = {};\n  for (const c of companies) comps[c[\"Record ID\"]] = c;\n  return deals.map(d => {\n    const amt = String(d[\"Amount\"] ?? \"\").trim();\n    const last = d[\"Last Activity Date\"] || d[\"Create Date\"];\n    return Object.assign({}, d, {\n      _open: !CLOSED.includes(d[\"Deal Stage\"]),\n      _amount: amt ? parseFloat(amt) : 0,\n      _close: dayNum(d[\"Close Date\"]),\n      _createMin: minNum(d[\"Create Date\"]),\n      _createDay: dayNum(d[\"Create Date\"]),\n      _lastDay: dayNum(last),\n      _company: comps[d[\"Associated Company IDs (Primary)\"]] || {},\n    });\n  });\n}\nconst ownerOf = d => (d[\"Deal owner\"] || \"\").trim() || \"(no owner)\";\nconst weighted = d => d._amount * PROB[d[\"Deal Stage\"]];\nconst inQ4 = d => d._open && d._close !== null && d._close >= Q4[0] && d._close <= Q4[1];\nconst halfUp = (x, digits = 0) => Math.floor(x * 10 ** digits + 0.5) / 10 ** digits;\nconst eur = x => \"€\" + String(halfUp(x)).replace(/\\B(?=(\\d{3})+(?!\\d))/g, \",\");\n\nfunction ruleFlags(deals, today) {\n  const flags = [];\n  for (const d of deals) {\n    if (d[\"Deal Stage\"] === \"Closed Won\" && d._close !== null && d._close > today)\n      flags.push([d, \"WON_FUTURE_DATE\", `closed won, close date ${d[\"Close Date\"]}`]);\n    if (!d._open) continue;\n    if (d._amount === 0 && d[\"Deal Stage\"] !== \"Appointment Scheduled\") flags.push([d, \"NO_AMOUNT\", `stage ${d[\"Deal Stage\"]}, no amount`]);\n    if (d._close === null) flags.push([d, \"NO_CLOSE_DATE\", \"no close date\"]);\n    if (!(d[\"Deal owner\"] || \"\").trim()) flags.push([d, \"NO_OWNER\", \"no owner\"]);\n    if (d._close !== null && d._close < today) flags.push([d, \"PAST_CLOSE\", `close date ${d[\"Close Date\"]}, ${today - d._close} days ago`]);\n    const idle = today - d._lastDay;\n    if (idle >= 31 && idle <= 60) flags.push([d, \"STALE\", `last activity ${idle} days ago`]);\n    else if (idle > 60) flags.push([d, \"ZOMBIE\", `last activity ${idle} days ago`]);\n  }\n  return flags;\n}\n\nconst settings = $('Settings').first().json;\nconst deals = prep($('All deals').first().json.rows, $('All companies').first().json.rows);\nconst today = dayNum(settings.now);\nconst flags = ruleFlags(deals, today).map(([d, code, detail]) => ({record_id: d[\"Record ID\"], code, detail}));\nreturn [{json: {flags, counts: flags.reduce((c, f) => (c[f.code] = (c[f.code] || 0) + 1, c), {})}}];"
+      },
+      "notes": "Missing amount, close date or owner; close date passed; no activity 31-60 or 60+ days; won with a future date",
+      "notesInFlow": true
+    },
+    {
+      "id": "a9640e5f-352e-5d1a-8741-657513cc6ced",
+      "name": "2. Find duplicate pairs",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        260,
+        120
+      ],
+      "parameters": {
+        "jsCode": "const PROB = {\"Appointment Scheduled\": 0.2, \"Qualified To Buy\": 0.4, \"Presentation Scheduled\": 0.6,\n  \"Decision Maker Bought-In\": 0.8, \"Contract Sent\": 0.9, \"Closed Won\": 1.0, \"Closed Lost\": 0.0};\nconst CLOSED = [\"Closed Won\", \"Closed Lost\"];\nconst LEGAL = new Set([\"gmbh\", \"ggmbh\", \"mbh\", \"ag\", \"se\", \"kg\", \"co\", \"ug\", \"ohg\", \"kgaa\", \"und\"]);\nconst ACTION = {\n  NO_AMOUNT: \"Add the amount (it counts as €0 in the forecast until then)\",\n  NO_CLOSE_DATE: \"Add a close date (it is in no quarter's forecast until then)\",\n  NO_OWNER: \"Give it an owner\",\n  PAST_CLOSE: \"The close date has passed: move it or close the deal\",\n  STALE: \"No activity for 31-60 days: book a next step or downgrade it\",\n  ZOMBIE: \"No activity for over 60 days: close it as lost, or prove it's alive\",\n  WON_FUTURE_DATE: \"Closed won, but the close date is in the future: fix the date\",\n  DUPLICATE: \"Looks like a second copy of another deal: merge it into the original\",\n};\nconst ORDER = Object.keys(ACTION);\n// dates as whole days since 1970 (UTC) and minutes, so there are no time-zone surprises\nconst dayNum = s => s ? Math.round(Date.UTC(+s.slice(0, 4), +s.slice(5, 7) - 1, +s.slice(8, 10)) / 86400000) : null;\nconst minNum = s => s ? dayNum(s) * 1440 + (+s.slice(11, 13)) * 60 + (+s.slice(14, 16)) : null;\nconst Q4 = [dayNum(\"2026-10-01\"), dayNum(\"2026-12-31\")];\n\nfunction prep(deals, companies) {\n  const comps = {};\n  for (const c of companies) comps[c[\"Record ID\"]] = c;\n  return deals.map(d => {\n    const amt = String(d[\"Amount\"] ?? \"\").trim();\n    const last = d[\"Last Activity Date\"] || d[\"Create Date\"];\n    return Object.assign({}, d, {\n      _open: !CLOSED.includes(d[\"Deal Stage\"]),\n      _amount: amt ? parseFloat(amt) : 0,\n      _close: dayNum(d[\"Close Date\"]),\n      _createMin: minNum(d[\"Create Date\"]),\n      _createDay: dayNum(d[\"Create Date\"]),\n      _lastDay: dayNum(last),\n      _company: comps[d[\"Associated Company IDs (Primary)\"]] || {},\n    });\n  });\n}\nconst ownerOf = d => (d[\"Deal owner\"] || \"\").trim() || \"(no owner)\";\nconst weighted = d => d._amount * PROB[d[\"Deal Stage\"]];\nconst inQ4 = d => d._open && d._close !== null && d._close >= Q4[0] && d._close <= Q4[1];\nconst halfUp = (x, digits = 0) => Math.floor(x * 10 ** digits + 0.5) / 10 ** digits;\nconst eur = x => \"€\" + String(halfUp(x)).replace(/\\B(?=(\\d{3})+(?!\\d))/g, \",\");\n\n// A faithful copy of Python difflib.SequenceMatcher(None, a, b).ratio() (no junk; autojunk only matters for 200+ chars)\nfunction ratio(a, b) {\n  const b2j = {};\n  for (let j = 0; j < b.length; j++) (b2j[b[j]] = b2j[b[j]] || []).push(j);\n  if (b.length >= 200) {  // difflib's autojunk \"popular\" rule\n    const ntest = Math.floor(b.length / 100) + 1;\n    for (const k of Object.keys(b2j)) if (b2j[k].length > ntest) delete b2j[k];\n  }\n  function longest(alo, ahi, blo, bhi) {\n    let besti = alo, bestj = blo, bestsize = 0, j2len = {};\n    for (let i = alo; i < ahi; i++) {\n      const newj2len = {};\n      for (const j of (b2j[a[i]] || [])) {\n        if (j < blo) continue;\n        if (j >= bhi) break;\n        const k = (j2len[j - 1] || 0) + 1;\n        newj2len[j] = k;\n        if (k > bestsize) { besti = i - k + 1; bestj = j - k + 1; bestsize = k; }\n      }\n      j2len = newj2len;\n    }\n    while (besti > alo && bestj > blo && a[besti - 1] === b[bestj - 1]) { besti--; bestj--; bestsize++; }\n    while (besti + bestsize < ahi && bestj + bestsize < bhi && a[besti + bestsize] === b[bestj + bestsize]) bestsize++;\n    return [besti, bestj, bestsize];\n  }\n  let matches = 0;\n  const queue = [[0, a.length, 0, b.length]];\n  while (queue.length) {\n    const [alo, ahi, blo, bhi] = queue.pop();\n    const [i, j, k] = longest(alo, ahi, blo, bhi);\n    if (k) {\n      matches += k;\n      if (alo < i && blo < j) queue.push([alo, i, blo, j]);\n      if (i + k < ahi && j + k < bhi) queue.push([i + k, ahi, j + k, bhi]);\n    }\n  }\n  const t = a.length + b.length;\n  return t ? 2 * matches / t : 1;\n}\nfunction normCompany(name) {\n  let s = name.toLowerCase().replace(/ä/g, \"ae\").replace(/ö/g, \"oe\").replace(/ü/g, \"ue\").replace(/ß/g, \"ss\");\n  s = s.normalize(\"NFKD\").replace(/[^\\x00-\\x7f]/g, \"\");\n  s = s.replace(/[^a-z0-9 ]+/g, \" \");\n  return s.split(/\\s+/).filter(t => t && !LEGAL.has(t)).join(\" \");\n}\nconst normDealName = n => n.toLowerCase().split(/\\s+/).filter(Boolean).join(\" \");\n\nfunction companyMatch(a, b) {\n  if (a[\"Associated Company IDs (Primary)\"] === b[\"Associated Company IDs (Primary)\"]) return [true, \"same company record\", 1.0];\n  const da = a._company[\"Company Domain Name\"] || \"\", db = b._company[\"Company Domain Name\"] || \"\";\n  const sim = ratio(normCompany(a[\"Associated Company (Primary)\"]), normCompany(b[\"Associated Company (Primary)\"]));\n  if (da && db && da === db) return [true, \"same domain\", sim];\n  return [sim >= 0.80, `name similarity ${sim.toFixed(2)}`, sim];\n}\nfunction amountGap(a, b) {\n  const hi = Math.max(a._amount, b._amount);\n  return hi === 0 ? 0 : Math.abs(a._amount - b._amount) / hi;\n}\nfunction copyOf(a, b) {\n  if (a._createDay !== b._createDay) return a._createMin > b._createMin ? [a, b] : [b, a];\n  return BigInt(a[\"Record ID\"]) > BigInt(b[\"Record ID\"]) ? [a, b] : [b, a];\n}\nfunction duplicatePairs(deals) {\n  const opn = deals.filter(d => d._open);\n  const exact = [], candidates = [];\n  for (let i = 0; i < opn.length; i++) for (let j = i + 1; j < opn.length; j++) {\n    const a = opn[i], b = opn[j];\n    if (a[\"Associated Company IDs (Primary)\"] === b[\"Associated Company IDs (Primary)\"] && normDealName(a[\"Deal Name\"]) === normDealName(b[\"Deal Name\"])) {\n      const [c, o] = copyOf(a, b);\n      exact.push({copy: c, original: o, how: \"same company record and same deal name\"});\n      continue;\n    }\n    const [match, how, sim] = companyMatch(a, b);\n    if (!match) continue;\n    const gap = amountGap(a, b);\n    const days = Math.floor(Math.abs(a._createMin - b._createMin) / 1440);\n    if (gap <= 0.25 && days <= 90) {\n      const [c, o] = copyOf(a, b);\n      candidates.push({copy: c, original: o, how, sim, gap, days});\n    }\n  }\n  return [exact, candidates];\n}\nconst pairId = p => `${p.original[\"Record ID\"]}~${p.copy[\"Record ID\"]}`;\n\nconst settings = $('Settings').first().json;\nconst deals = prep($('All deals').first().json.rows, $('All companies').first().json.rows);\nconst today = dayNum(settings.now);\nconst template = $('Judge prompt text').first().json.text;\nconst DEAL = [\"Record ID\", \"Deal Name\", \"Deal Stage\", \"Amount\", \"Close Date\", \"Create Date\", \"Last Activity Date\", \"Deal owner\", \"Associated Company (Primary)\"];\nconst COMP = [\"Record ID\", \"Company name\", \"Company Domain Name\", \"City\"];\nconst block = (row, fields) => fields.map(f => `${f}: ${row[f] || \"(empty)\"}`).join(\"\\n\");\nconst prompt = p => template.replace(\"{deal_a}\", block(p.original, DEAL)).replace(\"{company_a}\", block(p.original._company, COMP))\n  .replace(\"{deal_b}\", block(p.copy, DEAL)).replace(\"{company_b}\", block(p.copy._company, COMP));\nconst [exact, candidates] = duplicatePairs(deals);\nconst out = [];\nfor (const p of exact) out.push({kind: \"exact\", pair_id: pairId(p), original_id: p.original[\"Record ID\"], copy_id: p.copy[\"Record ID\"], how: p.how});\nfor (const p of candidates) out.push({kind: \"candidate\", pair_id: pairId(p), original_id: p.original[\"Record ID\"], copy_id: p.copy[\"Record ID\"],\n  how: p.how, similarity: +p.sim.toFixed(3), amount_gap: +p.gap.toFixed(3), prompt: prompt(p)});\nif (!out.length) out.push({kind: \"none\"});\nreturn out.map(json => ({json}));"
+      },
+      "notes": "Exact copies by rule; look-alike pairs (similar company, amount within 25%, created within 90 days) go to the AI judge",
+      "notesInFlow": true
+    },
+    {
+      "id": "14bf8c3a-ca6c-59fe-968e-76b0ec8d925b",
+      "name": "Live AI?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        500,
+        120
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "c1",
+              "leftValue": "={{ $('Settings').first().json.aiMode === 'live' && $json.kind === 'candidate' }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "936f1bf0-f9d4-55ae-90a4-dbdc0a6efce0",
+      "name": "Ask AI: same deal twice?",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        740,
+        20
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $('Settings').first().json.apiUrl }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "anthropic-version",
+              "value": "2023-06-01"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ model: $('Settings').first().json.model, max_tokens: 120, messages: [{ role: 'user', content: $json.prompt }] }) }}",
+        "options": {
+          "timeout": 60000
+        }
+      },
+      "notes": "Live mode only. Needs your own Anthropic API key as a Header Auth credential (name: x-api-key).",
+      "notesInFlow": true
+    },
+    {
+      "id": "c6144e56-5be2-5cdb-86fe-36f9de32b2c9",
+      "name": "Read AI verdict",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        980,
+        20
+      ],
+      "parameters": {
+        "jsCode": "const pairs = $('Live AI?').all(0, 0);\nconst parse = text => {\n  const line = (text || \"\").trim().split(\"\\n\")[0] || \"\";\n  const m = line.match(/^\\s*(DUPLICATE|DIFFERENT|UNSURE)\\s*\\|\\s*(.*)$/);\n  return m ? [m[1], m[2].trim()] : [\"UNSURE\", `unreadable answer, sent to a person: ${line.slice(0, 60)}`];\n};\nreturn $input.all().map((it, i) => {\n  const text = (it.json.content || []).map(c => c.text || \"\").join(\"\").trim();\n  const [verdict, reason] = parse(text);\n  return {json: {...pairs[i].json, verdict, reason, decided_by: $('Settings').first().json.model}};\n});"
+      }
+    },
+    {
+      "id": "049725ed-acae-59f2-b51d-158aca1723f3",
+      "name": "Decide: rule, recorded answer or a person",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        740,
+        220
+      ],
+      "parameters": {
+        "jsCode": "const mode = $('Settings').first().json.aiMode;\nconst recorded = {};\nfor (const r of $('All recorded answers').first().json.rows) recorded[r.pair_id] = r;\nreturn $input.all().map(it => {\n  const p = it.json;\n  if (p.kind === \"none\") return {json: p};\n  if (p.kind === \"exact\") return {json: {...p, verdict: \"DUPLICATE\", reason: \"same company record and same deal name\", decided_by: \"rule\"}};\n  if (mode === \"off\") return {json: {...p, verdict: \"UNSURE\", reason: \"AI step switched off: a person decides\", decided_by: \"off\"}};\n  const r = recorded[p.pair_id];\n  return {json: r ? {...p, verdict: r.verdict, reason: r.reason, decided_by: `recorded (${r.model})`}\n                  : {...p, verdict: \"UNSURE\", reason: \"no recorded answer for this pair: a person decides\", decided_by: \"replay-missing\"}};\n});"
+      }
+    },
+    {
+      "id": "3a8054ef-3955-5d68-bd34-077f5ef8e5e8",
+      "name": "All pair verdicts",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        1220,
+        120
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "a5d7573f-4e30-5029-bcf4-4e619acb3e00",
+      "name": "3. Clean the Q4 forecast",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1460,
+        120
+      ],
+      "parameters": {
+        "jsCode": "const PROB = {\"Appointment Scheduled\": 0.2, \"Qualified To Buy\": 0.4, \"Presentation Scheduled\": 0.6,\n  \"Decision Maker Bought-In\": 0.8, \"Contract Sent\": 0.9, \"Closed Won\": 1.0, \"Closed Lost\": 0.0};\nconst CLOSED = [\"Closed Won\", \"Closed Lost\"];\nconst LEGAL = new Set([\"gmbh\", \"ggmbh\", \"mbh\", \"ag\", \"se\", \"kg\", \"co\", \"ug\", \"ohg\", \"kgaa\", \"und\"]);\nconst ACTION = {\n  NO_AMOUNT: \"Add the amount (it counts as €0 in the forecast until then)\",\n  NO_CLOSE_DATE: \"Add a close date (it is in no quarter's forecast until then)\",\n  NO_OWNER: \"Give it an owner\",\n  PAST_CLOSE: \"The close date has passed: move it or close the deal\",\n  STALE: \"No activity for 31-60 days: book a next step or downgrade it\",\n  ZOMBIE: \"No activity for over 60 days: close it as lost, or prove it's alive\",\n  WON_FUTURE_DATE: \"Closed won, but the close date is in the future: fix the date\",\n  DUPLICATE: \"Looks like a second copy of another deal: merge it into the original\",\n};\nconst ORDER = Object.keys(ACTION);\n// dates as whole days since 1970 (UTC) and minutes, so there are no time-zone surprises\nconst dayNum = s => s ? Math.round(Date.UTC(+s.slice(0, 4), +s.slice(5, 7) - 1, +s.slice(8, 10)) / 86400000) : null;\nconst minNum = s => s ? dayNum(s) * 1440 + (+s.slice(11, 13)) * 60 + (+s.slice(14, 16)) : null;\nconst Q4 = [dayNum(\"2026-10-01\"), dayNum(\"2026-12-31\")];\n\nfunction prep(deals, companies) {\n  const comps = {};\n  for (const c of companies) comps[c[\"Record ID\"]] = c;\n  return deals.map(d => {\n    const amt = String(d[\"Amount\"] ?? \"\").trim();\n    const last = d[\"Last Activity Date\"] || d[\"Create Date\"];\n    return Object.assign({}, d, {\n      _open: !CLOSED.includes(d[\"Deal Stage\"]),\n      _amount: amt ? parseFloat(amt) : 0,\n      _close: dayNum(d[\"Close Date\"]),\n      _createMin: minNum(d[\"Create Date\"]),\n      _createDay: dayNum(d[\"Create Date\"]),\n      _lastDay: dayNum(last),\n      _company: comps[d[\"Associated Company IDs (Primary)\"]] || {},\n    });\n  });\n}\nconst ownerOf = d => (d[\"Deal owner\"] || \"\").trim() || \"(no owner)\";\nconst weighted = d => d._amount * PROB[d[\"Deal Stage\"]];\nconst inQ4 = d => d._open && d._close !== null && d._close >= Q4[0] && d._close <= Q4[1];\nconst halfUp = (x, digits = 0) => Math.floor(x * 10 ** digits + 0.5) / 10 ** digits;\nconst eur = x => \"€\" + String(halfUp(x)).replace(/\\B(?=(\\d{3})+(?!\\d))/g, \",\");\n\n// A faithful copy of Python difflib.SequenceMatcher(None, a, b).ratio() (no junk; autojunk only matters for 200+ chars)\nfunction ratio(a, b) {\n  const b2j = {};\n  for (let j = 0; j < b.length; j++) (b2j[b[j]] = b2j[b[j]] || []).push(j);\n  if (b.length >= 200) {  // difflib's autojunk \"popular\" rule\n    const ntest = Math.floor(b.length / 100) + 1;\n    for (const k of Object.keys(b2j)) if (b2j[k].length > ntest) delete b2j[k];\n  }\n  function longest(alo, ahi, blo, bhi) {\n    let besti = alo, bestj = blo, bestsize = 0, j2len = {};\n    for (let i = alo; i < ahi; i++) {\n      const newj2len = {};\n      for (const j of (b2j[a[i]] || [])) {\n        if (j < blo) continue;\n        if (j >= bhi) break;\n        const k = (j2len[j - 1] || 0) + 1;\n        newj2len[j] = k;\n        if (k > bestsize) { besti = i - k + 1; bestj = j - k + 1; bestsize = k; }\n      }\n      j2len = newj2len;\n    }\n    while (besti > alo && bestj > blo && a[besti - 1] === b[bestj - 1]) { besti--; bestj--; bestsize++; }\n    while (besti + bestsize < ahi && bestj + bestsize < bhi && a[besti + bestsize] === b[bestj + bestsize]) bestsize++;\n    return [besti, bestj, bestsize];\n  }\n  let matches = 0;\n  const queue = [[0, a.length, 0, b.length]];\n  while (queue.length) {\n    const [alo, ahi, blo, bhi] = queue.pop();\n    const [i, j, k] = longest(alo, ahi, blo, bhi);\n    if (k) {\n      matches += k;\n      if (alo < i && blo < j) queue.push([alo, i, blo, j]);\n      if (i + k < ahi && j + k < bhi) queue.push([i + k, ahi, j + k, bhi]);\n    }\n  }\n  const t = a.length + b.length;\n  return t ? 2 * matches / t : 1;\n}\nfunction normCompany(name) {\n  let s = name.toLowerCase().replace(/ä/g, \"ae\").replace(/ö/g, \"oe\").replace(/ü/g, \"ue\").replace(/ß/g, \"ss\");\n  s = s.normalize(\"NFKD\").replace(/[^\\x00-\\x7f]/g, \"\");\n  s = s.replace(/[^a-z0-9 ]+/g, \" \");\n  return s.split(/\\s+/).filter(t => t && !LEGAL.has(t)).join(\" \");\n}\nconst normDealName = n => n.toLowerCase().split(/\\s+/).filter(Boolean).join(\" \");\n\nfunction companyMatch(a, b) {\n  if (a[\"Associated Company IDs (Primary)\"] === b[\"Associated Company IDs (Primary)\"]) return [true, \"same company record\", 1.0];\n  const da = a._company[\"Company Domain Name\"] || \"\", db = b._company[\"Company Domain Name\"] || \"\";\n  const sim = ratio(normCompany(a[\"Associated Company (Primary)\"]), normCompany(b[\"Associated Company (Primary)\"]));\n  if (da && db && da === db) return [true, \"same domain\", sim];\n  return [sim >= 0.80, `name similarity ${sim.toFixed(2)}`, sim];\n}\nfunction amountGap(a, b) {\n  const hi = Math.max(a._amount, b._amount);\n  return hi === 0 ? 0 : Math.abs(a._amount - b._amount) / hi;\n}\nfunction copyOf(a, b) {\n  if (a._createDay !== b._createDay) return a._createMin > b._createMin ? [a, b] : [b, a];\n  return BigInt(a[\"Record ID\"]) > BigInt(b[\"Record ID\"]) ? [a, b] : [b, a];\n}\nfunction duplicatePairs(deals) {\n  const opn = deals.filter(d => d._open);\n  const exact = [], candidates = [];\n  for (let i = 0; i < opn.length; i++) for (let j = i + 1; j < opn.length; j++) {\n    const a = opn[i], b = opn[j];\n    if (a[\"Associated Company IDs (Primary)\"] === b[\"Associated Company IDs (Primary)\"] && normDealName(a[\"Deal Name\"]) === normDealName(b[\"Deal Name\"])) {\n      const [c, o] = copyOf(a, b);\n      exact.push({copy: c, original: o, how: \"same company record and same deal name\"});\n      continue;\n    }\n    const [match, how, sim] = companyMatch(a, b);\n    if (!match) continue;\n    const gap = amountGap(a, b);\n    const days = Math.floor(Math.abs(a._createMin - b._createMin) / 1440);\n    if (gap <= 0.25 && days <= 90) {\n      const [c, o] = copyOf(a, b);\n      candidates.push({copy: c, original: o, how, sim, gap, days});\n    }\n  }\n  return [exact, candidates];\n}\nconst pairId = p => `${p.original[\"Record ID\"]}~${p.copy[\"Record ID\"]}`;\n\nconst settings = $('Settings').first().json;\nconst deals = prep($('All deals').first().json.rows, $('All companies').first().json.rows);\nconst today = dayNum(settings.now);\nconst byId = {}; for (const d of deals) byId[d[\"Record ID\"]] = d;\nconst verdicts = $input.all().map(i => i.json).filter(p => p.kind !== \"none\");\n// verdicts come back in a different order per branch; put them in the order the pairs were found\nconst order = {}; $('2. Find duplicate pairs').all().forEach((it, i) => order[it.json.pair_id] = i);\nverdicts.sort((a, b) => order[a.pair_id] - order[b.pair_id]);\nconst flags = $('1. Rule checks').first().json.flags.map(f => [byId[f.record_id], f.code, f.detail]);\nconst dupCopies = new Set();\nfor (const v of verdicts) if (v.verdict === \"DUPLICATE\") {\n  dupCopies.add(v.copy_id);\n  const o = byId[v.original_id];\n  flags.push([byId[v.copy_id], \"DUPLICATE\", `copy of ${o[\"Record ID\"]} (${o[\"Deal Name\"]}); ${v.reason}`]);\n}\nconst zombies = new Set(flags.filter(f => f[1] === \"ZOMBIE\").map(f => f[0][\"Record ID\"]));\nconst q4 = deals.filter(inQ4);\nconst raw = q4.reduce((s, d) => s + weighted(d), 0);\nconst dupRows = q4.filter(d => dupCopies.has(d[\"Record ID\"]));\nconst zombieRows = q4.filter(d => zombies.has(d[\"Record ID\"]) && !dupCopies.has(d[\"Record ID\"]));\nconst sum = rows => rows.reduce((s, d) => s + weighted(d), 0);\nconst cleaned = raw - sum(dupRows) - sum(zombieRows);\nconst noAmount = q4.filter(d => d._amount === 0);\n\nconst cmp = (a, b) => a < b ? -1 : a > b ? 1 : 0;\nflags.sort((a, b) => cmp(ownerOf(a[0]), ownerOf(b[0])) || ORDER.indexOf(a[1]) - ORDER.indexOf(b[1]) || b[0]._amount - a[0]._amount);\nconst fixRows = flags.map(([d, code, detail]) => ({owner: ownerOf(d), record_id: d[\"Record ID\"], deal: d[\"Deal Name\"], stage: d[\"Deal Stage\"],\n  amount: d[\"Amount\"], check: code, detail, what_to_do: ACTION[code]}));\nconst reviewRows = verdicts.map(v => { const o = byId[v.original_id], c = byId[v.copy_id];\n  return {pair_id: v.pair_id, original_id: v.original_id, original_deal: o[\"Deal Name\"], original_company: o[\"Associated Company (Primary)\"],\n    copy_id: v.copy_id, copy_deal: c[\"Deal Name\"], copy_company: c[\"Associated Company (Primary)\"], why_compared: v.how,\n    amount_gap_pct: halfUp(100 * amountGap(o, c), 1).toFixed(1), verdict: v.verdict, reason: v.reason, decided_by: v.decided_by}; });\nlet run = raw;\nconst bridgeRows = [{step: \"Q4 weighted forecast as exported\", record_id: \"\", deal: `${q4.length} open deals closing in Q4`, owner: \"\", stage: \"\", amount: \"\", weighted: \"\", running_total: halfUp(run)}];\nfor (const [label, rows] of [[\"minus duplicate copy\", dupRows], [\"minus no activity for over 60 days\", zombieRows]])\n  for (const d of [...rows].sort((a, b) => weighted(b) - weighted(a))) {\n    run -= weighted(d);\n    bridgeRows.push({step: label, record_id: d[\"Record ID\"], deal: d[\"Deal Name\"], owner: ownerOf(d), stage: d[\"Deal Stage\"], amount: d[\"Amount\"], weighted: halfUp(weighted(d)), running_total: halfUp(run)});\n  }\nbridgeRows.push({step: \"Q4 weighted forecast, cleaned\", record_id: \"\", deal: \"\", owner: \"\", stage: \"\", amount: \"\", weighted: \"\", running_total: halfUp(cleaned)});\nfor (const d of noAmount) bridgeRows.push({step: \"not counted: no amount\", record_id: d[\"Record ID\"], deal: d[\"Deal Name\"], owner: ownerOf(d), stage: d[\"Deal Stage\"], amount: \"\", weighted: \"\", running_total: \"\"});\n\nconst perOwner = {}; for (const [d] of flags) perOwner[ownerOf(d)] = (perOwner[ownerOf(d)] || 0) + 1;\nconst top = rows => [...rows].sort((a, b) => weighted(b) - weighted(a)).slice(0, 3).map(d => ({deal: d[\"Deal Name\"], owner: ownerOf(d), weighted: eur(weighted(d))}));\nconst D = [\"Sun\",\"Mon\",\"Tue\",\"Wed\",\"Thu\",\"Fri\",\"Sat\"], M = [\"Jan\",\"Feb\",\"Mar\",\"Apr\",\"May\",\"Jun\",\"Jul\",\"Aug\",\"Sep\",\"Oct\",\"Nov\",\"Dec\"];\nconst nd = new Date(today * 86400000);\nconst facts = {\n  date: `${D[nd.getUTCDay()]} ${nd.getUTCDate()} ${M[nd.getUTCMonth()]} ${nd.getUTCFullYear()}`,\n  q4_forecast_as_exported: eur(raw), q4_forecast_cleaned: eur(cleaned), difference: eur(raw - cleaned),\n  difference_pct_of_exported: `${halfUp(100 * (raw - cleaned) / raw, 1).toFixed(1)}%`,\n  q4_open_deals: q4.length,\n  removed_duplicate_copies: {deals: dupRows.length, weighted: eur(sum(dupRows)), largest: top(dupRows)},\n  removed_no_activity_over_60_days: {deals: zombieRows.length, weighted: eur(sum(zombieRows)), largest: top(zombieRows)},\n  not_counted_no_amount: {deals: noAmount.length, names: noAmount.map(d => d[\"Deal Name\"]),\n    meaning: \"These count as zero in both figures, so once their amounts are filled in, the cleaned figure can only go up.\"},\n  fix_this_week: Object.entries(perOwner).sort((a, b) => b[1] - a[1] || cmp(a[0], b[0])).map(([owner, items]) => ({owner, items})),\n  items_total: flags.length,\n  duplicate_pairs_for_a_person: verdicts.filter(v => v.verdict === \"UNSURE\").length,\n};\n// one to-do message per owner\nconst byOwner = {}; for (const [d, code] of flags) (byOwner[ownerOf(d)] = byOwner[ownerOf(d)] || []).push([d, code]);\nconst ownerMessages = facts.fix_this_week.map(({owner}) => {\n  const items = byOwner[owner];\n  const hi = owner === \"(no owner)\" ? \"These deals have no owner. Please assign them:\"\n    : `Hi ${owner.split(\" \")[0]}, ${items.length} things in HubSpot need you before this week's forecast call:`;\n  return {to: owner === \"(no owner)\" ? \"Head of RevOps (deals with no owner)\" : owner, items: items.length,\n          message: [hi, ...items.map(([d, code]) => `- ${d[\"Deal Name\"]}: ${ACTION[code]}`)].join(\"\\n\")};\n});\nconst notePrompt = $('Note prompt text').first().json.text.replace(\"{facts_json}\", JSON.stringify(facts, null, 2));\nreturn [{json: {facts, fixRows, reviewRows, bridgeRows, ownerMessages, notePrompt,\n  summary: {q4_raw: halfUp(raw), q4_cleaned: halfUp(cleaned), flags: flags.length}}}];"
+      },
+      "notes": "Raw Q4 weighted forecast, minus duplicate copies, minus deals with no activity for 60+ days. Writes the facts for the note.",
+      "notesInFlow": true
+    },
+    {
+      "id": "b3021982-7110-5f33-9092-c5b36d4c5b42",
+      "name": "Live AI note?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1700,
+        120
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "c2",
+              "leftValue": "={{ $('Settings').first().json.aiMode === 'live' }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "85c091fb-a493-58a0-a4a8-3ab8ec0fb53b",
+      "name": "Ask AI to write the note",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1940,
+        20
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $('Settings').first().json.apiUrl }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "anthropic-version",
+              "value": "2023-06-01"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ model: $('Settings').first().json.model, max_tokens: 600, messages: [{ role: 'user', content: $json.notePrompt }] }) }}",
+        "options": {
+          "timeout": 60000
+        }
+      },
+      "notes": "Live mode only. Needs your own Anthropic API key as a Header Auth credential (name: x-api-key).",
+      "notesInFlow": true
+    },
+    {
+      "id": "d1b05f0b-bc3b-5de5-b330-49de33230460",
+      "name": "Take AI draft",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2180,
+        20
+      ],
+      "parameters": {
+        "jsCode": "return [{json: {draft: ($input.first().json.content || []).map(c => c.text || \"\").join(\"\").trim(),\n  source: `AI (${$('Settings').first().json.model})`}}];"
+      }
+    },
+    {
+      "id": "168e495f-e061-5046-815d-dd1c694214e5",
+      "name": "Take the recorded draft",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1940,
+        220
+      ],
+      "parameters": {
+        "jsCode": "const mode = $('Settings').first().json.aiMode;\nif (mode === \"off\") return [{json: {draft: \"\", source: \"off\"}}];\nreturn [{json: {draft: ($('Recorded note text').first().json.text || \"\").trim(), source: \"AI (recorded)\"}}];"
+      }
+    },
+    {
+      "id": "479e5f4c-34fb-538f-811f-7a92386c1019",
+      "name": "Draft",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        2420,
+        120
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "7c913020-5d29-5d75-876b-d0640c0975e8",
+      "name": "4. Number guard",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2660,
+        120
+      ],
+      "parameters": {
+        "jsCode": "const norm = n => n.replace(/\\.+$/, \"\").replace(/,/g, \"\");\nconst numbersIn = t => new Set((t.match(/\\d[\\d,.]*\\d|\\d/g) || []).map(norm));\nconst moneyIn = t => [...t.matchAll(/€\\s?(\\d[\\d,.]*\\d|\\d)/g)].map(m => norm(m[1]));\nconst pctIn = t => [...t.matchAll(/(\\d[\\d,.]*\\d|\\d)\\s?%/g)].map(m => norm(m[1]));\n// Python's json.dumps(ensure_ascii=False) and JSON.stringify give the same numbers, so the guard sees the same facts\nfunction numberGuard(note, facts) {\n  const factText = JSON.stringify(facts, null, 1);\n  const allowed = numbersIn(factText); allowed.add(\"4\");  // \"Q4\" is allowed\n  const money = new Set(moneyIn(factText)), pct = new Set(pctIn(factText));\n  const bad = new Set([...numbersIn(note)].filter(n => !allowed.has(n)));\n  for (const m of moneyIn(note)) if (!money.has(m)) bad.add(\"€\" + m);\n  for (const m of pctIn(note)) if (!pct.has(m)) bad.add(m + \"%\");\n  return [...bad].sort();\n}\nconst r = $('3. Clean the Q4 forecast').first().json;\nconst f = r.facts, settings = $('Settings').first().json;\nconst draft = $input.first().json.draft, aiSource = $input.first().json.source;\nlet note = null, source = \"template\", problems = [];\nif (draft) {\n  problems = numberGuard(draft, f);\n  if (problems.length) source = \"template (AI draft failed the number guard)\";\n  else { note = draft; source = aiSource; }\n}\nif (note === null) note = [`Pipeline hygiene, ${f.date}`,\n  `Q4 weighted forecast: ${f.q4_forecast_as_exported} as exported, ${f.q4_forecast_cleaned} after cleaning (${f.difference} less, ${f.difference_pct_of_exported}).`,\n  `- Duplicate copies removed: ${f.removed_duplicate_copies.deals} deals, ${f.removed_duplicate_copies.weighted}.`,\n  `- No activity for over 60 days, removed: ${f.removed_no_activity_over_60_days.deals} deals, ${f.removed_no_activity_over_60_days.weighted}.`,\n  `- Not counted because the amount is empty: ${f.not_counted_no_amount.deals} deals.`,\n  \"Fix this week: \" + f.fix_this_week.map(o => `${o.owner} ${o.items}`).join(\", \") + \".\",\n  `Duplicate pairs a person needs to decide: ${f.duplicate_pairs_for_a_person}.`].join(\"\\n\");\nconst guardText = `note used: ${source}\\nnumbers in the AI draft not found in facts.json: ${problems.length ? problems.join(\", \") : \"none\"}\\n`;\nconst wouldSend = [\n  {logged_at: settings.now, channel: \"#sales-leadership (would post, nothing sent)\", what: \"Monday pipeline hygiene note\", file: \"4-monday-note.md\", note_source: source},\n  {logged_at: settings.now, channel: \"direct messages (would send, nothing sent)\", what: `${r.ownerMessages.length} owner to-do messages`, file: \"6-owner-messages.csv\", note_source: \"template\"}];\nreturn [{json: {...r, note: note + \"\\n\", guardText, wouldSend, noteSource: source}}];"
+      },
+      "notes": "Every number in the AI's note must be in the facts. If one isn't, the plain template note is used instead.",
+      "notesInFlow": true
+    },
+    {
+      "id": "5c585d5e-f2c6-5244-9489-42180a7372b6",
+      "name": "Fix list rows",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2900,
+        -560
+      ],
+      "parameters": {
+        "jsCode": "return $input.first().json.fixRows.map(json => ({json}));"
+      }
+    },
+    {
+      "id": "66cfaebc-0e39-5187-8045-4ea17107cfd5",
+      "name": "Fix list as CSV",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        3140,
+        -560
+      ],
+      "parameters": {
+        "options": {
+          "fileName": "1-fix-list.csv"
+        }
+      }
+    },
+    {
+      "id": "dd0e9149-3cd5-5487-9c44-02c9220355b0",
+      "name": "Save 1-fix-list.csv",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        3380,
+        -560
+      ],
+      "parameters": {
+        "operation": "write",
+        "fileName": "={{ $('Settings').first().json.folder }}/outbox/1-fix-list.csv",
+        "options": {}
+      }
+    },
+    {
+      "id": "36baa710-7a0e-542d-9a26-0a2a4faa4a76",
+      "name": "Duplicate review rows",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2900,
+        -390
+      ],
+      "parameters": {
+        "jsCode": "return $input.first().json.reviewRows.map(json => ({json}));"
+      }
+    },
+    {
+      "id": "e3f65921-7473-58e4-86a0-678dd9925118",
+      "name": "Duplicate review as CSV",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        3140,
+        -390
+      ],
+      "parameters": {
+        "options": {
+          "fileName": "2-duplicate-review.csv"
+        }
+      }
+    },
+    {
+      "id": "ef159de4-d5ac-51cc-8271-66933da7186e",
+      "name": "Save 2-duplicate-review.csv",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        3380,
+        -390
+      ],
+      "parameters": {
+        "operation": "write",
+        "fileName": "={{ $('Settings').first().json.folder }}/outbox/2-duplicate-review.csv",
+        "options": {}
+      }
+    },
+    {
+      "id": "5c7f6381-4f6e-5f36-aad3-0743000016a7",
+      "name": "Forecast bridge rows",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2900,
+        -220
+      ],
+      "parameters": {
+        "jsCode": "return $input.first().json.bridgeRows.map(json => ({json}));"
+      }
+    },
+    {
+      "id": "12cbf24d-d341-586c-a3ea-413637376424",
+      "name": "Forecast bridge as CSV",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        3140,
+        -220
+      ],
+      "parameters": {
+        "options": {
+          "fileName": "3-forecast-bridge.csv"
+        }
+      }
+    },
+    {
+      "id": "f988dcfe-df41-50d5-8117-423d3bae3406",
+      "name": "Save 3-forecast-bridge.csv",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        3380,
+        -220
+      ],
+      "parameters": {
+        "operation": "write",
+        "fileName": "={{ $('Settings').first().json.folder }}/outbox/3-forecast-bridge.csv",
+        "options": {}
+      }
+    },
+    {
+      "id": "3c22c97b-1754-574c-a1bc-f418372a96f0",
+      "name": "Would-send log rows",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2900,
+        -50
+      ],
+      "parameters": {
+        "jsCode": "return $input.first().json.wouldSend.map(json => ({json}));"
+      }
+    },
+    {
+      "id": "1d6bc19f-e3d6-5fe6-a018-a182418f56de",
+      "name": "Would-send log as CSV",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        3140,
+        -50
+      ],
+      "parameters": {
+        "options": {
+          "fileName": "5-would-send.csv"
+        }
+      }
+    },
+    {
+      "id": "650f679b-159a-515e-89f4-8f0818baadee",
+      "name": "Save 5-would-send.csv",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        3380,
+        -50
+      ],
+      "parameters": {
+        "operation": "write",
+        "fileName": "={{ $('Settings').first().json.folder }}/outbox/5-would-send.csv",
+        "options": {}
+      }
+    },
+    {
+      "id": "37452f98-7a24-50c6-9e49-ef7fe16d919b",
+      "name": "Owner messages rows",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2900,
+        120
+      ],
+      "parameters": {
+        "jsCode": "return $input.first().json.ownerMessages.map(json => ({json}));"
+      }
+    },
+    {
+      "id": "fcab10c3-162d-52f2-90cb-3eec5cd1ae4b",
+      "name": "Owner messages as CSV",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        3140,
+        120
+      ],
+      "parameters": {
+        "options": {
+          "fileName": "6-owner-messages.csv"
+        }
+      }
+    },
+    {
+      "id": "67ebb4f9-904b-55fa-88d1-fb74368e0d4f",
+      "name": "Save 6-owner-messages.csv",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        3380,
+        120
+      ],
+      "parameters": {
+        "operation": "write",
+        "fileName": "={{ $('Settings').first().json.folder }}/outbox/6-owner-messages.csv",
+        "options": {}
+      }
+    },
+    {
+      "id": "53c5db58-2117-5aba-8deb-197aa727efe6",
+      "name": "Monday note as file",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        3140,
+        290
+      ],
+      "parameters": {
+        "operation": "toText",
+        "options": {
+          "fileName": "4-monday-note.md"
+        },
+        "sourceProperty": "note"
+      }
+    },
+    {
+      "id": "217a4286-5a6a-596c-b9f4-92bfb7ed254c",
+      "name": "Save 4-monday-note.md",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        3380,
+        290
+      ],
+      "parameters": {
+        "operation": "write",
+        "fileName": "={{ $('Settings').first().json.folder }}/outbox/4-monday-note.md",
+        "options": {}
+      }
+    },
+    {
+      "id": "721562ec-38e0-5f42-86ee-05dc42624a32",
+      "name": "Guard result as file",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        3140,
+        460
+      ],
+      "parameters": {
+        "operation": "toText",
+        "options": {
+          "fileName": "4b-number-guard.txt"
+        },
+        "sourceProperty": "guardText"
+      }
+    },
+    {
+      "id": "2ee02035-fb5c-518b-a051-aa4d8ea99a0e",
+      "name": "Save 4b-number-guard.txt",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        3380,
+        460
+      ],
+      "parameters": {
+        "operation": "write",
+        "fileName": "={{ $('Settings').first().json.folder }}/outbox/4b-number-guard.txt",
+        "options": {}
+      }
+    },
+    {
+      "id": "b16393f0-6ad4-5f60-ad15-1982b2ab08e6",
+      "name": "Facts only",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2900,
+        630
+      ],
+      "parameters": {
+        "jsCode": "return [{json: $input.first().json.facts}];"
+      }
+    },
+    {
+      "id": "b15bce32-1eb1-5f11-9008-bbfcf5e77740",
+      "name": "Facts as file",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        3140,
+        630
+      ],
+      "parameters": {
+        "operation": "toJson",
+        "options": {
+          "fileName": "facts.json",
+          "format": true
+        },
+        "mode": "each"
+      }
+    },
+    {
+      "id": "4a8ba516-51d5-58c1-9f4e-7910c73117d7",
+      "name": "Save facts.json",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        3380,
+        630
+      ],
+      "parameters": {
+        "operation": "write",
+        "fileName": "={{ $('Settings').first().json.folder }}/outbox/facts.json",
+        "options": {}
+      }
+    },
+    {
+      "id": "f7a71a1e-424f-5cb2-bab2-0446880fa4fd",
+      "name": "About this demo",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -520,
+        -560
+      ],
+      "parameters": {
+        "width": 1100,
+        "height": 220,
+        "color": 4,
+        "content": "## One chore, gone: pipeline hygiene check (DEMO)\nEvery **Monday 07:30**: read the HubSpot deals export, flag what's missing or stale, find duplicate deals (exact copies by rule, look-alikes judged by AI), and show the **Q4 forecast before and after cleaning**.\n\n**Outputs** (in `outbox/`): a fix list, the duplicate review, the forecast bridge, the Monday note (AI-written, every number checked against the facts), one to-do message per owner.\n\n**Nothing is sent and nothing in HubSpot is changed.** All companies, people and numbers are made up. `Settings` → `aiMode`: **replay** (recorded AI answers, no key), **live** (your own Anthropic key), **off** (a person decides)."
+      }
+    }
+  ],
+  "connections": {
+    "Run the demo Monday (test button)": {
+      "main": [
+        [
+          {
+            "node": "Settings",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Every Monday 07:30": {
+      "main": [
+        [
+          {
+            "node": "Settings",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Settings": {
+      "main": [
+        [
+          {
+            "node": "Read deals export",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read deals export": {
+      "main": [
+        [
+          {
+            "node": "Deal rows",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Deal rows": {
+      "main": [
+        [
+          {
+            "node": "All deals",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "All deals": {
+      "main": [
+        [
+          {
+            "node": "Read companies export",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read companies export": {
+      "main": [
+        [
+          {
+            "node": "Company rows",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Company rows": {
+      "main": [
+        [
+          {
+            "node": "All companies",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "All companies": {
+      "main": [
+        [
+          {
+            "node": "Read recorded AI answers",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read recorded AI answers": {
+      "main": [
+        [
+          {
+            "node": "Answer rows",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Answer rows": {
+      "main": [
+        [
+          {
+            "node": "All recorded answers",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "All recorded answers": {
+      "main": [
+        [
+          {
+            "node": "Read judge prompt",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read judge prompt": {
+      "main": [
+        [
+          {
+            "node": "Judge prompt text",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Judge prompt text": {
+      "main": [
+        [
+          {
+            "node": "Read note prompt",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read note prompt": {
+      "main": [
+        [
+          {
+            "node": "Note prompt text",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Note prompt text": {
+      "main": [
+        [
+          {
+            "node": "Read recorded note",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read recorded note": {
+      "main": [
+        [
+          {
+            "node": "Recorded note text",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Recorded note text": {
+      "main": [
+        [
+          {
+            "node": "1. Rule checks",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "1. Rule checks": {
+      "main": [
+        [
+          {
+            "node": "2. Find duplicate pairs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "2. Find duplicate pairs": {
+      "main": [
+        [
+          {
+            "node": "Live AI?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Live AI?": {
+      "main": [
+        [
+          {
+            "node": "Ask AI: same deal twice?",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Decide: rule, recorded answer or a person",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ask AI: same deal twice?": {
+      "main": [
+        [
+          {
+            "node": "Read AI verdict",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read AI verdict": {
+      "main": [
+        [
+          {
+            "node": "All pair verdicts",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Decide: rule, recorded answer or a person": {
+      "main": [
+        [
+          {
+            "node": "All pair verdicts",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "All pair verdicts": {
+      "main": [
+        [
+          {
+            "node": "3. Clean the Q4 forecast",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "3. Clean the Q4 forecast": {
+      "main": [
+        [
+          {
+            "node": "Live AI note?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Live AI note?": {
+      "main": [
+        [
+          {
+            "node": "Ask AI to write the note",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Take the recorded draft",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ask AI to write the note": {
+      "main": [
+        [
+          {
+            "node": "Take AI draft",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Take AI draft": {
+      "main": [
+        [
+          {
+            "node": "Draft",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Take the recorded draft": {
+      "main": [
+        [
+          {
+            "node": "Draft",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Draft": {
+      "main": [
+        [
+          {
+            "node": "4. Number guard",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "4. Number guard": {
+      "main": [
+        [
+          {
+            "node": "Fix list rows",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Duplicate review rows",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Forecast bridge rows",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Would-send log rows",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Owner messages rows",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Monday note as file",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Guard result as file",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Facts only",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fix list rows": {
+      "main": [
+        [
+          {
+            "node": "Fix list as CSV",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fix list as CSV": {
+      "main": [
+        [
+          {
+            "node": "Save 1-fix-list.csv",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Duplicate review rows": {
+      "main": [
+        [
+          {
+            "node": "Duplicate review as CSV",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Duplicate review as CSV": {
+      "main": [
+        [
+          {
+            "node": "Save 2-duplicate-review.csv",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Forecast bridge rows": {
+      "main": [
+        [
+          {
+            "node": "Forecast bridge as CSV",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Forecast bridge as CSV": {
+      "main": [
+        [
+          {
+            "node": "Save 3-forecast-bridge.csv",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Would-send log rows": {
+      "main": [
+        [
+          {
+            "node": "Would-send log as CSV",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Would-send log as CSV": {
+      "main": [
+        [
+          {
+            "node": "Save 5-would-send.csv",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Owner messages rows": {
+      "main": [
+        [
+          {
+            "node": "Owner messages as CSV",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Owner messages as CSV": {
+      "main": [
+        [
+          {
+            "node": "Save 6-owner-messages.csv",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Monday note as file": {
+      "main": [
+        [
+          {
+            "node": "Save 4-monday-note.md",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Guard result as file": {
+      "main": [
+        [
+          {
+            "node": "Save 4b-number-guard.txt",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Facts only": {
+      "main": [
+        [
+          {
+            "node": "Facts as file",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Facts as file": {
+      "main": [
+        [
+          {
+            "node": "Save facts.json",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "Europe/Berlin",
+    "saveManualExecutions": true
+  },
+  "pinData": {},
+  "id": "pipelineHygiene01"
+}
