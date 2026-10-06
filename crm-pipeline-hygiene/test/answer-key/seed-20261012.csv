@@ -1,0 +1,63 @@
+code,record_id,other_record_id,true_amount,note
+DUP_EXACT,32032282390,32030480841,,copy is record_id; original is other_record_id
+DUP_EXACT,32053691954,32050202520,,copy is record_id; original is other_record_id
+DUP_EXACT,32055531452,32054122973,,copy is record_id; original is other_record_id
+DUP_EXACT,32067281733,32065716441,,copy is record_id; original is other_record_id
+DUP_EXACT,32099245661,32091304620,,copy is record_id; original is other_record_id
+DUP_EXACT,32162047647,32158874439,,copy is record_id; original is other_record_id
+DUP_EXACT,32194081646,32193941312,,copy is record_id; original is other_record_id
+DUP_EXACT,32222322861,32217763270,,copy is record_id; original is other_record_id
+DUP_FUZZY,32117287664,32067707686,,copy is record_id; original is other_record_id
+DUP_FUZZY,32142514618,32109871077,,copy is record_id; original is other_record_id
+DUP_FUZZY,32148389610,32093870221,,copy is record_id; original is other_record_id
+DUP_FUZZY,32150786470,32124416677,,copy is record_id; original is other_record_id
+DUP_FUZZY,32225749347,32200215760,,copy is record_id; original is other_record_id
+DUP_FUZZY,32251617713,32241877346,,copy is record_id; original is other_record_id
+DUP_FUZZY,32273517805,32257851869,,copy is record_id; original is other_record_id
+DUP_FUZZY,32290382328,32282170459,,copy is record_id; original is other_record_id
+DUP_FUZZY,32291030631,32287349317,,copy is record_id; original is other_record_id
+DUP_FUZZY,32293229190,32265218497,,copy is record_id; original is other_record_id
+NO_AMOUNT,31999326915,,54500,
+NO_AMOUNT,32015337901,,23100,
+NO_AMOUNT,32052317011,,4000,
+NO_AMOUNT,32134741420,,28200,
+NO_AMOUNT,32164760202,,46800,
+NO_AMOUNT,32228640465,,26600,
+NO_AMOUNT,32239839258,,13600,
+NO_AMOUNT,32262239546,,37500,
+NO_CLOSE_DATE,32034447767,,,
+NO_CLOSE_DATE,32042328331,,,
+NO_CLOSE_DATE,32085078431,,,
+NO_CLOSE_DATE,32292603246,,,
+NO_OWNER,32077436878,,,
+NO_OWNER,32126245212,,,
+NO_OWNER,32224303809,,,
+PAST_CLOSE,32028024812,,,
+PAST_CLOSE,32040769777,,,
+PAST_CLOSE,32097481765,,,
+PAST_CLOSE,32122483130,,,
+PAST_CLOSE,32131601117,,,
+PAST_CLOSE,32180403156,,,
+STALE,32046490844,,,
+STALE,32058262004,,,
+STALE,32089855587,,,
+STALE,32128779953,,,
+STALE,32176350354,,,
+STALE,32237119458,,,
+TRAP,32206748744,32177638807,,NOT a duplicate: different business at the same company
+TRAP,32244299145,32198772213,,NOT a duplicate: different business at the same company
+TRAP,32266871028,32244721862,,NOT a duplicate: different business at the same company
+TRAP,32275476846,32220638084,,NOT a duplicate: different business at the same company
+TRAP,32285764367,32227279262,,NOT a duplicate: different business at the same company
+TRAP,32293986023,32282705677,,NOT a duplicate: different business at the same company
+WON_FUTURE_DATE,31968739105,,,
+WON_FUTURE_DATE,31992021103,,,
+WON_FUTURE_DATE,32238616526,,,
+ZOMBIE,32004476615,,,
+ZOMBIE,32010657364,,,
+ZOMBIE,32011826077,,,
+ZOMBIE,32017687379,,,
+ZOMBIE,32019490025,,,
+ZOMBIE,32058990997,,,
+ZOMBIE,32120217853,,,
+ZOMBIE,32126988740,,,

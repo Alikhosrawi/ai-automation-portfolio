@@ -1,0 +1,6 @@
+PREREGISTRATION.md
+sha256: 479efb8c1cf33935a0d634b6305bc38bd4b50a1d9ceecc06375f1daac77ab7e6
+prompts/duplicate-judge.md sha256: a1a0550a1ea92f86eb1a7661d437a00fa3b61c305b572739a4d0ee4e67d23b2c
+prompts/weekly-note.md sha256: 8187867b3a44f526c9a639dc60443f7341717b04124bf1a47ae9aa99cb62922c
+locked: 2026-10-06 18:18:15 CEST (Europe/Berlin)
+No generator, check code, data or results existed at this time. The two prompts are locked with it.
