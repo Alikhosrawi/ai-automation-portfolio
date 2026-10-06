@@ -90,7 +90,7 @@
       "typeVersion": 1,
       "position": [
         20,
-        -320
+        -300
       ],
       "parameters": {
         "fileSelector": "={{ $('Settings').first().json.folder }}/export/deals.csv",
@@ -104,7 +104,7 @@
       "typeVersion": 1,
       "position": [
         240,
-        -320
+        -300
       ],
       "parameters": {
         "options": {
@@ -119,7 +119,7 @@
       "typeVersion": 1,
       "position": [
         460,
-        -320
+        -300
       ],
       "parameters": {
         "aggregate": "aggregateAllItemData",
@@ -134,7 +134,7 @@
       "typeVersion": 1,
       "position": [
         720,
-        -320
+        -300
       ],
       "parameters": {
         "fileSelector": "={{ $('Settings').first().json.folder }}/export/companies.csv",
@@ -148,7 +148,7 @@
       "typeVersion": 1,
       "position": [
         940,
-        -320
+        -300
       ],
       "parameters": {
         "options": {
@@ -163,7 +163,7 @@
       "typeVersion": 1,
       "position": [
         1160,
-        -320
+        -300
       ],
       "parameters": {
         "aggregate": "aggregateAllItemData",
@@ -178,7 +178,7 @@
       "typeVersion": 1,
       "position": [
         1420,
-        -320
+        -300
       ],
       "parameters": {
         "fileSelector": "={{ $('Settings').first().json.folder }}/ai/duplicate-verdicts.csv",
@@ -192,7 +192,7 @@
       "typeVersion": 1,
       "position": [
         1640,
-        -320
+        -300
       ],
       "parameters": {
         "options": {
@@ -207,7 +207,7 @@
       "typeVersion": 1,
       "position": [
         1860,
-        -320
+        -300
       ],
       "parameters": {
         "aggregate": "aggregateAllItemData",
@@ -222,7 +222,7 @@
       "typeVersion": 1,
       "position": [
         20,
-        -160
+        -140
       ],
       "parameters": {
         "fileSelector": "={{ $('Settings').first().json.folder }}/prompts/duplicate-judge.md",
@@ -236,7 +236,7 @@
       "typeVersion": 1,
       "position": [
         240,
-        -160
+        -140
       ],
       "parameters": {
         "operation": "text",
@@ -251,7 +251,7 @@
       "typeVersion": 1,
       "position": [
         500,
-        -160
+        -140
       ],
       "parameters": {
         "fileSelector": "={{ $('Settings').first().json.folder }}/prompts/weekly-note.md",
@@ -265,7 +265,7 @@
       "typeVersion": 1,
       "position": [
         720,
-        -160
+        -140
       ],
       "parameters": {
         "operation": "text",
@@ -280,7 +280,7 @@
       "typeVersion": 1,
       "position": [
         980,
-        -160
+        -140
       ],
       "parameters": {
         "fileSelector": "={{ $('Settings').first().json.folder }}/ai/weekly-note.md",
@@ -294,7 +294,7 @@
       "typeVersion": 1,
       "position": [
         1200,
-        -160
+        -140
       ],
       "parameters": {
         "operation": "text",
@@ -577,7 +577,7 @@
       "typeVersion": 2,
       "position": [
         2900,
-        380
+        -560
       ],
       "parameters": {
         "jsCode": "return $input.first().json.fixRows.map(json => ({json}));"
@@ -590,7 +590,7 @@
       "typeVersion": 1.1,
       "position": [
         3140,
-        380
+        -560
       ],
       "parameters": {
         "options": {
@@ -605,7 +605,7 @@
       "typeVersion": 1,
       "position": [
         3380,
-        380
+        -560
       ],
       "parameters": {
         "operation": "write",
@@ -620,7 +620,7 @@
       "typeVersion": 2,
       "position": [
         2900,
-        560
+        -390
       ],
       "parameters": {
         "jsCode": "return $input.first().json.reviewRows.map(json => ({json}));"
@@ -633,7 +633,7 @@
       "typeVersion": 1.1,
       "position": [
         3140,
-        560
+        -390
       ],
       "parameters": {
         "options": {
@@ -648,7 +648,7 @@
       "typeVersion": 1,
       "position": [
         3380,
-        560
+        -390
       ],
       "parameters": {
         "operation": "write",
@@ -663,7 +663,7 @@
       "typeVersion": 2,
       "position": [
         2900,
-        740
+        -220
       ],
       "parameters": {
         "jsCode": "return $input.first().json.bridgeRows.map(json => ({json}));"
@@ -676,7 +676,7 @@
       "typeVersion": 1.1,
       "position": [
         3140,
-        740
+        -220
       ],
       "parameters": {
         "options": {
@@ -691,7 +691,7 @@
       "typeVersion": 1,
       "position": [
         3380,
-        740
+        -220
       ],
       "parameters": {
         "operation": "write",
@@ -706,7 +706,7 @@
       "typeVersion": 2,
       "position": [
         2900,
-        920
+        -50
       ],
       "parameters": {
         "jsCode": "return $input.first().json.wouldSend.map(json => ({json}));"
@@ -719,7 +719,7 @@
       "typeVersion": 1.1,
       "position": [
         3140,
-        920
+        -50
       ],
       "parameters": {
         "options": {
@@ -734,7 +734,7 @@
       "typeVersion": 1,
       "position": [
         3380,
-        920
+        -50
       ],
       "parameters": {
         "operation": "write",
@@ -749,7 +749,7 @@
       "typeVersion": 2,
       "position": [
         2900,
-        1100
+        120
       ],
       "parameters": {
         "jsCode": "return $input.first().json.ownerMessages.map(json => ({json}));"
@@ -762,7 +762,7 @@
       "typeVersion": 1.1,
       "position": [
         3140,
-        1100
+        120
       ],
       "parameters": {
         "options": {
@@ -777,7 +777,7 @@
       "typeVersion": 1,
       "position": [
         3380,
-        1100
+        120
       ],
       "parameters": {
         "operation": "write",
@@ -792,7 +792,7 @@
       "typeVersion": 1.1,
       "position": [
         3140,
-        1280
+        290
       ],
       "parameters": {
         "operation": "toText",
@@ -809,7 +809,7 @@
       "typeVersion": 1,
       "position": [
         3380,
-        1280
+        290
       ],
       "parameters": {
         "operation": "write",
@@ -824,7 +824,7 @@
       "typeVersion": 1.1,
       "position": [
         3140,
-        1460
+        460
       ],
       "parameters": {
         "operation": "toText",
@@ -841,7 +841,7 @@
       "typeVersion": 1,
       "position": [
         3380,
-        1460
+        460
       ],
       "parameters": {
         "operation": "write",
@@ -856,7 +856,7 @@
       "typeVersion": 2,
       "position": [
         2900,
-        1640
+        630
       ],
       "parameters": {
         "jsCode": "return [{json: $input.first().json.facts}];"
@@ -869,7 +869,7 @@
       "typeVersion": 1.1,
       "position": [
         3140,
-        1640
+        630
       ],
       "parameters": {
         "operation": "toJson",
@@ -887,7 +887,7 @@
       "typeVersion": 1,
       "position": [
         3380,
-        1640
+        630
       ],
       "parameters": {
         "operation": "write",
@@ -901,12 +901,12 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -480,
-        -620
+        -520,
+        -560
       ],
       "parameters": {
-        "width": 980,
-        "height": 260,
+        "width": 1100,
+        "height": 220,
         "color": 4,
         "content": "## One chore, gone: pipeline hygiene check (DEMO)\nEvery **Monday 07:30**: read the HubSpot deals export, flag what's missing or stale, find duplicate deals (exact copies by rule, look-alikes judged by AI), and show the **Q4 forecast before and after cleaning**.\n\n**Outputs** (in `outbox/`): a fix list, the duplicate review, the forecast bridge, the Monday note (AI-written, every number checked against the facts), one to-do message per owner.\n\n**Nothing is sent and nothing in HubSpot is changed.** All companies, people and numbers are made up. `Settings` → `aiMode`: **replay** (recorded AI answers, no key), **live** (your own Anthropic key), **off** (a person decides)."
       }
