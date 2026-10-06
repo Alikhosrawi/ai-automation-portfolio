@@ -1,0 +1,425 @@
+Record ID,Deal Name,Pipeline,Deal Stage,Amount,Close Date,Create Date,Last Activity Date,Deal owner,Associated Company IDs (Primary),Associated Company (Primary)
+31870110459,"Sturmflut Event – Time tracking, 200 seats",Sales Pipeline,Closed Won,38000,2026-01-09,2025-08-03 12:10,2026-01-02 16:30,Jonas Example,18405891722,Sturmflut Event SE
+31872088829,Lotsenhaus Event – Expansion +150 seats,Sales Pipeline,Closed Won,12600,2026-01-09,2025-08-23 13:35,2026-01-09 13:05,Aylin Example,18403729186,Lotsenhaus Event GmbH
+31872864548,"Waltershof Hotels – Workforce analytics, 150 seats",Sales Pipeline,Closed Lost,24300,2026-02-07,2025-09-01 13:15,2026-02-05 08:40,Leonie Example,18402975452,Waltershof Hotels GmbH
+31874613603,"Bernstein Handel – Shift planning, 80 seats",Sales Pipeline,Closed Lost,16600,2026-01-29,2025-09-02 17:00,2026-01-19 14:25,Leonie Example,18407144378,Bernstein Handel AG
+31876483314,"Cranz Kliniken – Time tracking, 40 seats",Sales Pipeline,Closed Lost,40200,2026-01-24,2025-09-02 17:35,2026-01-23 08:00,Clara Example,18405573340,Cranz Kliniken AG
+31877035199,Silbermöwe Sicherheitsdienst – Expansion +300 seats,Sales Pipeline,Closed Lost,11700,2026-02-10,2025-09-03 12:10,2026-02-03 17:55,Murat Example,18402344378,Silbermöwe Sicherheitsdienst GmbH
+31878486803,"Waltershof Bau – Time tracking, 200 seats",Sales Pipeline,Closed Lost,70100,2026-02-11,2025-09-12 10:20,2026-02-11 16:55,Clara Example,18405222090,Waltershof Bau GmbH
+31879519456,"Hammerbrook Bau – Shift planning + time tracking, 60 seats",Sales Pipeline,Closed Won,10800,2026-01-25,2025-09-17 08:00,2026-01-23 14:45,Finn Example,18405257272,Hammerbrook Bau SE
+31880750812,"Heidekraut Reinigung – Time tracking, 60 seats",Sales Pipeline,Closed Won,17400,2026-01-29,2025-09-19 17:35,2026-01-27 17:30,Leonie Example,18404549129,Heidekraut Reinigung GmbH
+31881154051,"Tidenhub Event – Shift planning, 200 seats",Sales Pipeline,Closed Lost,27200,2026-02-20,2025-09-24 11:15,2026-02-13 17:55,Murat Example,18406978698,Tidenhub Event GmbH
+31882972781,"Fleetwerk Spedition – Shift planning + time tracking, 80 seats",Sales Pipeline,Closed Won,61300,2026-01-13,2025-09-28 12:55,2026-01-06 15:00,Leonie Example,18412598735,Fleetwerk Spedition GmbH
+31884789785,"Wilhelmsburg Handel – Shift planning, 80 seats",Sales Pipeline,Closed Won,15900,2026-02-19,2025-09-30 17:15,2026-02-12 11:35,Jonas Example,18410935200,Wilhelmsburg Handel GmbH
+31886712150,"Francop Reinigung – Time tracking, 25 seats",Sales Pipeline,Closed Won,15500,2026-02-02,2025-10-02 08:40,2026-01-31 10:35,Aylin Example,18411688728,Francop Reinigung GmbH
+31887047043,"Rönneburg Spedition – Time tracking, 300 seats",Sales Pipeline,Closed Won,38200,2026-01-22,2025-10-04 12:05,2026-01-21 12:20,Jonas Example,18403821813,Rönneburg Spedition UG
+31887915629,"Altona Sicherheitsdienst – Time tracking, 40 seats",Sales Pipeline,Closed Won,62700,2026-02-04,2025-10-17 09:30,2026-01-26 15:50,Murat Example,18405384067,Altona Sicherheitsdienst GmbH & Co. KG
+31889544070,"Finkenwerder Pflege – Shift planning + time tracking, 40 seats",Sales Pipeline,Closed Won,7500,2026-03-29,2025-10-20 12:20,2026-03-27 14:20,Leonie Example,18408498737,Finkenwerder Pflege GmbH
+31891090255,Allermöhe Handel – Expansion +150 seats,Sales Pipeline,Closed Lost,26600,2026-03-03,2025-10-21 11:15,2026-03-01 14:30,Leonie Example,18415517500,Allermöhe Handel UG
+31891962504,"Barmbek Handel – Shift planning + time tracking, 25 seats",Sales Pipeline,Closed Lost,17300,2026-03-26,2025-10-25 08:20,2026-03-19 12:30,Clara Example,18422603090,Barmbek Handel GmbH
+31893920443,"Tatenberg Hotels – Shift planning + time tracking, 60 seats",Sales Pipeline,Closed Won,180000,2026-03-25,2025-10-28 15:25,2026-03-24 16:40,Aylin Example,18409742501,Tatenberg Hotels gGmbH
+31894087662,"Marmstorf Sicherheitsdienst – Workforce analytics, 150 seats",Sales Pipeline,Closed Won,25600,2026-03-08,2025-10-28 15:45,2026-03-02 13:05,Jonas Example,18410038037,Marmstorf Sicherheitsdienst GmbH
+31894709944,"Eißendorf Facility Services – Workforce analytics, 150 seats",Sales Pipeline,Closed Won,12500,2026-03-31,2025-10-30 12:25,2026-03-31 17:05,Aylin Example,18413895211,Eißendorf Facility Services AG
+31895117338,"Eichenwald Spedition – Time tracking, 80 seats",Sales Pipeline,Closed Lost,16900,2026-03-28,2025-10-30 14:05,2026-03-27 13:00,Leonie Example,18411036491,Eichenwald Spedition SE
+31895165681,"Kompass Pflege – Workforce analytics, 25 seats",Sales Pipeline,Closed Won,105100,2026-04-02,2025-11-01 10:35,2026-04-01 13:05,Aylin Example,18406644636,Kompass Pflege AG
+31895965044,Harburg Reinigung – Expansion +80 seats,Sales Pipeline,Closed Won,42300,2026-02-12,2025-11-04 13:25,2026-02-07 14:00,Aylin Example,18413645766,Harburg Reinigung GmbH
+31897558997,Altona Sicherheitsdienst – Expansion +60 seats,Sales Pipeline,Closed Won,46700,2026-03-02,2025-11-08 10:10,2026-02-28 11:40,Finn Example,18405384067,Altona Sicherheitsdienst GmbH & Co. KG
+31899243542,"Eichenwald Kliniken – Shift planning, 60 seats",Sales Pipeline,Closed Lost,61900,2026-04-08,2025-11-08 12:30,2026-04-02 15:05,Jonas Example,18409083636,Eichenwald Kliniken AG
+31900214258,"Kaiserkai Pflege – Time tracking, 40 seats",Sales Pipeline,Closed Won,27300,2026-02-09,2025-11-08 16:55,2026-02-02 10:40,Clara Example,18411656345,Kaiserkai Pflege SE
+31902111814,"Kaiserkai Spedition – Workforce analytics, 200 seats",Sales Pipeline,Closed Won,45200,2026-04-10,2025-11-09 13:15,2026-04-04 11:55,Leonie Example,18413225458,Kaiserkai Spedition GmbH & Co. KG
+31902349186,"Reitbrook Reinigung – Workforce analytics, 25 seats",Sales Pipeline,Closed Lost,35300,2026-02-12,2025-11-12 09:45,2026-02-05 13:35,Clara Example,18407789338,Reitbrook Reinigung UG
+31903052350,"Curslack Kliniken – Shift planning, 200 seats",Sales Pipeline,Closed Lost,22100,2026-01-31,2025-11-13 14:00,2026-01-31 13:30,Leonie Example,18416744102,Curslack Kliniken gGmbH
+31904642610,"Wandsbek Bau – Shift planning + time tracking, 25 seats",Sales Pipeline,Closed Won,15800,2026-01-15,2025-11-14 16:10,2026-01-06 15:55,Jonas Example,18407972605,Wandsbek Bau GmbH
+31905571869,Hammerbrook Bau – Expansion +300 seats,Sales Pipeline,Closed Won,38800,2026-03-02,2025-11-15 15:55,2026-02-28 09:40,Finn Example,18405257272,Hammerbrook Bau SE
+31907354835,"Eppendorf Sicherheitsdienst – Workforce analytics, 80 seats",Sales Pipeline,Closed Lost,14400,2026-03-04,2025-11-20 17:05,2026-02-24 12:10,Clara Example,18414654725,Eppendorf Sicherheitsdienst GmbH
+31909189324,"Bernstein Bau – Time tracking, 300 seats",Sales Pipeline,Closed Lost,21800,2026-03-18,2025-11-21 17:20,2026-03-14 16:50,Leonie Example,18424786327,Bernstein Bau SE
+31910012744,"Eißendorf Kliniken – Shift planning + time tracking, 120 seats",Sales Pipeline,Closed Lost,63900,2026-04-02,2025-11-23 16:00,2026-03-30 11:20,Leonie Example,18412380265,Eißendorf Kliniken GmbH
+31911251829,"Rotklinker Facility Services – Time tracking, 40 seats",Sales Pipeline,Closed Lost,19100,2026-04-07,2025-11-24 12:20,2026-03-28 08:55,Clara Example,18427898710,Rotklinker Facility Services GmbH & Co. KG
+31912347017,"Elbufer Handel – Workforce analytics, 25 seats",Sales Pipeline,Closed Lost,7500,2026-03-09,2025-11-25 11:50,2026-03-08 09:45,Finn Example,18426135583,Elbufer Handel GmbH
+31914107994,"Kranich Kliniken – Workforce analytics, 40 seats",Sales Pipeline,Closed Lost,28100,2026-04-06,2025-11-27 08:10,2026-04-01 11:15,Leonie Example,18429656121,Kranich Kliniken SE
+31915636896,"Hausbruch Reinigung – Time tracking, 60 seats",Sales Pipeline,Closed Won,27800,2026-03-21,2025-11-27 15:50,2026-03-19 11:15,Leonie Example,18411958396,Hausbruch Reinigung SE
+31916409547,"Hafenkante Handel – Time tracking, 150 seats",Sales Pipeline,Closed Lost,23300,2026-03-26,2025-11-27 17:05,2026-03-23 10:05,Aylin Example,18423634900,Hafenkante Handel SE
+31917902064,Grünspan Sicherheitsdienst – Expansion +25 seats,Sales Pipeline,Closed Won,18600,2026-04-27,2025-11-30 10:20,2026-04-26 09:10,Murat Example,18425517606,Grünspan Sicherheitsdienst GmbH
+31918188432,"Leuchtturm Spedition – Shift planning + time tracking, 60 seats",Sales Pipeline,Closed Lost,12500,2026-02-04,2025-12-04 10:00,2026-01-26 08:50,Murat Example,18418211002,Leuchtturm Spedition GmbH & Co. KG
+31919367329,"Blauwal Handel – Time tracking, 120 seats",Sales Pipeline,Closed Lost,14300,2026-01-28,2025-12-04 15:50,2026-01-23 12:00,Murat Example,18412222574,Blauwal Handel GmbH & Co. KG
+31919471536,"Wandsbek Spedition – Shift planning + time tracking, 120 seats",Sales Pipeline,Closed Lost,18800,2026-01-08,2025-12-05 12:10,2026-01-08 09:55,Murat Example,18421734175,Wandsbek Spedition SE
+31919694570,"Möwenweg Hotels – Workforce analytics, 120 seats",Sales Pipeline,Closed Won,39200,2026-02-17,2025-12-05 15:25,2026-02-09 10:10,Aylin Example,18419573746,Möwenweg Hotels GmbH
+31921616519,"Fischbek Handel – Time tracking, 300 seats",Sales Pipeline,Closed Won,19900,2026-01-08,2025-12-06 13:15,2025-12-31 14:35,Leonie Example,18430821092,Fischbek Handel SE
+31921835286,"Allermöhe Hotels – Time tracking, 300 seats",Sales Pipeline,Closed Won,21100,2026-02-25,2025-12-07 15:45,2026-02-15 08:20,Murat Example,18427706995,Allermöhe Hotels SE
+31921961919,"Heidekraut Logistik – Time tracking, 200 seats",Sales Pipeline,Closed Won,52700,2026-03-12,2025-12-07 17:15,2026-03-07 14:05,Leonie Example,18417408999,Heidekraut Logistik UG
+31922599138,"Wattenmeer Sicherheitsdienst – Workforce analytics, 300 seats",Sales Pipeline,Closed Won,37500,2026-04-08,2025-12-10 13:30,2026-04-01 09:55,Aylin Example,18432379727,Wattenmeer Sicherheitsdienst SE
+31923740308,Tatenberg Hotels – Expansion +120 seats,Sales Pipeline,Closed Won,124700,2026-03-08,2025-12-11 09:05,2026-02-28 15:25,Jonas Example,18409742501,Tatenberg Hotels gGmbH
+31925107271,"Allermöhe Bau – Workforce analytics, 80 seats",Sales Pipeline,Closed Won,60100,2026-03-06,2025-12-11 12:55,2026-03-02 14:15,Leonie Example,18429401380,Allermöhe Bau GmbH
+31925992632,Gut Moor Hotels – Expansion +80 seats,Sales Pipeline,Closed Lost,12400,2026-02-02,2025-12-12 15:50,2026-01-25 09:45,Aylin Example,18419051292,Gut Moor Hotels UG
+31927141110,"Ochsenwerder Bau – Workforce analytics, 120 seats",Sales Pipeline,Closed Lost,24500,2026-05-20,2025-12-12 17:00,2026-05-17 16:05,Finn Example,18413849147,Ochsenwerder Bau AG
+31928621246,"Alsterblick Handel – Workforce analytics, 300 seats",Sales Pipeline,Closed Lost,29400,2026-05-15,2025-12-15 16:55,2026-05-13 11:00,Murat Example,18416262677,Alsterblick Handel GmbH
+31929299837,"Elbufer Facility Services – Workforce analytics, 40 seats",Sales Pipeline,Closed Won,40400,2026-03-27,2025-12-16 09:00,2026-03-17 17:55,Jonas Example,18429942973,Elbufer Facility Services AG
+31929828297,"Seemeile Pflege – Time tracking, 25 seats",Sales Pipeline,Closed Won,23900,2026-02-20,2025-12-16 12:40,2026-02-12 16:35,Jonas Example,18428179128,Seemeile Pflege SE
+31930286889,"Sandtor Facility Services – Time tracking, 80 seats",Sales Pipeline,Closed Lost,39100,2026-03-15,2025-12-17 13:55,2026-03-09 14:15,Clara Example,18432971319,Sandtor Facility Services UG
+31931856853,Allermöhe Hotels – Expansion +300 seats,Sales Pipeline,Closed Won,13200,2026-04-10,2025-12-21 16:30,2026-04-08 08:20,Clara Example,18427706995,Allermöhe Hotels SE
+31933340641,"Ankerplatz Reinigung – Shift planning, 80 seats",Sales Pipeline,Closed Won,13600,2026-05-26,2025-12-22 14:35,2026-05-25 10:25,Jonas Example,18420196782,Ankerplatz Reinigung AG
+31933682994,Grünspan Sicherheitsdienst – Renewal 2027,Sales Pipeline,Closed Won,14500,2026-03-12,2025-12-23 14:45,2026-03-04 15:45,Finn Example,18425517606,Grünspan Sicherheitsdienst GmbH
+31935150858,"Sinstorf Event – Workforce analytics, 300 seats",Sales Pipeline,Closed Won,44100,2026-01-28,2025-12-24 10:50,2026-01-18 11:05,Jonas Example,18431470145,Sinstorf Event gGmbH
+31935175185,"Lotsenhaus Facility Services – Shift planning, 40 seats",Sales Pipeline,Closed Won,166300,2026-03-22,2025-12-28 11:10,2026-03-22 12:20,Jonas Example,18433798033,Lotsenhaus Facility Services GmbH
+31935551125,"Strandgut Spedition – Shift planning, 150 seats",Sales Pipeline,Closed Lost,33200,2026-01-23,2026-01-02 15:30,2026-01-13 13:40,Leonie Example,18420347607,Strandgut Spedition GmbH
+31935798520,Neuland Event – Renewal 2027,Sales Pipeline,Closed Won,50000,2026-02-11,2026-01-04 12:05,2026-02-06 14:40,Clara Example,18425629952,Neuland Event GmbH
+31937252459,Wilhelmsburg Kliniken – Renewal 2027,Sales Pipeline,Closed Won,32900,2026-03-28,2026-01-04 14:55,2026-03-24 15:35,Clara Example,18422935130,Wilhelmsburg Kliniken GmbH & Co. KG
+31938200893,Fischbek Gastro – Expansion +80 seats,Sales Pipeline,Closed Lost,52100,2026-04-13,2026-01-06 11:15,2026-04-07 09:35,Finn Example,18438900839,Fischbek Gastro UG
+31938287305,"Curslack Sicherheitsdienst – Time tracking, 40 seats",Sales Pipeline,Closed Lost,11500,2026-04-29,2026-01-07 09:40,2026-04-21 09:10,Finn Example,18426563815,Curslack Sicherheitsdienst GmbH
+31939823664,"Speicherstadt Kliniken – Workforce analytics, 40 seats",Sales Pipeline,Closed Won,46800,2026-06-02,2026-01-07 11:15,2026-06-02 08:30,Finn Example,18424138831,Speicherstadt Kliniken GmbH & Co. KG
+31939988205,Ottensen Pflege – Expansion +200 seats,Sales Pipeline,Closed Won,8800,2026-04-21,2026-01-10 09:15,2026-04-13 17:55,Jonas Example,18425968017,Ottensen Pflege GmbH
+31941415698,"Altona Hotels – Shift planning, 120 seats",Sales Pipeline,Closed Won,14100,2026-05-24,2026-01-10 14:30,2026-05-22 11:55,Murat Example,18421106297,Altona Hotels GmbH
+31942446973,"Altona Handel – Workforce analytics, 80 seats",Sales Pipeline,Closed Won,9300,2026-02-22,2026-01-10 15:15,2026-02-15 13:55,Clara Example,18435314312,Altona Handel GmbH
+31943390905,"Bernstein Logistik – Workforce analytics, 200 seats",Sales Pipeline,Closed Won,29700,2026-06-18,2026-01-12 14:15,2026-06-17 13:50,Aylin Example,18436620719,Bernstein Logistik GmbH
+31943624755,"Kirchdorf Hotels – Time tracking, 150 seats",Sales Pipeline,Closed Won,8600,2026-02-09,2026-01-15 10:15,2026-02-06 15:25,Aylin Example,18438293455,Kirchdorf Hotels GmbH
+31944830094,"Steinwerder Reinigung – Workforce analytics, 200 seats",Sales Pipeline,Closed Lost,27700,2026-06-07,2026-01-17 09:05,2026-05-29 17:10,Leonie Example,18426907671,Steinwerder Reinigung GmbH
+31945096929,"Lindenhof Handel – Time tracking, 300 seats",Sales Pipeline,Closed Lost,61600,2026-04-28,2026-01-17 12:15,2026-04-25 12:05,Leonie Example,18437232166,Lindenhof Handel SE
+31945112808,Sinstorf Event – Expansion +120 seats,Sales Pipeline,Closed Won,27300,2026-06-13,2026-01-19 11:25,2026-06-09 13:40,Clara Example,18431470145,Sinstorf Event gGmbH
+31945190264,"Westwall Event – Shift planning, 40 seats",Sales Pipeline,Closed Lost,21500,2026-06-03,2026-01-22 17:00,2026-06-03 15:45,Aylin Example,18441542280,Westwall Event GmbH
+31945218566,Rönneburg Spedition – Expansion +150 seats,Sales Pipeline,Closed Lost,32700,2026-05-26,2026-01-23 08:35,2026-05-26 15:05,Jonas Example,18403821813,Rönneburg Spedition UG
+31946396281,"Ottensen Hotels – Shift planning + time tracking, 40 seats",Sales Pipeline,Closed Lost,85400,2026-06-29,2026-01-24 09:50,2026-06-21 11:05,Clara Example,18423620619,Ottensen Hotels GmbH
+31946698053,Möwenweg Event – Expansion +200 seats,Sales Pipeline,Closed Lost,36100,2026-05-26,2026-01-26 16:30,2026-05-20 14:35,Finn Example,18441421806,Möwenweg Event GmbH
+31948496837,"Silbermöwe Facility Services – Workforce analytics, 40 seats",Sales Pipeline,Closed Lost,85000,2026-06-05,2026-01-28 17:45,2026-06-03 09:35,Clara Example,18429906920,Silbermöwe Facility Services GmbH & Co. KG
+31949498573,Francop Reinigung – Renewal 2027,Sales Pipeline,Closed Lost,5500,2026-03-12,2026-01-31 13:10,2026-03-03 10:35,Murat Example,18411688728,Francop Reinigung GmbH
+31950846466,"Wilhelmsburg Kliniken – Shift planning, 300 seats",Sales Pipeline,Closed Won,37200,2026-07-05,2026-02-05 12:55,2026-06-25 11:35,Murat Example,18422935130,Wilhelmsburg Kliniken GmbH & Co. KG
+31951749679,"Eißendorf Bau – Workforce analytics, 200 seats",Sales Pipeline,Closed Won,37900,2026-03-19,2026-02-08 15:05,2026-03-10 15:45,Murat Example,18434792270,Eißendorf Bau GmbH
+31951806195,"Sturmflut Bau – Shift planning, 200 seats",Sales Pipeline,Closed Lost,24400,2026-06-04,2026-02-09 17:05,2026-05-30 11:45,Aylin Example,18441608169,Sturmflut Bau GmbH & Co. KG
+31952359336,"Billwerder Facility Services – Shift planning, 200 seats",Sales Pipeline,Closed Won,17100,2026-03-06,2026-02-14 15:40,2026-02-27 12:15,Clara Example,18451967338,Billwerder Facility Services gGmbH
+31952580481,"Finkenwerder Bau – Time tracking, 300 seats",Sales Pipeline,Closed Won,26000,2026-03-22,2026-02-15 17:55,2026-03-22 12:30,Finn Example,18443910709,Finkenwerder Bau GmbH
+31953141893,"Gut Moor Facility Services – Time tracking, 200 seats",Sales Pipeline,Closed Lost,22100,2026-06-02,2026-02-16 09:15,2026-05-26 15:00,Aylin Example,18452563902,Gut Moor Facility Services GmbH
+31953878632,"Kirchdorf Handel – Shift planning + time tracking, 60 seats",Sales Pipeline,Closed Lost,8700,2026-06-14,2026-02-18 09:35,2026-06-06 10:40,Finn Example,18431522961,Kirchdorf Handel GmbH & Co. KG
+31954562691,"Brückenbau Handel – Time tracking, 120 seats",Sales Pipeline,Closed Won,35100,2026-06-08,2026-02-19 14:55,2026-05-31 08:35,Murat Example,18428833762,Brückenbau Handel GmbH
+31955462682,"Sandtor Event – Time tracking, 150 seats",Sales Pipeline,Closed Won,69900,2026-07-14,2026-02-21 08:05,2026-07-12 16:50,Jonas Example,18439371475,Sandtor Event GmbH
+31956257299,Neuland Sicherheitsdienst – Expansion +40 seats,Sales Pipeline,Closed Lost,21500,2026-05-17,2026-02-21 15:45,2026-05-07 13:50,Clara Example,18432653792,Neuland Sicherheitsdienst SE
+31957325646,"Hammerbrook Gastro – Shift planning + time tracking, 80 seats",Sales Pipeline,Closed Lost,14200,2026-05-25,2026-02-22 13:40,2026-05-22 08:55,Jonas Example,18450110859,Hammerbrook Gastro GmbH
+31958873459,"Leuchtturm Handel – Shift planning + time tracking, 200 seats",Sales Pipeline,Closed Won,114000,2026-08-04,2026-02-26 14:20,2026-08-01 11:35,Aylin Example,18442491952,Leuchtturm Handel GmbH
+31960649805,"Grünspan Sicherheitsdienst – Shift planning + time tracking, 300 seats",Sales Pipeline,Closed Won,22800,2026-07-24,2026-02-27 08:50,2026-07-21 09:40,Jonas Example,18425517606,Grünspan Sicherheitsdienst GmbH
+31962620877,"Möwenweg Pflege – Shift planning + time tracking, 80 seats",Sales Pipeline,Closed Won,34300,2026-05-19,2026-03-02 17:00,2026-05-16 13:05,Jonas Example,18434302142,Möwenweg Pflege GmbH & Co. KG
+31964401561,"Nordlicht Event – Workforce analytics, 300 seats",Sales Pipeline,Closed Lost,55200,2026-06-25,2026-03-04 16:15,2026-06-18 17:50,Leonie Example,18458666485,Nordlicht Event SE
+31966188471,"Deichgraf Spedition – Time tracking, 120 seats",Sales Pipeline,Closed Lost,8700,2026-07-03,2026-03-06 11:55,2026-06-26 16:15,Clara Example,18446299422,Deichgraf Spedition AG
+31967719200,Allermöhe Hotels – Renewal 2027,Sales Pipeline,Closed Won,27400,2026-08-03,2026-03-06 15:05,2026-07-25 09:20,Murat Example,18427706995,Allermöhe Hotels SE
+31968151105,"Rönneburg Hotels – Shift planning + time tracking, 40 seats",Sales Pipeline,Closed Lost,50500,2026-06-09,2026-03-06 17:40,2026-05-30 14:35,Jonas Example,18449387522,Rönneburg Hotels GmbH & Co. KG
+31968739105,Bernstein Event – Expansion +40 seats,Sales Pipeline,Closed Won,24900,2026-10-24,2026-03-08 08:25,2026-06-07 11:35,Aylin Example,18454325630,Bernstein Event GmbH
+31970390212,"Rothenburg Bau – Shift planning + time tracking, 40 seats",Sales Pipeline,Closed Won,18200,2026-06-02,2026-03-08 10:10,2026-05-26 16:20,Murat Example,18457412111,Rothenburg Bau GmbH & Co. KG
+31970395254,"Marmstorf Event – Workforce analytics, 300 seats",Sales Pipeline,Closed Lost,83800,2026-07-27,2026-03-09 17:10,2026-07-21 09:00,Jonas Example,18440306954,Marmstorf Event UG
+31971559672,"Hausbruch Bau – Workforce analytics, 200 seats",Sales Pipeline,Closed Lost,15600,2026-05-05,2026-03-10 11:25,2026-05-01 12:50,Finn Example,18443060887,Hausbruch Bau GmbH
+31973516784,"Silbermöwe Spedition – Workforce analytics, 40 seats",Sales Pipeline,Closed Lost,26400,2026-07-20,2026-03-11 17:15,2026-07-11 11:40,Murat Example,18440117622,Silbermöwe Spedition GmbH
+31975067894,"Bernstein Event – Workforce analytics, 120 seats",Sales Pipeline,Closed Won,13000,2026-06-30,2026-03-13 16:00,2026-06-26 11:15,Leonie Example,18454325630,Bernstein Event GmbH
+31976585805,"Rotklinker Gastro – Workforce analytics, 60 seats",Sales Pipeline,Closed Won,33500,2026-06-02,2026-03-14 09:55,2026-05-27 10:45,Leonie Example,18463250342,Rotklinker Gastro GmbH
+31978051242,"Tatenberg Pflege – Shift planning + time tracking, 120 seats",Sales Pipeline,Closed Lost,76800,2026-04-11,2026-03-15 12:30,2026-04-07 13:30,Aylin Example,18452188530,Tatenberg Pflege AG
+31979786899,"Eichenwald Facility Services – Workforce analytics, 200 seats",Sales Pipeline,Closed Won,16700,2026-06-25,2026-03-18 10:45,2026-06-20 11:50,Murat Example,18438107906,Eichenwald Facility Services AG
+31981777649,Eichenwald Facility Services – Expansion +150 seats,Sales Pipeline,Closed Won,103100,2026-07-03,2026-03-21 17:00,2026-06-27 13:10,Murat Example,18438107906,Eichenwald Facility Services AG
+31982824440,"Ottensen Pflege – Time tracking, 80 seats",Sales Pipeline,Closed Won,17500,2026-08-27,2026-03-22 11:00,2026-08-24 12:20,Murat Example,18425968017,Ottensen Pflege GmbH
+31983397235,"Reitbrook Bau – Shift planning + time tracking, 200 seats",Sales Pipeline,Closed Lost,19500,2026-08-09,2026-03-22 16:35,2026-08-06 10:55,Leonie Example,18448360381,Reitbrook Bau UG
+31984375319,"Moorfleet Spedition – Workforce analytics, 150 seats",Sales Pipeline,Closed Lost,24000,2026-08-24,2026-03-24 17:50,2026-08-15 08:30,Murat Example,18435817880,Moorfleet Spedition GmbH
+31984949438,Tidenhub Kliniken – Expansion +120 seats,Sales Pipeline,Closed Won,27700,2026-06-16,2026-03-26 08:50,2026-06-12 14:10,Aylin Example,18460513632,Tidenhub Kliniken GmbH
+31986736030,"Ochsenwerder Gastro – Shift planning, 150 seats",Sales Pipeline,Closed Lost,25300,2026-08-18,2026-03-26 16:40,2026-08-12 12:25,Leonie Example,18448223598,Ochsenwerder Gastro GmbH
+31987289563,"Birkenhain Reinigung – Time tracking, 200 seats",Sales Pipeline,Closed Won,46800,2026-04-20,2026-03-27 08:25,2026-04-13 15:25,Jonas Example,18468110588,Birkenhain Reinigung GmbH
+31988033328,"Neuland Sicherheitsdienst – Time tracking, 40 seats",Sales Pipeline,Closed Lost,37800,2026-07-27,2026-03-28 08:15,2026-07-24 10:00,Jonas Example,18432653792,Neuland Sicherheitsdienst SE
+31989489740,"Moorfleet Kliniken – Time tracking, 25 seats",Sales Pipeline,Closed Lost,47000,2026-08-21,2026-03-28 17:50,2026-08-18 10:45,Jonas Example,18448518152,Moorfleet Kliniken UG
+31990340729,"Steinwerder Pflege – Workforce analytics, 150 seats",Sales Pipeline,Closed Won,13400,2026-05-25,2026-03-29 08:15,2026-05-18 11:25,Leonie Example,18440121190,Steinwerder Pflege GmbH
+31991045991,"Heimfeld Bau – Time tracking, 40 seats",Sales Pipeline,Closed Lost,15800,2026-07-08,2026-03-29 12:05,2026-07-07 10:20,Leonie Example,18455256342,Heimfeld Bau GmbH
+31992021103,"Seemeile Sicherheitsdienst – Workforce analytics, 120 seats",Sales Pipeline,Closed Won,11000,2026-11-04,2026-03-31 15:20,2026-04-23 16:40,Murat Example,18462749962,Seemeile Sicherheitsdienst AG
+31993168398,Ankerplatz Bau – Expansion +200 seats,Sales Pipeline,Closed Lost,35600,2026-05-06,2026-04-03 10:45,2026-05-02 16:40,Leonie Example,18445544088,Ankerplatz Bau GmbH & Co. KG
+31994531777,"Heimfeld Logistik – Time tracking, 40 seats",Sales Pipeline,Closed Won,10300,2026-09-08,2026-04-04 08:40,2026-09-03 16:50,Jonas Example,18441016953,Heimfeld Logistik UG
+31994653194,"Ottensen Reinigung – Shift planning, 80 seats",Sales Pipeline,Appointment Scheduled,10300,2026-11-07,2026-04-04 15:00,2026-09-17 10:30,Jonas Example,18444553468,Ottensen Reinigung GmbH
+31996066236,"Ebbe Spedition – Time tracking, 80 seats",Sales Pipeline,Closed Lost,8100,2026-08-26,2026-04-06 13:40,2026-08-20 11:00,Aylin Example,18449981673,Ebbe Spedition GmbH & Co. KG
+31997036194,Francop Sicherheitsdienst – Expansion +150 seats,Sales Pipeline,Decision Maker Bought-In,20100,2026-12-13,2026-04-06 14:55,2026-09-23 13:00,Clara Example,18442703712,Francop Sicherheitsdienst GmbH
+31997495736,"Veddel Handel – Shift planning + time tracking, 200 seats",Sales Pipeline,Decision Maker Bought-In,44200,2027-03-06,2026-04-07 10:05,2026-09-24 09:05,Finn Example,18459924664,Veddel Handel GmbH & Co. KG
+31997568463,"Harburg Reinigung – Shift planning + time tracking, 300 seats",Sales Pipeline,Closed Won,15300,2026-05-07,2026-04-09 09:35,2026-05-04 17:40,Murat Example,18413645766,Harburg Reinigung GmbH
+31998189837,"Bergedorf Reinigung – Shift planning, 80 seats",Sales Pipeline,Closed Lost,51800,2026-05-28,2026-04-09 09:50,2026-05-18 08:40,Aylin Example,18444739923,Bergedorf Reinigung UG
+31999326915,"Wandsbek Gastro – Time tracking, 300 seats",Sales Pipeline,Qualified To Buy,,2026-10-23,2026-04-11 11:20,2026-09-18 10:50,Jonas Example,18456928012,Wandsbek Gastro GmbH
+32001024223,"Lindenhof Gastro – Shift planning, 200 seats",Sales Pipeline,Closed Lost,12900,2026-06-20,2026-04-11 12:20,2026-06-19 12:05,Aylin Example,18474402214,Lindenhof Gastro SE
+32001600256,Leuchtturm Pflege – Expansion +300 seats,Sales Pipeline,Decision Maker Bought-In,28800,2026-10-20,2026-04-11 12:30,2026-09-22 10:10,Jonas Example,18445809530,Leuchtturm Pflege AG
+32001696706,"Alsterblick Pflege – Shift planning + time tracking, 40 seats",Sales Pipeline,Closed Lost,30200,2026-09-16,2026-04-11 12:50,2026-09-06 14:05,Clara Example,18467281387,Alsterblick Pflege SE
+32003515353,"Sandtor Hotels – Workforce analytics, 120 seats",Sales Pipeline,Closed Lost,19300,2026-06-19,2026-04-12 10:05,2026-06-16 11:25,Leonie Example,18465768205,Sandtor Hotels SE
+32003955125,"Lotsenhaus Kliniken – Time tracking, 80 seats",Sales Pipeline,Closed Lost,19600,2026-07-29,2026-04-12 12:20,2026-07-29 12:45,Finn Example,18463799491,Lotsenhaus Kliniken SE
+32004078201,"Brückenbau Logistik – Time tracking, 60 seats",Sales Pipeline,Contract Sent,11200,2026-10-15,2026-04-13 13:15,2026-09-22 12:00,Clara Example,18456715033,Brückenbau Logistik GmbH
+32004476615,Uhlenhorst Bau – Workforce analytics add-on,Sales Pipeline,Decision Maker Bought-In,16500,2026-12-19,2026-04-14 15:20,2026-06-09 13:45,Leonie Example,18459364129,Uhlenhorst Bau GmbH
+32006458980,"Speicherstadt Gastro – Shift planning + time tracking, 60 seats",Sales Pipeline,Appointment Scheduled,37600,2027-03-21,2026-04-15 09:45,2026-09-19 14:30,Murat Example,18462904397,Speicherstadt Gastro GmbH & Co. KG
+32007202339,"Gut Moor Hotels – Shift planning + time tracking, 40 seats",Sales Pipeline,Closed Lost,16200,2026-09-03,2026-04-15 11:10,2026-09-03 13:35,Clara Example,18419051292,Gut Moor Hotels UG
+32007756812,"Ostwind Kliniken – Shift planning + time tracking, 300 seats",Sales Pipeline,Closed Lost,4600,2026-07-28,2026-04-15 16:40,2026-07-28 14:00,Aylin Example,18444969284,Ostwind Kliniken GmbH
+32008465254,"Billwerder Pflege – Time tracking, 25 seats",Sales Pipeline,Closed Won,92400,2026-07-19,2026-04-18 13:15,2026-07-10 09:50,Jonas Example,18465576458,Billwerder Pflege GmbH
+32008890500,Wilhelmsburg Handel – Expansion +300 seats,Sales Pipeline,Qualified To Buy,13900,2026-10-26,2026-04-18 15:05,2026-10-03 13:50,Clara Example,18410935200,Wilhelmsburg Handel GmbH
+32010657364,Blauwal Pflege – Expansion +300 seats,Sales Pipeline,Qualified To Buy,57100,2027-01-12,2026-04-19 08:05,2026-06-27 17:55,Finn Example,18473089358,Blauwal Pflege AG
+32011826077,Ochsenwerder Bau – Expansion +40 seats,Sales Pipeline,Appointment Scheduled,81300,2027-01-15,2026-04-19 08:20,2026-07-13 17:30,Finn Example,18413849147,Ochsenwerder Bau AG
+32013343898,Neugraben Facility Services – Expansion +80 seats,Sales Pipeline,Appointment Scheduled,146100,2026-12-11,2026-04-19 12:05,2026-09-26 17:10,Aylin Example,18463262257,Neugraben Facility Services UG
+32015337901,Lotsenhaus Bau – Expansion +150 seats,Sales Pipeline,Qualified To Buy,,2026-12-16,2026-04-19 15:10,2026-10-02 17:40,Aylin Example,18458155059,Lotsenhaus Bau UG
+32015522249,"Neuenfelde Gastro – Time tracking, 200 seats",Sales Pipeline,Qualified To Buy,7500,2027-03-27,2026-04-19 17:25,2026-09-19 08:10,Aylin Example,18473507168,Neuenfelde Gastro AG
+32016213138,"Hausbruch Event – Shift planning + time tracking, 120 seats",Sales Pipeline,Closed Won,19600,2026-05-25,2026-04-20 11:25,2026-05-25 11:50,Finn Example,18451106386,Hausbruch Event SE
+32017311842,Lindenhof Gastro – Expansion +300 seats,Sales Pipeline,Presentation Scheduled,7100,2027-01-16,2026-04-20 17:40,2026-09-24 16:15,Finn Example,18474402214,Lindenhof Gastro SE
+32017687379,Wattenmeer Handel – Workforce analytics add-on,Sales Pipeline,Appointment Scheduled,50300,2027-03-28,2026-04-21 09:55,2026-06-01 09:55,Finn Example,18446980028,Wattenmeer Handel SE
+32019490025,Altona Hotels – Expansion +200 seats,Sales Pipeline,Presentation Scheduled,16000,2027-02-26,2026-04-21 12:05,2026-05-22 12:05,Finn Example,18421106297,Altona Hotels GmbH
+32020697848,"Winterhude Kliniken – Time tracking, 80 seats",Sales Pipeline,Closed Won,34600,2026-06-06,2026-04-22 14:15,2026-06-02 16:20,Clara Example,18453718946,Winterhude Kliniken GmbH
+32020792635,"Rothenburg Hotels – Shift planning, 40 seats",Sales Pipeline,Decision Maker Bought-In,31100,2026-11-23,2026-04-22 15:50,2026-10-01 11:15,Jonas Example,18447633851,Rothenburg Hotels UG
+32022317745,Fischbek Handel – Expansion +300 seats,Sales Pipeline,Closed Lost,14300,2026-08-12,2026-04-22 16:20,2026-08-06 08:35,Leonie Example,18430821092,Fischbek Handel SE
+32022459448,Ostwind Kliniken – Renewal 2027,Sales Pipeline,Presentation Scheduled,12700,2026-11-24,2026-04-22 17:40,2026-09-23 13:10,Jonas Example,18444969284,Ostwind Kliniken GmbH
+32023685002,"Neuland Kliniken – Workforce analytics, 200 seats",Sales Pipeline,Closed Lost,8100,2026-09-06,2026-04-23 10:10,2026-09-01 08:10,Aylin Example,18456089568,Neuland Kliniken AG
+32024036665,"Neugraben Gastro – Workforce analytics, 120 seats",Sales Pipeline,Contract Sent,19200,2026-10-29,2026-04-23 17:35,2026-09-18 14:40,Clara Example,18461420779,Neugraben Gastro GmbH
+32025015303,Francop Logistik – Expansion +40 seats,Sales Pipeline,Decision Maker Bought-In,42800,2026-10-28,2026-04-24 13:15,2026-10-01 15:00,Jonas Example,18448582764,Francop Logistik GmbH
+32026349264,"Eißendorf Sicherheitsdienst – Time tracking, 80 seats",Sales Pipeline,Closed Lost,48400,2026-09-20,2026-04-24 15:20,2026-09-15 11:30,Jonas Example,18469466986,Eißendorf Sicherheitsdienst GmbH
+32027126587,Hafenkante Pflege – Renewal 2027,Sales Pipeline,Contract Sent,50200,2026-12-10,2026-04-26 11:35,2026-09-21 16:00,Jonas Example,18465915298,Hafenkante Pflege GmbH
+32028024812,"Veddel Spedition – Workforce analytics, 200 seats",Sales Pipeline,Qualified To Buy,52500,2026-09-13,2026-04-26 13:40,2026-10-09 09:00,Leonie Example,18466538054,Veddel Spedition GmbH & Co. KG
+32028267176,Allermöhe Bau – Expansion +120 seats,Sales Pipeline,Qualified To Buy,37000,2027-02-22,2026-04-26 15:45,2026-10-12 07:15,Finn Example,18429401380,Allermöhe Bau GmbH
+32029612154,"Blauwal Reinigung – Shift planning + time tracking, 300 seats",Sales Pipeline,Closed Lost,121100,2026-09-14,2026-04-27 08:30,2026-09-13 10:45,Clara Example,18457158833,Blauwal Reinigung GmbH
+32029644456,Francop Reinigung – Expansion +60 seats,Sales Pipeline,Closed Won,17000,2026-06-13,2026-04-27 10:00,2026-06-09 15:05,Finn Example,18411688728,Francop Reinigung GmbH
+32030480841,"Ebbe Gastro – Workforce analytics, 60 seats",Sales Pipeline,Contract Sent,47900,2027-01-29,2026-04-27 14:50,2026-10-08 10:15,Murat Example,18452960526,Ebbe Gastro GmbH & Co. KG
+32031687939,Heidekraut Sicherheitsdienst – Expansion +25 seats,Sales Pipeline,Qualified To Buy,52900,2026-11-24,2026-04-27 15:05,2026-10-02 10:45,Clara Example,18450107341,Heidekraut Sicherheitsdienst AG
+32032282390,"Ebbe Gastro – Workforce analytics, 60 seats",Sales Pipeline,Contract Sent,47900,2027-01-29,2026-04-27 15:21,2026-10-05 10:15,Murat Example,18452960526,Ebbe Gastro GmbH & Co. KG
+32032490037,Ochsenwerder Kliniken – Renewal 2027,Sales Pipeline,Presentation Scheduled,42600,2027-03-05,2026-04-28 08:35,2026-10-03 12:30,Aylin Example,18464451096,Ochsenwerder Kliniken SE
+32034013096,"Möwenweg Event – Shift planning, 200 seats",Sales Pipeline,Closed Won,22300,2026-05-27,2026-04-28 09:50,2026-05-22 13:45,Clara Example,18441421806,Möwenweg Event GmbH
+32034447767,Wandsbek Gastro – Expansion +120 seats,Sales Pipeline,Decision Maker Bought-In,56600,,2026-04-28 10:35,2026-09-20 12:15,Murat Example,18456928012,Wandsbek Gastro GmbH
+32034692146,"Ochsenwerder Kliniken – Shift planning + time tracking, 300 seats",Sales Pipeline,Closed Lost,133100,2026-09-01,2026-04-28 15:25,2026-08-23 09:50,Leonie Example,18464451096,Ochsenwerder Kliniken SE
+32036640763,"Spadenland Gastro – Shift planning + time tracking, 80 seats",Sales Pipeline,Qualified To Buy,6600,2027-03-22,2026-04-28 17:40,2026-10-01 10:40,Murat Example,18470591053,Spadenland Gastro GmbH
+32036730914,Sandtor Facility Services – Expansion +150 seats,Sales Pipeline,Appointment Scheduled,13800,2026-12-04,2026-04-29 15:35,2026-10-11 10:20,Murat Example,18432971319,Sandtor Facility Services UG
+32037757487,"Leuchtturm Kliniken – Shift planning + time tracking, 40 seats",Sales Pipeline,Closed Won,19900,2026-06-15,2026-04-29 16:10,2026-06-07 08:30,Aylin Example,18457682382,Leuchtturm Kliniken GmbH & Co. KG
+32039668640,Neuenfelde Spedition – Expansion +200 seats,Sales Pipeline,Decision Maker Bought-In,16200,2026-12-21,2026-04-29 16:20,2026-09-25 12:50,Jonas Example,18468672180,Neuenfelde Spedition GmbH & Co. KG
+32039850057,"Tidenhub Kliniken – Workforce analytics, 120 seats",Sales Pipeline,Closed Won,35600,2026-06-24,2026-04-29 16:35,2026-06-16 11:15,Finn Example,18460513632,Tidenhub Kliniken GmbH
+32040769777,Lotsenhaus Event – Renewal 2027,Sales Pipeline,Contract Sent,29500,2026-10-01,2026-04-29 17:10,2026-10-02 15:15,Clara Example,18403729186,Lotsenhaus Event GmbH
+32041137842,Reitbrook Bau – Renewal 2027,Sales Pipeline,Presentation Scheduled,24700,2026-10-14,2026-04-30 15:10,2026-09-21 17:10,Aylin Example,18448360381,Reitbrook Bau UG
+32042328331,Moorfleet Hotels – Expansion +25 seats,Sales Pipeline,Appointment Scheduled,16500,,2026-04-30 17:20,2026-09-21 14:05,Murat Example,18447523052,Moorfleet Hotels GmbH
+32044079652,"Moorfleet Hotels – Time tracking, 300 seats",Sales Pipeline,Closed Won,21400,2026-06-09,2026-05-01 10:15,2026-06-09 08:05,Aylin Example,18447523052,Moorfleet Hotels GmbH
+32045504401,Speicherstadt Hotels – Expansion +25 seats,Sales Pipeline,Closed Lost,49200,2026-07-03,2026-05-01 12:50,2026-06-26 17:00,Clara Example,18457051454,Speicherstadt Hotels SE
+32045631637,"Waltershof Pflege – Workforce analytics, 40 seats",Sales Pipeline,Qualified To Buy,56300,2026-11-26,2026-05-01 17:25,2026-09-22 08:05,Murat Example,18454552135,Waltershof Pflege GmbH
+32046490844,Wattenmeer Handel – Renewal 2027,Sales Pipeline,Appointment Scheduled,80200,2026-11-08,2026-05-03 08:55,2026-08-13 15:20,Leonie Example,18446980028,Wattenmeer Handel SE
+32048038371,Neugraben Hotels – Expansion +200 seats,Sales Pipeline,Decision Maker Bought-In,19700,2027-03-08,2026-05-03 14:40,2026-10-08 09:05,Murat Example,18475513993,Neugraben Hotels AG
+32049529443,"Winterhude Facility Services – Time tracking, 200 seats",Sales Pipeline,Presentation Scheduled,47400,2026-10-19,2026-05-03 15:25,2026-10-12 07:02,Murat Example,18482907033,Winterhude Facility Services GmbH
+32050202520,"Tatenberg Reinigung – Workforce analytics, 80 seats",Sales Pipeline,Qualified To Buy,73400,2027-03-21,2026-05-03 15:35,2026-10-02 17:50,Finn Example,18464500351,Tatenberg Reinigung AG
+32050511441,Neuenfelde Gastro – Expansion +120 seats,Sales Pipeline,Decision Maker Bought-In,15100,2027-01-14,2026-05-03 16:50,2026-10-10 13:10,Aylin Example,18473507168,Neuenfelde Gastro AG
+32051553894,"Rothenburg Facility Services – Shift planning, 40 seats",Sales Pipeline,Presentation Scheduled,21900,2026-12-15,2026-05-04 09:15,2026-10-11 11:25,Finn Example,18454304261,Rothenburg Facility Services GmbH
+32052317011,"Ostwind Facility Services – Workforce analytics, 120 seats",Sales Pipeline,Qualified To Buy,,2026-10-23,2026-05-04 09:20,2026-10-05 16:05,Leonie Example,18449362861,Ostwind Facility Services GmbH
+32053309488,Spadenland Reinigung – Expansion +60 seats,Sales Pipeline,Presentation Scheduled,49400,2026-11-09,2026-05-04 11:35,2026-09-24 12:15,Finn Example,18466185663,Spadenland Reinigung UG
+32053691954,"Tatenberg Reinigung – Workforce analytics, 80 seats",Sales Pipeline,Qualified To Buy,73400,2027-03-21,2026-05-04 16:03,2026-09-28 17:50,Finn Example,18464500351,Tatenberg Reinigung AG
+32054098046,Barmbek Bau – Renewal 2027,Sales Pipeline,Presentation Scheduled,11700,2027-02-02,2026-05-04 16:40,2026-09-21 14:35,Finn Example,18450860543,Barmbek Bau GmbH
+32054122973,Sandtor Event – Expansion +60 seats,Sales Pipeline,Appointment Scheduled,15100,2027-01-08,2026-05-04 17:00,2026-09-26 17:15,Jonas Example,18439371475,Sandtor Event GmbH
+32055531452,Sandtor Event – Expansion +60 seats,Sales Pipeline,Appointment Scheduled,15100,2027-01-08,2026-05-04 17:18,2026-09-26 17:15,Jonas Example,18439371475,Sandtor Event GmbH
+32056604182,Ostwind Kliniken – Expansion +25 seats,Sales Pipeline,Appointment Scheduled,26800,2027-03-11,2026-05-04 17:35,2026-10-11 16:05,Clara Example,18444969284,Ostwind Kliniken GmbH
+32058262004,Billwerder Pflege – Renewal 2027,Sales Pipeline,Decision Maker Bought-In,67800,2026-10-24,2026-05-05 12:10,2026-08-28 12:05,Jonas Example,18465576458,Billwerder Pflege GmbH
+32058990997,Lindenhof Handel – Expansion +60 seats,Sales Pipeline,Appointment Scheduled,38700,2026-10-29,2026-05-07 09:55,2026-07-06 09:55,Jonas Example,18437232166,Lindenhof Handel SE
+32060586249,Eichenwald Facility Services – Renewal 2027,Sales Pipeline,Closed Lost,60700,2026-06-03,2026-05-07 10:00,2026-05-28 13:55,Leonie Example,18438107906,Eichenwald Facility Services AG
+32060740572,"Fischbek Gastro – Workforce analytics, 40 seats",Sales Pipeline,Closed Won,11200,2026-08-30,2026-05-07 12:45,2026-08-26 11:35,Jonas Example,18438900839,Fischbek Gastro UG
+32061796728,"Moorburg Sicherheitsdienst – Time tracking, 120 seats",Sales Pipeline,Appointment Scheduled,26900,2026-12-13,2026-05-07 16:25,2026-10-05 08:20,Leonie Example,18454268480,Moorburg Sicherheitsdienst GmbH
+32062304798,Leuchtturm Handel – Expansion +80 seats,Sales Pipeline,Closed Won,41200,2026-07-03,2026-05-08 10:45,2026-06-26 11:55,Finn Example,18442491952,Leuchtturm Handel GmbH
+32062575407,Uhlenhorst Event – Expansion +25 seats,Sales Pipeline,Closed Lost,28300,2026-06-27,2026-05-08 13:00,2026-06-17 11:25,Murat Example,18460249586,Uhlenhorst Event gGmbH
+32064387630,"Leuchtturm Pflege – Shift planning + time tracking, 40 seats",Sales Pipeline,Closed Won,68100,2026-08-23,2026-05-09 15:00,2026-08-21 09:25,Leonie Example,18445809530,Leuchtturm Pflege AG
+32064703495,"Grünspan Pflege – Workforce analytics, 120 seats",Sales Pipeline,Closed Won,16600,2026-05-31,2026-05-10 12:50,2026-05-22 14:40,Clara Example,18476377856,Grünspan Pflege GmbH
+32065716441,Hafenkante Pflege – Expansion +40 seats,Sales Pipeline,Contract Sent,7800,2026-12-14,2026-05-10 13:00,2026-10-07 15:10,Murat Example,18465915298,Hafenkante Pflege GmbH
+32066196964,Rothenburg Facility Services – Expansion +200 seats,Sales Pipeline,Decision Maker Bought-In,15800,2026-12-25,2026-05-11 10:40,2026-10-07 09:00,Leonie Example,18454304261,Rothenburg Facility Services GmbH
+32067071312,Ebbe Spedition – Expansion +60 seats,Sales Pipeline,Qualified To Buy,39700,2027-01-31,2026-05-11 12:15,2026-09-18 16:20,Clara Example,18449981673,Ebbe Spedition GmbH & Co. KG
+32067281733,Hafenkante Pflege – Expansion +40 seats,Sales Pipeline,Contract Sent,7800,2026-12-14,2026-05-11 13:24,2026-10-07 15:10,Murat Example,18465915298,Hafenkante Pflege GmbH
+32067357631,"Elbufer Hotels – Workforce analytics, 300 seats",Sales Pipeline,Decision Maker Bought-In,5600,2026-10-23,2026-05-11 15:10,2026-10-03 08:30,Jonas Example,18479622514,Elbufer Hotels AG
+32067707686,"Grünspan Logistik – Shift planning + time tracking, 60 seats",Sales Pipeline,Contract Sent,64000,2027-01-13,2026-05-12 08:25,2026-10-05 15:25,Finn Example,18474917877,Grünspan Logistik GmbH & Co. KG
+32068944848,Finkenwerder Logistik – Expansion +80 seats,Sales Pipeline,Decision Maker Bought-In,20900,2026-12-08,2026-05-12 11:40,2026-09-27 16:35,Jonas Example,18478825064,Finkenwerder Logistik AG
+32069375206,"Heidekraut Sicherheitsdienst – Shift planning, 40 seats",Sales Pipeline,Closed Won,44800,2026-09-15,2026-05-12 13:50,2026-09-15 13:35,Finn Example,18450107341,Heidekraut Sicherheitsdienst AG
+32069736428,"Silbermöwe Sicherheitsdienst – Shift planning, 80 seats",Sales Pipeline,Closed Lost,14800,2026-07-11,2026-05-12 16:45,2026-07-04 14:05,Clara Example,18402344378,Silbermöwe Sicherheitsdienst GmbH
+32071645984,"Hammerbrook Kliniken – Time tracking, 200 seats",Sales Pipeline,Closed Won,96400,2026-06-18,2026-05-13 10:55,2026-06-13 14:55,Finn Example,18465010531,Hammerbrook Kliniken SE
+32073076273,"Cranz Gastro – Shift planning + time tracking, 80 seats",Sales Pipeline,Qualified To Buy,77200,2027-03-29,2026-05-13 13:15,2026-09-27 09:55,Aylin Example,18467719288,Cranz Gastro GmbH
+32074954635,Kompass Spedition – Expansion +80 seats,Sales Pipeline,Qualified To Buy,21300,2026-11-23,2026-05-14 12:30,2026-09-26 12:35,Jonas Example,18475849884,Kompass Spedition GmbH
+32076205015,"Sinstorf Event – Time tracking, 40 seats",Sales Pipeline,Appointment Scheduled,60200,2026-10-31,2026-05-14 12:45,2026-10-02 10:40,Finn Example,18431470145,Sinstorf Event gGmbH
+32077394135,Steinwerder Pflege – Renewal 2027,Sales Pipeline,Appointment Scheduled,54500,2027-03-04,2026-05-14 15:10,2026-09-19 17:50,Clara Example,18440121190,Steinwerder Pflege GmbH
+32077436878,"Seemeile Gastro – Shift planning + time tracking, 300 seats",Sales Pipeline,Appointment Scheduled,11500,2027-02-10,2026-05-15 16:45,2026-09-24 10:40,,18485001543,Seemeile Gastro UG
+32077907037,Ottensen Pflege – Renewal 2027,Sales Pipeline,Closed Won,36700,2026-07-16,2026-05-16 10:40,2026-07-11 13:20,Finn Example,18425968017,Ottensen Pflege GmbH
+32078518451,"Cranz Facility Services – Shift planning + time tracking, 25 seats",Sales Pipeline,Qualified To Buy,7500,2027-02-13,2026-05-16 13:55,2026-09-20 10:45,Finn Example,18461870323,Cranz Facility Services AG
+32079646128,Curslack Sicherheitsdienst – Expansion +40 seats,Sales Pipeline,Qualified To Buy,23700,2026-12-06,2026-05-16 17:10,2026-09-19 09:20,Clara Example,18426563815,Curslack Sicherheitsdienst GmbH
+32081399906,"Birkenhain Pflege – Workforce analytics, 150 seats",Sales Pipeline,Closed Lost,13400,2026-09-19,2026-05-17 08:50,2026-09-16 09:30,Jonas Example,18460427110,Birkenhain Pflege GmbH
+32082408622,Steinwerder Pflege – Expansion +25 seats,Sales Pipeline,Decision Maker Bought-In,21400,2027-01-28,2026-05-17 12:05,2026-10-07 17:25,Clara Example,18440121190,Steinwerder Pflege GmbH
+32083562014,Heimfeld Bau – Expansion +40 seats,Sales Pipeline,Appointment Scheduled,28200,2027-02-24,2026-05-17 13:25,2026-09-20 08:15,Murat Example,18455256342,Heimfeld Bau GmbH
+32085078431,Billwerder Pflege – Expansion +150 seats,Sales Pipeline,Appointment Scheduled,41000,,2026-05-18 09:15,2026-09-17 12:10,Jonas Example,18465576458,Billwerder Pflege GmbH
+32086020289,Wattenmeer Sicherheitsdienst – Expansion +120 seats,Sales Pipeline,Contract Sent,10800,2027-03-31,2026-05-18 11:00,2026-09-25 10:50,Jonas Example,18432379727,Wattenmeer Sicherheitsdienst SE
+32086923075,Gut Moor Facility Services – Expansion +120 seats,Sales Pipeline,Presentation Scheduled,9400,2027-02-25,2026-05-19 13:00,2026-09-17 08:15,Finn Example,18452563902,Gut Moor Facility Services GmbH
+32087629655,"Ankerplatz Gastro – Shift planning + time tracking, 25 seats",Sales Pipeline,Closed Lost,30900,2026-06-14,2026-05-20 08:10,2026-06-07 13:30,Murat Example,18486735605,Ankerplatz Gastro gGmbH
+32088190360,Hafenkante Logistik – Expansion +120 seats,Sales Pipeline,Contract Sent,16500,2026-12-22,2026-05-20 08:45,2026-10-05 11:15,Clara Example,18484435473,Hafenkante Logistik GmbH
+32089115575,Möwenweg Pflege – Expansion +25 seats,Sales Pipeline,Qualified To Buy,41300,2027-01-11,2026-05-20 13:45,2026-09-24 17:05,Aylin Example,18434302142,Möwenweg Pflege GmbH & Co. KG
+32089223252,"Nordlicht Kliniken – Shift planning + time tracking, 150 seats",Sales Pipeline,Qualified To Buy,44900,2026-10-17,2026-05-21 14:00,2026-09-20 13:35,Jonas Example,18483650719,Nordlicht Kliniken UG
+32089855587,Neuenfelde Handel – Renewal 2027,Sales Pipeline,Appointment Scheduled,26600,2027-02-26,2026-05-21 14:30,2026-09-06 10:05,Clara Example,18478251527,Neuenfelde Handel GmbH
+32091304620,"Kaiserkai Kliniken – Workforce analytics, 80 seats",Sales Pipeline,Appointment Scheduled,9200,2026-11-25,2026-05-22 09:50,2026-09-22 12:45,Jonas Example,18479794435,Kaiserkai Kliniken GmbH
+32091880995,Barmbek Bau – Expansion +150 seats,Sales Pipeline,Closed Won,21300,2026-06-28,2026-05-23 08:05,2026-06-26 11:25,Aylin Example,18450860543,Barmbek Bau GmbH
+32093870221,"Francop Logistik – Workforce analytics, 25 seats",Sales Pipeline,Appointment Scheduled,14100,2026-11-03,2026-05-23 16:40,2026-09-19 08:40,Leonie Example,18448582764,Francop Logistik GmbH
+32095562521,"Moorburg Kliniken – Workforce analytics, 150 seats",Sales Pipeline,Closed Won,41600,2026-08-21,2026-05-24 16:45,2026-08-19 14:55,Leonie Example,18469864567,Moorburg Kliniken UG
+32097481765,Sinstorf Event – Renewal 2027,Sales Pipeline,Qualified To Buy,28500,2026-10-09,2026-05-24 17:05,2026-10-09 13:25,Murat Example,18431470145,Sinstorf Event gGmbH
+32099245661,"Kaiserkai Kliniken – Workforce analytics, 80 seats",Sales Pipeline,Appointment Scheduled,9200,2026-11-25,2026-05-25 10:12,2026-09-17 12:45,Jonas Example,18479794435,Kaiserkai Kliniken GmbH
+32100344862,"Nordlicht Facility Services – Workforce analytics, 60 seats",Sales Pipeline,Closed Won,15700,2026-08-01,2026-05-25 15:55,2026-07-22 13:55,Murat Example,18488781485,Nordlicht Facility Services GmbH
+32100523697,"Wilhelmsburg Reinigung – Shift planning, 60 seats",Sales Pipeline,Closed Lost,31000,2026-09-13,2026-05-26 08:50,2026-09-09 08:05,Finn Example,18465655295,Wilhelmsburg Reinigung GmbH
+32101549896,"Neuland Event – Time tracking, 120 seats",Sales Pipeline,Closed Won,11200,2026-08-04,2026-05-26 12:15,2026-07-29 16:40,Jonas Example,18425629952,Neuland Event GmbH
+32102890567,"Kompass Reinigung – Time tracking, 150 seats",Sales Pipeline,Presentation Scheduled,15600,2026-12-13,2026-05-26 15:05,2026-09-18 10:55,Clara Example,18477673512,Kompass Reinigung AG
+32104127740,"Finkenwerder Logistik – Time tracking, 200 seats",Sales Pipeline,Appointment Scheduled,54500,2027-01-08,2026-05-27 11:20,2026-10-02 13:45,Finn Example,18478825064,Finkenwerder Logistik AG
+32105593096,"Neuenfelde Spedition – Shift planning + time tracking, 60 seats",Sales Pipeline,Closed Won,48800,2026-07-30,2026-05-27 16:55,2026-07-27 14:30,Clara Example,18468672180,Neuenfelde Spedition GmbH & Co. KG
+32106764570,"Elbufer Kliniken – Shift planning + time tracking, 60 seats",Sales Pipeline,Closed Won,23200,2026-09-01,2026-05-28 14:20,2026-09-01 14:35,Murat Example,18461476604,Elbufer Kliniken gGmbH
+32108253269,Neuland Event – Expansion +60 seats,Sales Pipeline,Closed Won,62400,2026-08-22,2026-05-28 15:40,2026-08-21 09:05,Jonas Example,18425629952,Neuland Event GmbH
+32109871077,"Westwall Pflege – Shift planning + time tracking, 40 seats",Sales Pipeline,Appointment Scheduled,26200,2026-10-16,2026-05-28 15:50,2026-09-22 14:25,Leonie Example,18481920055,Westwall Pflege AG
+32110638704,Eichenwald Spedition – Expansion +200 seats,Sales Pipeline,Closed Lost,38600,2026-07-10,2026-05-30 13:00,2026-06-30 11:10,Finn Example,18411036491,Eichenwald Spedition SE
+32112492544,Harburg Reinigung – Renewal 2027,Sales Pipeline,Qualified To Buy,14600,2027-01-24,2026-06-02 09:40,2026-09-18 11:50,Jonas Example,18413645766,Harburg Reinigung GmbH
+32113259526,Wattenmeer Handel – Expansion +60 seats,Sales Pipeline,Appointment Scheduled,30400,2027-03-15,2026-06-02 16:35,2026-10-07 14:30,Aylin Example,18446980028,Wattenmeer Handel SE
+32114675189,Hammerbrook Bau – Renewal 2027,Sales Pipeline,Closed Won,11100,2026-08-31,2026-06-03 12:30,2026-08-25 13:15,Leonie Example,18405257272,Hammerbrook Bau SE
+32115256506,Spadenland Gastro – Expansion +120 seats,Sales Pipeline,Contract Sent,132300,2026-12-05,2026-06-05 08:10,2026-10-04 14:30,Clara Example,18470591053,Spadenland Gastro GmbH
+32116704536,Blauwal Gastro – Expansion +120 seats,Sales Pipeline,Closed Won,8200,2026-07-15,2026-06-05 10:10,2026-07-15 15:30,Aylin Example,18487555779,Blauwal Gastro gGmbH
+32116978973,Sinstorf Reinigung – Expansion +25 seats,Sales Pipeline,Closed Won,50100,2026-07-29,2026-06-05 13:40,2026-07-26 09:40,Clara Example,18460877443,Sinstorf Reinigung gGmbH
+32117287664,"Shift planning + time tracking, 60 seats for Grünspan Logistik",Sales Pipeline,Contract Sent,64600,2027-01-26,2026-06-07 08:31,2026-10-02 10:50,Jonas Example,18475006739,Grünspan Logistik
+32118580631,"Reitbrook Handel – Shift planning + time tracking, 60 seats",Sales Pipeline,Contract Sent,23900,2026-11-06,2026-06-07 11:45,2026-10-10 16:55,Clara Example,18493941621,Reitbrook Handel GmbH
+32119049345,Finkenwerder Pflege – Expansion +25 seats,Sales Pipeline,Presentation Scheduled,29000,2026-10-16,2026-06-09 08:30,2026-09-19 10:40,Clara Example,18408498737,Finkenwerder Pflege GmbH
+32120217853,"Wattenmeer Handel – Shift planning + time tracking, 300 seats",Sales Pipeline,Presentation Scheduled,180000,2026-12-18,2026-06-10 10:00,2026-08-05 10:00,Clara Example,18446980028,Wattenmeer Handel SE
+32120720387,"Moorburg Handel – Shift planning, 80 seats",Sales Pipeline,Decision Maker Bought-In,112600,2026-12-31,2026-06-10 17:15,2026-09-18 09:05,Jonas Example,18474367765,Moorburg Handel GmbH
+32122483130,"Neugraben Facility Services – Shift planning + time tracking, 300 seats",Sales Pipeline,Qualified To Buy,66200,2026-10-04,2026-06-13 12:15,2026-10-03 08:50,Finn Example,18463262257,Neugraben Facility Services UG
+32124416677,Birkenhain Pflege – Expansion +150 seats,Sales Pipeline,Appointment Scheduled,13900,2026-12-05,2026-06-14 08:45,2026-10-07 17:45,Aylin Example,18460427110,Birkenhain Pflege GmbH
+32126245212,Silbermöwe Facility Services – Expansion +60 seats,Sales Pipeline,Decision Maker Bought-In,7400,2027-03-01,2026-06-14 13:00,2026-09-29 16:25,,18429906920,Silbermöwe Facility Services GmbH & Co. KG
+32126771932,Moorfleet Spedition – Expansion +150 seats,Sales Pipeline,Qualified To Buy,32600,2026-10-15,2026-06-14 14:55,2026-09-25 10:25,Leonie Example,18435817880,Moorfleet Spedition GmbH
+32126988740,Tidenhub Kliniken – Renewal 2027,Sales Pipeline,Appointment Scheduled,56800,2026-11-02,2026-06-14 15:15,2026-06-23 12:40,Finn Example,18460513632,Tidenhub Kliniken GmbH
+32127837788,Reitbrook Bau – Expansion +300 seats,Sales Pipeline,Appointment Scheduled,20700,2026-12-23,2026-06-15 16:05,2026-09-22 11:35,Aylin Example,18448360381,Reitbrook Bau UG
+32128683282,"Rothenburg Sicherheitsdienst – Shift planning, 60 seats",Sales Pipeline,Closed Lost,8100,2026-08-11,2026-06-16 14:35,2026-08-01 17:40,Clara Example,18487847640,Rothenburg Sicherheitsdienst UG
+32128779953,Neugraben Hotels – Workforce analytics add-on,Sales Pipeline,Qualified To Buy,54800,2026-11-18,2026-06-17 16:05,2026-08-27 12:30,Clara Example,18475513993,Neugraben Hotels AG
+32129491377,Wandsbek Bau – Renewal 2027,Sales Pipeline,Closed Lost,36400,2026-09-07,2026-06-18 14:00,2026-09-05 13:45,Leonie Example,18407972605,Wandsbek Bau GmbH
+32130298222,"Fischbek Bau – Time tracking, 60 seats",Sales Pipeline,Decision Maker Bought-In,53500,2026-12-22,2026-06-18 16:15,2026-10-10 12:50,Jonas Example,18471942131,Fischbek Bau SE
+32131601117,Allermöhe Hotels – Workforce analytics add-on,Sales Pipeline,Contract Sent,5200,2026-09-18,2026-06-21 10:40,2026-09-19 08:45,Leonie Example,18427706995,Allermöhe Hotels SE
+32133550510,Rönneburg Kliniken – Expansion +300 seats,Sales Pipeline,Presentation Scheduled,10400,2026-11-11,2026-06-21 12:00,2026-09-26 17:25,Murat Example,18471439891,Rönneburg Kliniken AG
+32134741420,"Kirchdorf Kliniken – Shift planning, 25 seats",Sales Pipeline,Presentation Scheduled,,2026-11-05,2026-06-22 10:40,2026-10-03 09:20,Aylin Example,18480327410,Kirchdorf Kliniken gGmbH
+32135113828,Gut Moor Hotels – Renewal 2027,Sales Pipeline,Qualified To Buy,21900,2027-01-02,2026-06-22 10:50,2026-10-06 13:10,Jonas Example,18419051292,Gut Moor Hotels UG
+32136002182,Wandsbek Bau – Expansion +60 seats,Sales Pipeline,Closed Won,17500,2026-08-26,2026-06-22 12:50,2026-08-16 13:00,Leonie Example,18407972605,Wandsbek Bau GmbH
+32137261013,"Kompass Handel – Time tracking, 60 seats",Sales Pipeline,Qualified To Buy,33300,2026-12-15,2026-06-22 13:55,2026-10-09 14:10,Murat Example,18476937700,Kompass Handel UG
+32137827990,Altona Handel – Expansion +300 seats,Sales Pipeline,Closed Lost,7300,2026-07-31,2026-06-22 14:25,2026-07-25 17:10,Aylin Example,18435314312,Altona Handel GmbH
+32139822108,"Brückenbau Event – Workforce analytics, 300 seats",Sales Pipeline,Qualified To Buy,11000,2027-02-02,2026-06-24 15:20,2026-09-17 10:00,Leonie Example,18486147879,Brückenbau Event UG
+32141288138,Grünspan Logistik – Expansion +300 seats,Sales Pipeline,Qualified To Buy,67400,2026-12-30,2026-06-25 11:40,2026-09-24 08:40,Clara Example,18474917877,Grünspan Logistik GmbH & Co. KG
+32142242992,Deichgraf Gastro – Expansion +150 seats,Sales Pipeline,Decision Maker Bought-In,29300,2027-01-01,2026-06-25 12:25,2026-10-01 16:35,Leonie Example,18490258410,Deichgraf Gastro gGmbH
+32142514618,"Westwall Pflege Flensburg: shift planning + time tracking, 40 seats",Sales Pipeline,Appointment Scheduled,26600,2026-10-26,2026-06-25 16:37,2026-10-09 08:20,Murat Example,18481294070,Westwall Pflege Flensburg
+32144106546,"Hafenkante Logistik – Shift planning + time tracking, 200 seats",Sales Pipeline,Decision Maker Bought-In,6900,2027-03-03,2026-06-26 11:30,2026-10-11 10:25,Finn Example,18484435473,Hafenkante Logistik GmbH
+32145018575,Heidekraut Reinigung – Expansion +60 seats,Sales Pipeline,Closed Won,14700,2026-09-04,2026-06-27 11:55,2026-08-31 17:30,Murat Example,18404549129,Heidekraut Reinigung GmbH
+32145977878,"Cranz Pflege – Shift planning, 40 seats",Sales Pipeline,Appointment Scheduled,18100,2026-12-06,2026-06-27 15:55,2026-10-06 17:25,Clara Example,18494592344,Cranz Pflege GmbH & Co. KG
+32146129826,"Billwerder Event – Shift planning + time tracking, 120 seats",Sales Pipeline,Closed Lost,25900,2026-10-06,2026-06-27 17:00,2026-10-06 14:50,Leonie Example,18478657345,Billwerder Event SE
+32147503768,Silbermöwe Sicherheitsdienst – Renewal 2027,Sales Pipeline,Contract Sent,7300,2026-12-07,2026-06-27 17:35,2026-10-02 13:20,Murat Example,18402344378,Silbermöwe Sicherheitsdienst GmbH
+32148389610,"Francop Log. GmbH: workforce analytics, 25 seats",Sales Pipeline,Appointment Scheduled,14700,2026-11-09,2026-06-28 16:42,2026-10-10 12:45,Aylin Example,18492690345,Francop Log. GmbH
+32149499306,"Spadenland Kliniken – Workforce analytics, 200 seats",Sales Pipeline,Presentation Scheduled,48300,2026-11-08,2026-06-29 08:35,2026-10-08 14:55,Murat Example,18472681201,Spadenland Kliniken UG
+32150786470,BIRKENHAIN PFLEGE GMBH & CO. KG - Expansion +150 seats,Sales Pipeline,Appointment Scheduled,13900,2026-12-12,2026-06-29 09:02,2026-09-22 09:15,Clara Example,18499596456,BIRKENHAIN PFLEGE GMBH & CO. KG
+32152229622,Uhlenhorst Kliniken – Expansion +200 seats,Sales Pipeline,Contract Sent,17400,2026-12-24,2026-06-29 15:25,2026-09-18 13:05,Jonas Example,18480691746,Uhlenhorst Kliniken AG
+32152804715,"Sinstorf Reinigung – Workforce analytics, 300 seats",Sales Pipeline,Closed Won,108200,2026-10-08,2026-06-29 15:55,2026-10-03 11:15,Aylin Example,18460877443,Sinstorf Reinigung gGmbH
+32154674035,"Eppendorf Spedition – Shift planning + time tracking, 25 seats",Sales Pipeline,Decision Maker Bought-In,19700,2026-10-28,2026-06-29 17:45,2026-09-17 11:10,Aylin Example,18500245496,Eppendorf Spedition GmbH & Co. KG
+32155114510,Ostwind Facility Services – Expansion +25 seats,Sales Pipeline,Appointment Scheduled,18400,2026-11-20,2026-07-01 09:00,2026-10-02 09:25,Jonas Example,18449362861,Ostwind Facility Services GmbH
+32156601370,Ochsenwerder Kliniken – Expansion +150 seats,Sales Pipeline,Qualified To Buy,90700,2027-03-27,2026-07-01 12:05,2026-09-25 12:45,Finn Example,18464451096,Ochsenwerder Kliniken SE
+32156631755,Hammerbrook Kliniken – Expansion +60 seats,Sales Pipeline,Appointment Scheduled,38900,2026-11-22,2026-07-01 12:35,2026-09-27 17:35,Jonas Example,18465010531,Hammerbrook Kliniken SE
+32158202269,Birkenhain Reinigung – Expansion +60 seats,Sales Pipeline,Decision Maker Bought-In,17600,2026-10-25,2026-07-02 09:40,2026-10-06 16:50,Murat Example,18468110588,Birkenhain Reinigung GmbH
+32158874439,Wilhelmsburg Handel – Renewal 2027,Sales Pipeline,Presentation Scheduled,33400,2026-10-21,2026-07-02 16:40,2026-09-24 16:00,Jonas Example,18410935200,Wilhelmsburg Handel GmbH
+32159409595,"Harburg Bau – Shift planning + time tracking, 80 seats",Sales Pipeline,Appointment Scheduled,37500,2026-11-14,2026-07-02 17:55,2026-09-26 17:35,Clara Example,18494799984,Harburg Bau AG
+32161394612,Eißendorf Sicherheitsdienst – Expansion +40 seats,Sales Pipeline,Qualified To Buy,7100,2026-10-15,2026-07-03 10:40,2026-09-26 08:40,Finn Example,18469466986,Eißendorf Sicherheitsdienst GmbH
+32162047647,Wilhelmsburg Handel – Renewal 2027,Sales Pipeline,Presentation Scheduled,33400,2026-10-21,2026-07-03 16:56,2026-09-21 16:00,Jonas Example,18410935200,Wilhelmsburg Handel GmbH
+32162249910,Silbermöwe Facility Services – Renewal 2027,Sales Pipeline,Decision Maker Bought-In,10800,2027-03-07,2026-07-04 13:40,2026-09-19 14:05,Murat Example,18429906920,Silbermöwe Facility Services GmbH & Co. KG
+32163686707,"Kranich Event – Shift planning, 150 seats",Sales Pipeline,Closed Won,11300,2026-07-25,2026-07-05 14:45,2026-07-20 11:50,Murat Example,18495721396,Kranich Event SE
+32164760202,"Fleetwerk Reinigung – Time tracking, 60 seats",Sales Pipeline,Contract Sent,,2026-10-19,2026-07-05 16:30,2026-09-29 16:25,Murat Example,18491874172,Fleetwerk Reinigung GmbH & Co. KG
+32166212223,"Bergedorf Logistik – Workforce analytics, 150 seats",Sales Pipeline,Decision Maker Bought-In,13000,2026-11-26,2026-07-06 09:00,2026-09-17 10:40,Finn Example,18499234659,Bergedorf Logistik GmbH
+32167837536,Deichgraf Spedition – Renewal 2027,Sales Pipeline,Presentation Scheduled,24400,2026-11-26,2026-07-08 16:50,2026-09-26 15:10,Aylin Example,18446299422,Deichgraf Spedition AG
+32169419591,"Uhlenhorst Kliniken – Workforce analytics, 300 seats",Sales Pipeline,Closed Won,23200,2026-08-04,2026-07-10 12:20,2026-07-31 11:45,Clara Example,18480691746,Uhlenhorst Kliniken AG
+32171032276,"Ostwind Logistik – Workforce analytics, 120 seats",Sales Pipeline,Closed Lost,13000,2026-07-31,2026-07-10 17:55,2026-07-24 16:35,Murat Example,18501740958,Ostwind Logistik GmbH
+32172576660,"Strandgut Reinigung – Time tracking, 80 seats",Sales Pipeline,Closed Won,18800,2026-09-14,2026-07-11 08:55,2026-09-10 13:00,Clara Example,18493158128,Strandgut Reinigung gGmbH
+32174370665,"Heimfeld Sicherheitsdienst – Time tracking, 150 seats",Sales Pipeline,Appointment Scheduled,8000,2027-03-17,2026-07-11 13:55,2026-09-26 10:30,Finn Example,18490526798,Heimfeld Sicherheitsdienst UG
+32175221827,"Uhlenhorst Event – Time tracking, 150 seats",Sales Pipeline,Closed Won,22900,2026-09-30,2026-07-11 16:25,2026-09-24 16:25,Aylin Example,18460249586,Uhlenhorst Event gGmbH
+32176350354,Curslack Event – Expansion +25 seats,Sales Pipeline,Presentation Scheduled,50000,2027-02-25,2026-07-13 14:20,2026-08-14 17:50,Murat Example,18485044337,Curslack Event GmbH & Co. KG
+32177638807,"Kompass Spedition – Shift planning, 60 seats",Sales Pipeline,Presentation Scheduled,8300,2027-01-28,2026-07-14 11:25,2026-09-27 08:45,Clara Example,18475849884,Kompass Spedition GmbH
+32179309069,"Marmstorf Gastro – Shift planning, 300 seats",Sales Pipeline,Decision Maker Bought-In,94000,2027-03-07,2026-07-14 13:05,2026-09-25 11:45,Murat Example,18496906362,Marmstorf Gastro GmbH & Co. KG
+32179322721,"Allermöhe Handel – Shift planning, 80 seats",Sales Pipeline,Closed Lost,24900,2026-08-26,2026-07-15 09:15,2026-08-22 10:30,Leonie Example,18415517500,Allermöhe Handel UG
+32180179008,Hammerbrook Kliniken – Renewal 2027,Sales Pipeline,Presentation Scheduled,32400,2026-11-09,2026-07-15 09:30,2026-10-10 09:15,Leonie Example,18465010531,Hammerbrook Kliniken SE
+32180403156,Waltershof Sicherheitsdienst – Expansion +300 seats,Sales Pipeline,Contract Sent,5600,2026-09-25,2026-07-15 09:55,2026-10-03 13:15,Finn Example,18502411676,Waltershof Sicherheitsdienst SE
+32182222572,"Sandtor Spedition – Time tracking, 60 seats",Sales Pipeline,Appointment Scheduled,84600,2027-01-04,2026-07-15 10:25,2026-09-17 08:50,Finn Example,18485358842,Sandtor Spedition GmbH
+32182682614,Uhlenhorst Bau – Expansion +40 seats,Sales Pipeline,Appointment Scheduled,15200,2027-01-15,2026-07-16 16:40,2026-10-01 15:05,Clara Example,18459364129,Uhlenhorst Bau GmbH
+32184026471,"Sturmflut Logistik – Shift planning, 60 seats",Sales Pipeline,Presentation Scheduled,5100,2026-11-04,2026-07-18 11:25,2026-10-03 10:35,Aylin Example,18490069382,Sturmflut Logistik gGmbH
+32185291309,Bernstein Handel – Expansion +300 seats,Sales Pipeline,Contract Sent,21200,2026-12-17,2026-07-18 12:50,2026-09-24 13:40,Leonie Example,18407144378,Bernstein Handel AG
+32185485288,"Strandgut Handel – Workforce analytics, 150 seats",Sales Pipeline,Closed Won,17200,2026-09-05,2026-07-18 13:00,2026-09-04 11:15,Murat Example,18488257374,Strandgut Handel gGmbH
+32187061994,Rotklinker Gastro – Renewal 2027,Sales Pipeline,Qualified To Buy,76300,2026-11-25,2026-07-20 10:20,2026-09-28 11:55,Murat Example,18463250342,Rotklinker Gastro GmbH
+32188129442,Speicherstadt Kliniken – Expansion +40 seats,Sales Pipeline,Qualified To Buy,14600,2027-01-30,2026-07-20 16:05,2026-10-10 10:10,Clara Example,18424138831,Speicherstadt Kliniken GmbH & Co. KG
+32189099305,Rotklinker Gastro – Expansion +300 seats,Sales Pipeline,Decision Maker Bought-In,25500,2026-11-20,2026-07-21 11:50,2026-10-10 09:10,Clara Example,18463250342,Rotklinker Gastro GmbH
+32190526927,"Francop Sicherheitsdienst – Shift planning + time tracking, 300 seats",Sales Pipeline,Closed Lost,42700,2026-09-16,2026-07-21 14:10,2026-09-07 14:30,Aylin Example,18442703712,Francop Sicherheitsdienst GmbH
+32191191404,Spadenland Sicherheitsdienst – Expansion +80 seats,Sales Pipeline,Contract Sent,69100,2026-11-20,2026-07-22 08:30,2026-10-11 14:45,Jonas Example,18503743832,Spadenland Sicherheitsdienst UG
+32191570185,"Fleetwerk Pflege – Workforce analytics, 200 seats",Sales Pipeline,Closed Lost,14000,2026-09-27,2026-07-22 08:55,2026-09-27 17:50,Clara Example,18495006601,Fleetwerk Pflege GmbH
+32192176108,"Rotklinker Event – Workforce analytics, 80 seats",Sales Pipeline,Presentation Scheduled,15400,2026-12-04,2026-07-23 16:25,2026-10-12 07:03,Jonas Example,18490460301,Rotklinker Event GmbH
+32193941312,Rönneburg Hotels – Expansion +300 seats,Sales Pipeline,Qualified To Buy,109700,2027-03-02,2026-07-24 12:40,2026-09-27 11:05,Jonas Example,18449387522,Rönneburg Hotels GmbH & Co. KG
+32194081646,Rönneburg Hotels – Expansion +300 seats,Sales Pipeline,Qualified To Buy,109700,2027-03-02,2026-07-25 13:11,2026-09-23 11:05,Jonas Example,18449387522,Rönneburg Hotels GmbH & Co. KG
+32194944145,"Rönneburg Kliniken – Shift planning, 300 seats",Sales Pipeline,Closed Lost,26600,2026-10-07,2026-07-25 13:25,2026-09-30 16:20,Finn Example,18471439891,Rönneburg Kliniken AG
+32195961614,Allermöhe Handel – Renewal 2027,Sales Pipeline,Contract Sent,66000,2027-03-02,2026-07-26 12:00,2026-10-07 10:55,Murat Example,18415517500,Allermöhe Handel UG
+32196624871,"Harburg Sicherheitsdienst – Shift planning + time tracking, 40 seats",Sales Pipeline,Closed Won,10500,2026-09-21,2026-07-26 13:45,2026-09-19 17:50,Leonie Example,18495870661,Harburg Sicherheitsdienst GmbH
+32197169276,"Kranich Hotels – Shift planning + time tracking, 80 seats",Sales Pipeline,Decision Maker Bought-In,31900,2026-10-22,2026-07-26 16:55,2026-10-04 13:25,Murat Example,18482806298,Kranich Hotels GmbH
+32198772213,"Tidenhub Pflege – Shift planning + time tracking, 120 seats",Sales Pipeline,Decision Maker Bought-In,12200,2026-11-22,2026-07-27 09:05,2026-09-21 17:50,Aylin Example,18491281795,Tidenhub Pflege SE
+32199205540,"Deichgraf Gastro – Time tracking, 200 seats",Sales Pipeline,Presentation Scheduled,17300,2026-10-20,2026-07-27 12:40,2026-09-28 13:15,Murat Example,18490258410,Deichgraf Gastro gGmbH
+32200215760,Kirchdorf Kliniken – Expansion +120 seats,Sales Pipeline,Decision Maker Bought-In,39500,2026-10-28,2026-07-27 14:05,2026-09-30 14:50,Clara Example,18480327410,Kirchdorf Kliniken gGmbH
+32202034325,Ebbe Event – Expansion +40 seats,Sales Pipeline,Qualified To Buy,20400,2027-01-13,2026-07-27 16:00,2026-09-25 10:00,Aylin Example,18500838247,Ebbe Event AG
+32203182423,"Neugraben Hotels – Shift planning, 25 seats",Sales Pipeline,Closed Lost,36200,2026-10-02,2026-07-28 09:10,2026-09-22 12:00,Murat Example,18475513993,Neugraben Hotels AG
+32203947256,Birkenhain Reinigung – Renewal 2027,Sales Pipeline,Qualified To Buy,51300,2027-03-30,2026-07-30 10:00,2026-09-19 12:35,Murat Example,18468110588,Birkenhain Reinigung GmbH
+32204264535,"Francop Spedition – Time tracking, 25 seats",Sales Pipeline,Closed Won,81800,2026-08-27,2026-07-31 12:20,2026-08-25 16:55,Jonas Example,18498439801,Francop Spedition GmbH
+32204745619,"Rotklinker Spedition – Shift planning + time tracking, 120 seats",Sales Pipeline,Presentation Scheduled,19400,2026-11-26,2026-07-31 17:20,2026-10-08 08:05,Finn Example,18501621404,Rotklinker Spedition gGmbH
+32205155469,Deichgraf Spedition – Expansion +150 seats,Sales Pipeline,Appointment Scheduled,15600,2026-11-22,2026-08-01 14:10,2026-09-22 15:40,Leonie Example,18446299422,Deichgraf Spedition AG
+32206748744,Kompass Spedition – Rollout Hamburg site,Sales Pipeline,Contract Sent,9000,2026-12-08,2026-08-03 12:14,2026-10-07 15:50,Clara Example,18475849884,Kompass Spedition GmbH
+32207238199,Brückenbau Handel – Expansion +200 seats,Sales Pipeline,Decision Maker Bought-In,20000,2026-12-19,2026-08-03 14:05,2026-09-18 11:05,Clara Example,18428833762,Brückenbau Handel GmbH
+32208571000,"Wattenmeer Handel – Shift planning, 80 seats",Sales Pipeline,Qualified To Buy,19000,2027-03-30,2026-08-03 14:55,2026-10-09 13:20,Aylin Example,18446980028,Wattenmeer Handel SE
+32208702267,"Curslack Event – Workforce analytics, 60 seats",Sales Pipeline,Closed Won,22300,2026-09-09,2026-08-04 11:05,2026-09-01 13:55,Jonas Example,18485044337,Curslack Event GmbH & Co. KG
+32210418704,"Ebbe Event – Shift planning, 150 seats",Sales Pipeline,Qualified To Buy,46600,2026-11-08,2026-08-04 14:50,2026-10-09 11:05,Jonas Example,18500838247,Ebbe Event AG
+32211778726,Rönneburg Hotels – Renewal 2027,Sales Pipeline,Contract Sent,13800,2027-03-08,2026-08-06 14:40,2026-09-30 17:45,Jonas Example,18449387522,Rönneburg Hotels GmbH & Co. KG
+32213620529,"Neuenfelde Handel – Workforce analytics, 40 seats",Sales Pipeline,Qualified To Buy,11600,2026-11-02,2026-08-07 15:05,2026-09-30 15:45,Aylin Example,18478251527,Neuenfelde Handel GmbH
+32215332691,Elbufer Facility Services – Expansion +40 seats,Sales Pipeline,Closed Won,38000,2026-09-09,2026-08-08 14:55,2026-09-06 10:10,Murat Example,18429942973,Elbufer Facility Services AG
+32216825458,"Heimfeld Kliniken – Time tracking, 200 seats",Sales Pipeline,Qualified To Buy,43700,2027-03-05,2026-08-09 16:20,2026-09-30 09:00,Finn Example,18497675441,Heimfeld Kliniken GmbH
+32217763270,Eichenwald Facility Services – Workforce analytics add-on,Sales Pipeline,Appointment Scheduled,14000,2026-11-02,2026-08-09 17:50,2026-09-27 15:50,Murat Example,18438107906,Eichenwald Facility Services AG
+32218637632,Eißendorf Kliniken – Expansion +40 seats,Sales Pipeline,Qualified To Buy,30700,2026-12-23,2026-08-10 08:15,2026-09-19 16:00,Aylin Example,18412380265,Eißendorf Kliniken GmbH
+32219737450,Kaiserkai Spedition – Expansion +40 seats,Sales Pipeline,Qualified To Buy,20100,2026-12-08,2026-08-10 10:45,2026-10-07 14:25,Clara Example,18413225458,Kaiserkai Spedition GmbH & Co. KG
+32220638084,"Veddel Logistik – Shift planning + time tracking, 120 seats",Sales Pipeline,Appointment Scheduled,45500,2026-12-12,2026-08-11 09:50,2026-10-02 16:30,Murat Example,18506556090,Veddel Logistik GmbH
+32221959291,"Barmbek Sicherheitsdienst – Workforce analytics, 300 seats",Sales Pipeline,Presentation Scheduled,4000,2027-01-16,2026-08-12 11:45,2026-10-01 11:30,Clara Example,18506057993,Barmbek Sicherheitsdienst GmbH & Co. KG
+32222322861,Eichenwald Facility Services – Workforce analytics add-on,Sales Pipeline,Appointment Scheduled,14000,2026-11-02,2026-08-12 18:35,2026-09-22 15:50,Murat Example,18438107906,Eichenwald Facility Services AG
+32224303809,"Winterhude Bau – Workforce analytics, 40 seats",Sales Pipeline,Contract Sent,38800,2027-03-07,2026-08-13 13:40,2026-09-21 08:35,,18489500844,Winterhude Bau GmbH
+32225749347,Expansion +120 seats for Kirchdorf Kli. gGmbH,Sales Pipeline,Decision Maker Bought-In,38100,2026-11-02,2026-08-13 14:55,2026-09-27 16:50,Clara Example,18502350649,Kirchdorf Kli. gGmbH
+32227279262,"Gut Moor Spedition – Time tracking, 60 seats",Sales Pipeline,Appointment Scheduled,29400,2026-11-29,2026-08-15 16:15,2026-09-30 08:55,Aylin Example,18504350863,Gut Moor Spedition GmbH
+32228640465,"Uhlenhorst Bau – Shift planning + time tracking, 60 seats",Sales Pipeline,Presentation Scheduled,,2026-10-14,2026-08-16 08:55,2026-10-10 09:00,Jonas Example,18459364129,Uhlenhorst Bau GmbH
+32230194695,"Lotsenhaus Event – Shift planning, 120 seats",Sales Pipeline,Closed Won,38200,2026-09-28,2026-08-18 11:05,2026-09-22 09:50,Leonie Example,18403729186,Lotsenhaus Event GmbH
+32231788792,"Hammerbrook Pflege – Workforce analytics, 150 seats",Sales Pipeline,Qualified To Buy,33300,2026-12-11,2026-08-19 12:10,2026-09-18 09:35,Clara Example,18503373730,Hammerbrook Pflege GmbH
+32233172625,Sinstorf Event – Workforce analytics add-on,Sales Pipeline,Contract Sent,28500,2026-10-12,2026-08-19 17:25,2026-10-01 16:50,Murat Example,18431470145,Sinstorf Event gGmbH
+32235049863,Eppendorf Spedition – Expansion +200 seats,Sales Pipeline,Appointment Scheduled,90000,2027-03-01,2026-08-20 16:45,2026-09-18 14:55,Leonie Example,18500245496,Eppendorf Spedition GmbH & Co. KG
+32236492632,"Birkenhain Sicherheitsdienst – Shift planning + time tracking, 80 seats",Sales Pipeline,Closed Lost,29900,2026-09-23,2026-08-21 12:20,2026-09-22 09:15,Aylin Example,18507234581,Birkenhain Sicherheitsdienst AG
+32237119458,Heimfeld Sicherheitsdienst – Expansion +300 seats,Sales Pipeline,Appointment Scheduled,4800,2027-02-09,2026-08-21 16:25,2026-09-02 16:25,Jonas Example,18490526798,Heimfeld Sicherheitsdienst UG
+32238616526,"Ankerplatz Bau – Shift planning + time tracking, 25 seats",Sales Pipeline,Closed Won,11400,2026-11-20,2026-08-22 16:20,2026-09-19 09:15,Finn Example,18445544088,Ankerplatz Bau GmbH & Co. KG
+32239745354,"Speicherstadt Hotels – Time tracking, 120 seats",Sales Pipeline,Closed Lost,46200,2026-10-05,2026-08-23 13:40,2026-09-29 08:30,Aylin Example,18457051454,Speicherstadt Hotels SE
+32239839258,Kirchdorf Kliniken – Renewal 2027,Sales Pipeline,Decision Maker Bought-In,,2026-12-13,2026-08-25 16:50,2026-10-05 08:35,Murat Example,18480327410,Kirchdorf Kliniken gGmbH
+32241301362,"Blauwal Gastro – Shift planning + time tracking, 80 seats",Sales Pipeline,Closed Won,53500,2026-10-08,2026-08-28 09:40,2026-10-06 16:05,Murat Example,18487555779,Blauwal Gastro gGmbH
+32241877346,"Blauwal Pflege – Time tracking, 40 seats",Sales Pipeline,Qualified To Buy,23700,2026-10-18,2026-08-28 17:00,2026-10-05 08:20,Jonas Example,18473089358,Blauwal Pflege AG
+32241997156,Neuland Kliniken – Expansion +150 seats,Sales Pipeline,Appointment Scheduled,12700,2026-12-31,2026-08-29 15:10,2026-10-07 10:50,Clara Example,18456089568,Neuland Kliniken AG
+32243467130,"Spadenland Reinigung – Shift planning + time tracking, 300 seats",Sales Pipeline,Presentation Scheduled,7100,2026-11-07,2026-08-30 08:25,2026-09-28 17:40,Finn Example,18466185663,Spadenland Reinigung UG
+32244299145,Tidenhub Pflege – Rollout Bremen site,Sales Pipeline,Presentation Scheduled,12300,2027-01-02,2026-08-30 09:36,2026-10-10 14:05,Aylin Example,18491281795,Tidenhub Pflege SE
+32244721862,"Waltershof Sicherheitsdienst – Shift planning + time tracking, 150 seats",Sales Pipeline,Appointment Scheduled,84300,2027-02-25,2026-08-30 14:50,2026-10-04 14:50,Clara Example,18502411676,Waltershof Sicherheitsdienst SE
+32245360226,"Wattenmeer Kliniken – Shift planning, 200 seats",Sales Pipeline,Qualified To Buy,14500,2027-01-27,2026-08-31 08:20,2026-09-26 15:50,Clara Example,18503868448,Wattenmeer Kliniken SE
+32247247361,Tidenhub Pflege – Expansion +25 seats,Sales Pipeline,Presentation Scheduled,12900,2026-10-23,2026-08-31 09:05,2026-10-08 16:25,Clara Example,18491281795,Tidenhub Pflege SE
+32248528274,Seemeile Gastro – Expansion +80 seats,Sales Pipeline,Appointment Scheduled,14100,2027-01-26,2026-08-31 10:40,2026-09-25 13:15,Clara Example,18485001543,Seemeile Gastro UG
+32248644607,Bergedorf Reinigung – Expansion +200 seats,Sales Pipeline,Presentation Scheduled,16300,2027-03-14,2026-09-01 11:30,2026-10-06 15:15,Leonie Example,18444739923,Bergedorf Reinigung UG
+32250448873,Wilhelmsburg Kliniken – Expansion +120 seats,Sales Pipeline,Closed Won,49200,2026-09-29,2026-09-01 14:25,2026-09-20 11:05,Finn Example,18422935130,Wilhelmsburg Kliniken GmbH & Co. KG
+32251617713,"BLAUWAL PFLEGE GMBH & CO. KG: time tracking, 40 seats",Sales Pipeline,Qualified To Buy,24400,2026-10-29,2026-09-02 17:14,2026-09-27 17:35,Leonie Example,18503172907,BLAUWAL PFLEGE GMBH & CO. KG
+32252763773,Lotsenhaus Kliniken – Expansion +25 seats,Sales Pipeline,Appointment Scheduled,17200,2026-10-14,2026-09-02 17:25,2026-10-06 08:50,Leonie Example,18463799491,Lotsenhaus Kliniken SE
+32254522179,Blauwal Reinigung – Expansion +150 seats,Sales Pipeline,Decision Maker Bought-In,74400,2027-03-04,2026-09-03 11:55,2026-09-28 15:05,Murat Example,18457158833,Blauwal Reinigung GmbH
+32255791825,Kaiserkai Pflege – Expansion +300 seats,Sales Pipeline,Qualified To Buy,19000,2027-01-03,2026-09-03 13:45,2026-10-07 08:55,Clara Example,18411656345,Kaiserkai Pflege SE
+32257091826,Hammerbrook Gastro – Expansion +300 seats,Sales Pipeline,Qualified To Buy,18000,2026-12-03,2026-09-05 12:15,2026-10-08 08:30,Murat Example,18450110859,Hammerbrook Gastro GmbH
+32257851869,Eppendorf Sicherheitsdienst – Expansion +120 seats,Sales Pipeline,Appointment Scheduled,90900,2027-02-15,2026-09-05 17:00,2026-10-07 08:10,Clara Example,18414654725,Eppendorf Sicherheitsdienst GmbH
+32258887449,Eppendorf Spedition – Renewal 2027,Sales Pipeline,Decision Maker Bought-In,12100,2026-10-31,2026-09-06 14:10,2026-09-27 13:10,Murat Example,18500245496,Eppendorf Spedition GmbH & Co. KG
+32260050531,"Wilhelmsburg Pflege – Time tracking, 25 seats",Sales Pipeline,Closed Lost,17400,2026-10-04,2026-09-06 17:15,2026-09-29 11:55,Aylin Example,18507830969,Wilhelmsburg Pflege UG
+32260331255,"Gut Moor Bau – Shift planning, 80 seats",Sales Pipeline,Presentation Scheduled,11800,2027-03-21,2026-09-07 14:15,2026-09-23 14:00,Clara Example,18504663742,Gut Moor Bau GmbH
+32260521620,"Lindenhof Event – Shift planning + time tracking, 40 seats",Sales Pipeline,Qualified To Buy,13900,2026-11-13,2026-09-07 14:15,2026-09-20 14:05,Leonie Example,18505178234,Lindenhof Event GmbH & Co. KG
+32262239546,Strandgut Spedition – Expansion +40 seats,Sales Pipeline,Qualified To Buy,,2026-10-26,2026-09-07 17:05,2026-09-24 08:10,Jonas Example,18420347607,Strandgut Spedition GmbH
+32264000363,Uhlenhorst Bau – Renewal 2027,Sales Pipeline,Qualified To Buy,16900,2026-12-24,2026-09-08 08:30,2026-09-26 10:00,Jonas Example,18459364129,Uhlenhorst Bau GmbH
+32265218497,"Lotsenhaus Bau – Shift planning, 120 seats",Sales Pipeline,Appointment Scheduled,10100,2026-11-05,2026-09-09 11:45,2026-09-19 10:00,Aylin Example,18458155059,Lotsenhaus Bau UG
+32266772266,Möwenweg Hotels – Expansion +150 seats,Sales Pipeline,Appointment Scheduled,9700,2027-01-27,2026-09-09 13:00,2026-09-29 12:40,Leonie Example,18419573746,Möwenweg Hotels GmbH
+32266871028,Waltershof Sicherheitsdienst – Renewal 2027,Sales Pipeline,Appointment Scheduled,91900,2027-01-24,2026-09-09 15:13,2026-09-30 14:30,Clara Example,18502411676,Waltershof Sicherheitsdienst SE
+32267551688,Eichenwald Spedition – Renewal 2027,Sales Pipeline,Presentation Scheduled,64200,2027-03-28,2026-09-10 08:05,2026-10-01 12:00,Leonie Example,18411036491,Eichenwald Spedition SE
+32269164328,Billwerder Facility Services – Expansion +150 seats,Sales Pipeline,Qualified To Buy,11500,2026-11-13,2026-09-10 09:50,2026-10-08 10:00,Leonie Example,18451967338,Billwerder Facility Services gGmbH
+32269630156,Heimfeld Kliniken – Expansion +25 seats,Sales Pipeline,Qualified To Buy,45300,2027-01-14,2026-09-11 09:15,2026-09-19 14:35,Leonie Example,18497675441,Heimfeld Kliniken GmbH
+32270133740,"Westwall Facility Services – Shift planning, 150 seats",Sales Pipeline,Qualified To Buy,24800,2026-11-15,2026-09-11 11:30,2026-09-26 12:00,Aylin Example,18496375823,Westwall Facility Services GmbH
+32270803597,Kompass Spedition – Renewal 2027,Sales Pipeline,Presentation Scheduled,11100,2027-03-28,2026-09-11 16:00,2026-09-23 16:00,Leonie Example,18475849884,Kompass Spedition GmbH
+32271431276,Moorfleet Kliniken – Expansion +60 seats,Sales Pipeline,Qualified To Buy,15300,2026-10-27,2026-09-12 16:00,2026-09-19 14:35,Finn Example,18448518152,Moorfleet Kliniken UG
+32272543549,"Spadenland Sicherheitsdienst – Shift planning + time tracking, 25 seats",Sales Pipeline,Appointment Scheduled,18800,2026-12-29,2026-09-13 11:50,2026-10-09 16:00,Aylin Example,18503743832,Spadenland Sicherheitsdienst UG
+32273517805,Eppendorf Sicherheitsdienst Lüneburg - Expansion +120 seats,Sales Pipeline,Appointment Scheduled,88900,2027-02-20,2026-09-14 17:40,2026-09-29 08:55,Leonie Example,18509488245,Eppendorf Sicherheitsdienst Lüneburg
+32275476846,Veddel Logistik – Workforce analytics add-on,Sales Pipeline,Presentation Scheduled,49800,2026-11-17,2026-09-15 10:01,2026-10-04 08:25,Murat Example,18506556090,Veddel Logistik GmbH
+32277056549,"Hafenkante Spedition – Workforce analytics, 150 seats",Sales Pipeline,Appointment Scheduled,8800,2026-12-26,2026-09-15 13:55,2026-10-05 16:40,Finn Example,18509145800,Hafenkante Spedition SE
+32277685516,"Barmbek Bau – Time tracking, 200 seats",Sales Pipeline,Closed Won,19200,2026-10-09,2026-09-16 08:50,2026-10-06 16:45,Finn Example,18450860543,Barmbek Bau GmbH
+32278897543,Waltershof Hotels – Expansion +150 seats,Sales Pipeline,Presentation Scheduled,9700,2027-03-27,2026-09-16 12:55,2026-09-21 16:45,Leonie Example,18402975452,Waltershof Hotels GmbH
+32278987154,Neugraben Hotels – Renewal 2027,Sales Pipeline,Qualified To Buy,15300,2026-12-06,2026-09-17 17:15,2026-10-09 16:30,Leonie Example,18475513993,Neugraben Hotels AG
+32280885021,Waltershof Pflege – Expansion +25 seats,Sales Pipeline,Decision Maker Bought-In,12000,2027-03-26,2026-09-18 08:00,2026-10-09 15:50,Leonie Example,18454552135,Waltershof Pflege GmbH
+32282170459,Ankerplatz Bau – Renewal 2027,Sales Pipeline,Presentation Scheduled,24500,2026-12-12,2026-09-20 14:35,2026-10-12 07:09,Clara Example,18445544088,Ankerplatz Bau GmbH & Co. KG
+32282705677,"Uhlenhorst Reinigung – Time tracking, 200 seats",Sales Pipeline,Qualified To Buy,57400,2027-03-30,2026-09-20 16:50,2026-10-05 08:15,Finn Example,18500722177,Uhlenhorst Reinigung UG
+32284393504,"Hafenkante Pflege – Time tracking, 80 seats",Sales Pipeline,Qualified To Buy,5600,2026-12-14,2026-09-23 10:30,2026-10-12 07:17,Murat Example,18465915298,Hafenkante Pflege GmbH
+32284643502,Neuenfelde Handel – Expansion +80 seats,Sales Pipeline,Qualified To Buy,39100,2027-03-23,2026-09-23 14:35,2026-10-02 13:55,Leonie Example,18478251527,Neuenfelde Handel GmbH
+32285764367,Gut Moor Spedition – Expansion +60 seats,Sales Pipeline,Contract Sent,26700,2027-03-27,2026-09-28 16:39,2026-10-04 11:10,Aylin Example,18508599390,Gut Moor Spedition
+32287349317,Sandtor Spedition – Expansion +150 seats,Sales Pipeline,Decision Maker Bought-In,131900,2026-12-21,2026-09-30 15:30,2026-10-10 14:05,Murat Example,18485358842,Sandtor Spedition GmbH
+32289116311,Spadenland Gastro – Renewal 2027,Sales Pipeline,Decision Maker Bought-In,70200,2027-02-20,2026-10-02 14:10,2026-10-08 09:20,Finn Example,18470591053,Spadenland Gastro GmbH
+32290382328,Ankerplatz Bau: renewal 2027,Sales Pipeline,Presentation Scheduled,23200,2026-12-12,2026-10-02 14:46,2026-10-06 14:25,Murat Example,18507571514,Ankerplatz Bau
+32291030631,Sandtor Spediiton GmbH: expansion +150 seats,Sales Pipeline,Decision Maker Bought-In,132300,2026-12-27,2026-10-05 16:08,2026-10-11 12:00,Clara Example,18506245726,Sandtor Spediiton GmbH
+32291796878,Hammerbrook Pflege – Renewal 2027,Sales Pipeline,Qualified To Buy,13100,2026-11-23,2026-10-06 12:35,2026-10-11 16:35,Leonie Example,18503373730,Hammerbrook Pflege GmbH
+32292603246,Hammerbrook Pflege – Expansion +40 seats,Sales Pipeline,Presentation Scheduled,11400,,2026-10-06 12:55,2026-10-11 12:10,Leonie Example,18503373730,Hammerbrook Pflege GmbH
+32293229190,"Lotsenhaus Bua UG - Shift planning, 120 seats",Sales Pipeline,Appointment Scheduled,10000,2026-11-10,2026-10-10 12:28,2026-10-10 13:28,Clara Example,18510184974,Lotsenhaus Bua UG
+32293986023,Uhlenhorst Reinigung – Renewal 2027,Sales Pipeline,Qualified To Buy,54200,2027-03-04,2026-10-11 07:30,2026-10-11 10:30,Finn Example,18510373595,Uhlenhorst Reinigung
